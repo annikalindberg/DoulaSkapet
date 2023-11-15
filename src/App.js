@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import ResponsiveMenu from './components/ResponsiveMenu';
+import StickyFooter from './components/Footer';
+import { Theme } from './styles/Theme';
+import { ThemeProvider } from '@mui/material/styles';
+/* import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
+import Home from './pages/Home'; 
+/* import OmOss from './components/OmOss'; */
+/* import {NotFound }from './pages/NotFound'; */
+
+
+// Define your router
+/* const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+   {
+    path: "/about",
+    element: <OmOss />,
+  }, 
+  {
+    path: "/dashboard",
+    element: <Paket/>,
+  }, 
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]); */
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={Theme}>
+{/*       <RouterProvider router={router}>
+ */}        <ResponsiveMenu />
+        {/* Include other components that should be displayed on every page here */}
+        <StickyFooter />
+{/*       </RouterProvider>
+ */}    </ThemeProvider>
   );
 }
 
