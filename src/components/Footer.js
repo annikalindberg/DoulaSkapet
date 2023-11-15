@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import logoImage from '../assets/textlogo.svg';
 
 function Copyright() {
   return (
@@ -24,7 +25,8 @@ const defaultTheme = createTheme();
 
 export default function StickyFooter() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+      <ThemeProvider theme={defaultTheme}>
+        
       <Box
         sx={{
           display: 'flex',
@@ -54,8 +56,11 @@ export default function StickyFooter() {
                 ? theme.palette.grey[200]
                 : theme.palette.grey[800],
           }}
-        >
-          <Container maxWidth="sm">
+              >
+       
+         
+                  <Container maxWidth="sm">
+                      <img src={logoImage} alt="Logo" style={{ height: '100px' }} />
             <Typography variant="body1">
               My sticky footer can be found here.
             </Typography>

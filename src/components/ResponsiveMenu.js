@@ -7,14 +7,14 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logoImage from '../assets/nobg-logo.svg';
+import { Instagram, Facebook, LinkedIn, Email } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['OmOss', 'DoulaPaket', 'Doula']; // These are your page names
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -49,7 +49,8 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
-            <IconButton
+                      <IconButton
+
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -78,11 +79,15 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography 
-                          textAlign="center"
-                      >{page}</Typography>
-                </MenuItem>
+                <Button
+                key={page}
+                component={Link} // Wrap the Button component with Link
+                to={`/${page.toLowerCase()}`} // Link to the page route
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'primary.dark', display: 'block' }}
+              >
+                {page}
+              </Button>
               ))}
             </Menu>
           </Box>
@@ -103,11 +108,23 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+<Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: 'black' }}>
+                <Instagram />
               </IconButton>
-            </Tooltip>
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: 'black' }}>
+                <Facebook />
+              </IconButton>
+            </a>
+       <a href="mailto:your.email@example.com">
+              <IconButton sx={{ color: 'black' }}>
+                <Email />
+              </IconButton>
+            </a>
+          </Box>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

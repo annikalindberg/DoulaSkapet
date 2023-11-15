@@ -1,11 +1,8 @@
-
-
-    
 // In src/pages/OmOss.js
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 
-const Home = () => {
+const DoulaPaket = () => {
   return (
     <Container>
       <Box sx={{ my: 4 }}>
@@ -18,4 +15,4 @@ Paket vi erbjuder        </Typography>
   );
 }
 
-export default Home;
+export default DoulaPaket;
