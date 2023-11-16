@@ -6,7 +6,7 @@ const OmOss = () => {
   return (
     <Container>
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom>About Us - Om Oss</Typography>
+        <Typography variant="h4" gutterBottom>Om Oss</Typography>
         <Typography paragraph>
           Here we can introduce Annika Lindberg and Karin Dernulf, the doulas...
         </Typography>

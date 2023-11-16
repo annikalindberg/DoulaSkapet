@@ -19,7 +19,7 @@ const App = () =>
   <ResponsiveMenu />
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/OmOss" element={<OmOss />} />
+    <Route path="/Om Oss" element={<OmOss />} />
     <Route path="/DoulaPaket" element={<DoulaPaket />} />
     <Route path="/Doula" element={<Doula />} />
     <Route path="*" element={<NotFound />} />

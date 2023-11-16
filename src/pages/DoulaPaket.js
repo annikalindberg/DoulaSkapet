@@ -6,7 +6,7 @@ const DoulaPaket = () => {
   return (
     <Container>
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom>About Us - Om Oss</Typography>
+        <Typography variant="h4" gutterBottom>DoulaPaket</Typography>
         <Typography paragraph>
 Paket vi erbjuder        </Typography>
         {/* Add more detailed content, images, etc */}

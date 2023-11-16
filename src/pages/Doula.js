@@ -8,7 +8,7 @@ const Doula = () => {
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" gutterBottom>About Us - Om Oss</Typography>
         <Typography paragraph>
-Paket vi erbjuder        </Typography>
+Doulaeffekten       </Typography>
         {/* Add more detailed content, images, etc */}
       </Box>
     </Container>

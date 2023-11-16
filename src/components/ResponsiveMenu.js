@@ -15,6 +15,7 @@ import { Instagram, Facebook, LinkedIn, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const pages = ['OmOss', 'DoulaPaket', 'Doula']; // These are your page names
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -52,7 +53,7 @@ function ResponsiveAppBar() {
                       <IconButton
 
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -81,12 +82,12 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <Button
                 key={page}
-                component={Link} // Wrap the Button component with Link
-                to={`/${page.toLowerCase()}`} // Link to the page route
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'primary.dark', display: 'block' }}
-              >
-                {page}
+                  >
+                      <Link to={`/${page}`} style={{ textDecoration: "none", color: "inherit" }}>
+                          {page}
+                      </Link>
               </Button>
               ))}
             </Menu>
@@ -102,7 +103,10 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'primary.dark', display: 'block' }}
               >
-                {page}
+                <Link to={`/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}> {/* Wrap text with Link */}
+        {page}
+      </Link>
+        
               </Button>
             ))}
           </Box>
@@ -114,7 +118,7 @@ function ResponsiveAppBar() {
                 <Instagram />
               </IconButton>
             </a>
-            <a href="https://www.facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/doulaskapet" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}>
                 <Facebook />
               </IconButton>
