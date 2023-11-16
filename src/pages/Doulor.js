@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 
-const OmOss = () => {
+const Doulor = () => {
   return (
     <Container>
       <Box sx={{ my: 4 }}>
@@ -16,4 +16,4 @@ const OmOss = () => {
   );
 }
 
-export default OmOss;
+export default Doulor;

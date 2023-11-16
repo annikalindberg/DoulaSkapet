@@ -5,12 +5,13 @@ import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Home from './pages/Home';
-import OmOss from './pages/OmOss';
+import Doulor from './pages/Doulor';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
-import Doula from './pages/Doula';
+import DoulansRoll from './pages/DoulansRoll';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 // Inside your App component
 const App = () =>
@@ -19,9 +20,9 @@ const App = () =>
   <ResponsiveMenu />
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/Om Oss" element={<OmOss />} />
+    <Route path="/Doulor" element={< Doulor/>} />
     <Route path="/DoulaPaket" element={<DoulaPaket />} />
-    <Route path="/Doula" element={<Doula />} />
+    <Route path="/DoulansRoll" element={<DoulansRoll />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
     <StickyFooter />

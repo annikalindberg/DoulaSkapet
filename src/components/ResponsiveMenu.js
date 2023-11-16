@@ -14,7 +14,7 @@ import logoImage from '../assets/nobg-logo.svg';
 import { Instagram, Facebook, LinkedIn, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
-const pages = ['OmOss', 'DoulaPaket', 'Doula']; // These are your page names
+const pages = ['Doulor', 'DoulansRoll', 'DoulaPaket' ]; // These are your page names
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -43,11 +43,14 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
                       <img src={logoImage}
                           alt="Logo"
-                          style={{ width: '200px', margin: "1rem" }} />
-          </Box>
+                style={{ width: '200px', margin: "1rem" }} />
+            
+            </Box>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
                       <IconButton
@@ -93,9 +96,11 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
             <img src={logoImage} alt="Logo" style={{ height: '40px' }} />
-          </Box>
+            </Box>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
