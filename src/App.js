@@ -9,26 +9,40 @@ import Doulor from './pages/Doulor';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import DoulansRoll from './pages/DoulansRoll';
-
+import styled from 'styled-components';
+import background from './assets/images/bg-img.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+const Background = styled.div`
+background-image: url(${background});    
+background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+`;
 
-// Inside your App component
-const App = () =>
-<Router>
-  <ThemeProvider theme={Theme} >
-  <ResponsiveMenu />
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/Doulor" element={< Doulor/>} />
-    <Route path="/DoulaPaket" element={<DoulaPaket />} />
-    <Route path="/DoulansRoll" element={<DoulansRoll />} />
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-    <StickyFooter />
-    </ThemeProvider>
-  </Router>
-  ;
+const App = () => {
+  
+  return (
+    <Router>
+      <ThemeProvider theme={Theme} >
+        <Background>
+          <ResponsiveMenu />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Doulor" element={< Doulor />} />
+            <Route path="/DoulaPaket" element={<DoulaPaket />} />
+            <Route path="/Doulans Roll" element={<DoulansRoll />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <StickyFooter />
+        </Background>
+      </ThemeProvider>
+    </Router>
+  );
+};
+
 
 
 export default App;

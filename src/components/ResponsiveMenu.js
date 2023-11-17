@@ -11,10 +11,11 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logoImage from '../assets/nobg-logo.svg';
+import textlogo from '../assets/textlogo.svg';
 import { Instagram, Facebook, LinkedIn, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
-const pages = ['Doulor', 'DoulansRoll', 'DoulaPaket' ]; // These are your page names
+const pages = ['Doulor', 'Doulans Roll', 'DoulaPaket' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -42,16 +43,16 @@ function ResponsiveAppBar() {
     <AppBar position="static" sx={{ bgcolor: "primary.light"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    {/* Logo for both Desktop and Mobile */}
+
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
                       <img src={logoImage}
                           alt="Logo"
-                style={{ width: '200px', margin: "1rem" }} />
+                style={{ width: '300px', paddingTop: "4rem" }} />
             
             </Box>
           </Link>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
                       <IconButton
 
@@ -95,10 +96,9 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <img src={logoImage} alt="Logo" style={{ height: '40px' }} />
+            <img src={textlogo} alt="Logo" style={{ height: '5rem' }} />
             </Box>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
