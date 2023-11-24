@@ -3,59 +3,51 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import logoImage from '../assets/nobg-logo.svg';
-import textlogo from '../assets/textlogo.svg';
-import { Instagram, Facebook, LinkedIn, Email } from '@mui/icons-material';
+import { Instagram, Facebook, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-const pages = ['Doulor', 'Doulans Roll', 'DoulaPaket' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'Doulor', 'Doulans Roll', 'DoulaPaket' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
 
+// declare state variables using React's useState hook. anchorElNav and anchorElUser hold the anchor elements for navigation and user menus, initialized as null. 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const location = useLocation();
+  const currentPage = location.pathname;
+  const [anchorElNav, setAnchorElNav] = React.useState(null); 
 
+
+  // eventhandlers for opening and closing the menu. handleOpenNavMenu and handleOpenUserMenu set the anchorElNav and anchorElUser to the currentTarget of the event, which is the element that triggered the event. handleCloseNavMenu and handleCloseUserMenu set the anchorElNav and anchorElUser to null, closing the menu.
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-    
+
+//  disableGutters removes default padding. sx is the style prop for MUI components.
 
   return (
     <AppBar position="static" sx={{ bgcolor: "primary.light"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-                    {/* Logo for both Desktop and Mobile */}
-
+          {/* v wraps the logo with a link leading to / */}
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-                      <img src={logoImage}
-                          alt="Logo"
-                style={{ width: '300px', paddingTop: "4rem" }} />
-            
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+              <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem" }} />
             </Box>
           </Link>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
-                      <IconButton
-
+{/* This v section creates a menu icon (hamburger icon) for mobile views. When clicked, it opens a menu (Menu) containing navigation items. The IconButton is a button specifically designed to hold icons. */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
               size="large"
               aria-label="menu"
               aria-controls="menu-appbar"
@@ -65,6 +57,7 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -83,41 +76,56 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+            {pages.map((page) => {
+                const toPath = page === 'Home' ? '/' : `/${page.replace(' ', '-')}`;
+                const isActive = currentPage === toPath;
+
+
+              return (
                 <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'primary.dark', display: 'block' }}
-                  >
-                      <Link to={`/${page}`} style={{ textDecoration: "none", color: "inherit" }}>
-                          {page}
-                      </Link>
-              </Button>
-              ))}
-            </Menu>
-          </Box>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <img src={textlogo} alt="Logo" style={{ height: '5rem' }} />
-            </Box>
-          </Link>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'primary.dark', display: 'block' }}
-              >
-                <Link to={`/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}> {/* Wrap text with Link */}
-        {page}
-      </Link>
-        
-              </Button>
-            ))}
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: isActive ? 'secondary.main' : 'primary.dark',
+                  fontWeight: isActive ? 'bold' : 'normal',
+                  display: 'block',
+                }}
+                >
+                  <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {page}
+                  </Link>
+                </Button>
+              );
+              })}
+                  </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-<Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+
+      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => {
+              const toPath = page === 'Home' ? '/' : `/${page.replace(' ', '-')}`;
+              const isActive = currentPage === toPath;
+
+              return (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ 
+                    my: 2, 
+                    color: isActive ? 'secondary.main' : 'primary.dark', 
+                    fontWeight: isActive ? 'bold' : 'normal', 
+                    display: 'block' 
+                  }}
+                >
+                  <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {page}
+                  </Link>
+                </Button>
+              );
+            })}
+          </Box>
+           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
             <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}>
                 <Instagram />
@@ -128,37 +136,11 @@ function ResponsiveAppBar() {
                 <Facebook />
               </IconButton>
             </a>
-       <a href="mailto:your.email@example.com">
+            <a href="mailto:your.email@example.com">
               <IconButton sx={{ color: 'black' }}>
                 <Email />
               </IconButton>
             </a>
-          </Box>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography
-                          textAlign="center"
-                 
-                      >{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

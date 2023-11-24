@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <Container>
       <ContentSection>
-        <Typography variant="h4" gutterBottom>Hem</Typography>
+        <Typography variant="h1" gutterBottom>Hem</Typography>
         <Typography paragraph>
           Introductory text about your service, mission, or key message.
         </Typography>
