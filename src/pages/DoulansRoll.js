@@ -3,9 +3,9 @@ import React from 'react';
 import ResponsiveImage from '../components/responsiveImages';
 import twomomsMb from '../assets/images/twomoms-mobile.webp';
 import twomomsDt from '../assets/images/twomoms-desktop.webp';
-import partneDt from '../assets/images/partnerdoula-dt.webp';
+/* import partneDt from '../assets/images/partnerdoula-dt.webp';
 import partnerMb from '../assets/images/partnerdoula-mb.webp';
-import partnerTb from '../assets/images/partnerdoula-tb.webp';
+import partnerTb from '../assets/images/partnerdoula-tb.webp'; */
 import styled from 'styled-components';
 import { Box, Typography, Container } from '@mui/material';
 import { MdOutlinePregnantWoman } from 'react-icons/md'; // Example icon
