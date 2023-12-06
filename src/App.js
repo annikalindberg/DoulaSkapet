@@ -12,6 +12,9 @@ import Fakta from './pages/Fakta';
 import styled from 'styled-components';
 import background from './assets/images/bg-img.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 const Background = styled.div`
 background-image: url(${background});    
