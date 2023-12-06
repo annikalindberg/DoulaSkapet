@@ -8,25 +8,10 @@ import partnerDoulaDesktop from '../assets/images/partnerdoula-dt.webp';
 import twoMomsMobile from '../assets/images/twomoms-mobile.webp';
 import twoMomsTablet from '../assets/images/twomoms-tablet .webp';
 import twoMomsDesktop from '../assets/images/twomoms-desktop.webp';
-import { makeStyles } from '@mui/styles'; // install this library using `npm install @mui/styles`
+
 import TestimonialSlider from '../components/TestemonialsSlider';
 
-const useStyles = makeStyles((theme) => ({
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%',
-    
-  },
-  gridItem: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
-
-}));
-
 const DoulaPaket = () => {
-  const classes = useStyles();
   const handleReadMore = (title) => {
     alert(`Read more about ${title}`);
   };
@@ -83,7 +68,10 @@ const packageImages = {
         { quote: '"Jag är så innerligt tacksam för att Karin fanns vid min sida. Som självstående bestämde jag mig tidigt för att jag ville ha en doula. Kontakten med Karin under graviditeten och som partner under profylaxkursen, byggde upp en stark tillit. Att sedan ha Karin vid sin sida hemma då verkarbetet började ta form, som bollplank och i kontakten med BB var guld värt. "' },
         { quote: '"Den trygghet som jag upplevde både i hennes närvaro och sätt var ovärderlig. Hennes omsorg, lugn, beslutsfattande, klokskap och också fysiska enorma kunskap från sitt yrke som kiropraktor och massör gör henne otroligt lämpad till att vara just doula. "' },
         { quote: '"Hjälpen genom värkarbetet bara genom att trycka på vissa punkter till att ringa samtal, räkna tid mellan värkar och ordna det som behövdes ordnas. Orden, ledsagningen och omsorgen under förlossningen gav stabilitet, kontinuitet och trygghet. Jag kan inte tänka mig någon bättre person än Karin i rollen och jag är så tacksam för allt hon gjorde för mig både innan hemma och på sjukhuset då min dotter föddes. Hennes närvaro både före under och efter. Beslutet att ha med henne på resan är något som jag fortfarande tänker tillbaka på och gläds åt."' },
-        { quote: '"Att ha Karin vid min sida under denna process var ovärdeligt. Ska du föda barn, med partner, som ensamstående eller som jag självstående så kan jag verkligen rekommendera att ha Karin vid din och er sida." '}
+    {
+      quote: '"Att ha Karin vid min sida under denna process var ovärdeligt. Ska du föda barn, med partner, som ensamstående eller som jag självstående så kan jag verkligen rekommendera att ha Karin vid din och er sida." ',
+      author: ' - Susanna',
+    }
 ];    
 
 
@@ -91,13 +79,26 @@ const packageImages = {
   <Box>
      <Grid    
        container
-       margin={2}
-       flex="wrap"
-      spacing={2}>
+     >
       {packages.map((pkg) => (
-        <Grid item xs={12} sm={6} md={4} key={pkg.id} className={classes.gridItem}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          key={pkg.id}
+          sx={{
+            mt: 8,
+            display: 'flex',
+            height: '100%',
+          }}
+   >
           <DoulaPackageCard
-            className={classes.card}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%',
+            }}
             title={pkg.title}
             image={pkg.image}
             description={pkg.description}

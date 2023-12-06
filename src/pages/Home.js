@@ -12,7 +12,8 @@ import  handsholdingbabyTb  from '../assets/images/handsholdingbaby-tablet.webp'
 import  twomomsMb from '../assets/images/twomoms-mobile.webp';
 import  twomomsDt from '../assets/images/twomoms-desktop.webp';
 import { Link } from 'react-router-dom';
-
+import { CTAButton } from '../components/Buttons';
+import { Email } from '@mui/icons-material';
 
 const ContentSection = styled(Box)`
   margin-bottom: 2rem;
@@ -34,9 +35,16 @@ Att föda barn är en av de mest kraftfulla upplevelser en människa kan gå ige
 Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta vid en förlossning. Relationen mellan doulan och den födande bygger på ett ömsesidig förtroende, respekt, öppet sinne, fingertoppskänsla och erfarenhet. Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt.</Typography>
         <Typography paragraph>
           
-          Hoppas att du hittar det du söker, annars är du varmt välkommen att kontakta oss!
-
-        </Typography>
+          Hoppas att du hittar det du söker, annars är du varmt välkommen att  
+  <CTAButton
+  as="a"
+  href={`mailto:doulaskapet@gmail.com`}
+  aria-label="Maila en förfrågan via email"
+>
+  ta kontakt med oss!
+          </CTAButton>
+          </Typography>
+     
         <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
       </ContentSection>
 

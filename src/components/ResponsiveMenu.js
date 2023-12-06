@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 
-const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
+const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
 
 // declare state variables using React's useState hook. anchorElNav and anchorElUser hold the anchor elements for navigation and user menus, initialized as null. 
 function ResponsiveAppBar() {
