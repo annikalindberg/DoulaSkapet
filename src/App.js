@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Doulor from './pages/Doulor';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
-import DoulansRoll from './pages/DoulansRoll';
+import Fakta from './pages/Fakta';
 import styled from 'styled-components';
 import background from './assets/images/bg-img.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -33,7 +33,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Doulor" element={< Doulor />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
-            <Route path="/Doulans Roll" element={<DoulansRoll />} />
+            <Route path="/Fakta" element={< Fakta/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

@@ -33,16 +33,22 @@ const ImageContainer = styled(Box)`
   
 `;
 
-const DoulansRoll = () => {
+const Fakta = () => {
   return (
     <Container>
       <Section>
         <MdOutlinePregnantWoman size={40} color="#d17b88" />
-        <SectionHeader variant="h4" gutterBottom>
-          Doulans Roll
+        <SectionHeader variant="h2" gutterBottom>
+          Vad är en Doula?
         </SectionHeader>
         <SectionContent>
-          Information about the doula effect, the partner's role, testimonials, etc.
+          <Typography paragraph>
+            En doula är en person som har erfarenhet av förlossning och är tränad i att ge stöd och information till den födande kvinnan och hennes närmaste under graviditet, förlossning och den första tiden efteråt. Ordet doula kommer från grekiskan och betyder fritt översatt 'kvinna som ger omvårdnad'. Att kvinnor med erfarenhet från barnafödande hjälper andra kvinnor som föder barn är en urgammal företeelse.
+          </Typography>
+          <Typography paragraph>
+            En doula har inget medicinskt ansvar och ger inga medicinska råd. Hennes roll är tydligt avgränsad i förhållande till personalen på förlossningsavdelningen. Hon är inte heller någon ersättning för barnmorska eller partner. Hon är ett komplement som ger stöd och hjälp på ett sätt som ingen annan kan.
+          </Typography>
+
         </SectionContent>
       </Section>
 
@@ -61,4 +67,4 @@ const DoulansRoll = () => {
   );
 }
 
-export default DoulansRoll;
+export default Fakta;
