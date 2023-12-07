@@ -14,6 +14,9 @@ import background from './assets/images/bg-img.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const Background = styled.div`
@@ -26,6 +29,12 @@ background-size: cover;
 `;
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
   
   return (
     <Router>

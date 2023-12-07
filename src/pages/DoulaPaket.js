@@ -8,6 +8,9 @@ import partnerDoulaDesktop from '../assets/images/partnerdoula-dt.webp';
 import twoMomsMobile from '../assets/images/twomoms-mobile.webp';
 import twoMomsTablet from '../assets/images/twomoms-tablet .webp';
 import twoMomsDesktop from '../assets/images/twomoms-desktop.webp';
+import babyfeetDesktop from '../assets/images/babyfeet-desktop.webp';
+import babyfeetMobile from '../assets/images/babyfeet-mobile.webp';
+import babyfeetTablet from '../assets/images/babyfeet-tablet.webp';
 
 import TestimonialSlider from '../components/TestemonialsSlider';
 
@@ -31,9 +34,9 @@ const packageImages = {
     alt: 'Premium Doula Support',
   },
   3: {
-    mobile: twoMomsMobile,
-    tablet: twoMomsTablet,
-    desktop: twoMomsDesktop,
+    mobile: babyfeetMobile,
+    tablet: babyfeetTablet,
+    desktop: babyfeetDesktop,
     alt: 'Premium Doula Support',
   },
   };
@@ -78,7 +81,9 @@ const packageImages = {
   return (
   <Box>
      <Grid    
-       container
+        container
+    /*     justifyContent={'center'}
+        alignItems={'center'} */
      >
       {packages.map((pkg) => (
         <Grid
@@ -91,6 +96,8 @@ const packageImages = {
             mt: 8,
             display: 'flex',
             height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
    >
           <DoulaPackageCard
@@ -98,6 +105,7 @@ const packageImages = {
               display: 'flex',
               flexDirection: 'column',
               height: '100%',
+           
             }}
             title={pkg.title}
             image={pkg.image}

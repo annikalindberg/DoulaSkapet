@@ -11,9 +11,7 @@ import handsholdingbabyMb  from '../assets/images/handsholdingbaby-mobile.webp';
 import  handsholdingbabyTb  from '../assets/images/handsholdingbaby-tablet.webp';
 import  twomomsMb from '../assets/images/twomoms-mobile.webp';
 import  twomomsDt from '../assets/images/twomoms-desktop.webp';
-import { Link } from 'react-router-dom';
-import { CTAButton } from '../components/Buttons';
-import { Email } from '@mui/icons-material';
+import HeroSection from '../components/HeroSection';
 
 const ContentSection = styled(Box)`
   margin-bottom: 2rem;
@@ -23,7 +21,8 @@ const Home = () => {
   return (
     <Container>
       <ContentSection>
-        <Typography variant="h1" gutterBottom>DoulaSkapet - Trygg Förlossning</Typography>
+        <HeroSection />
+{/*         <Typography variant="h1" gutterBottom>DoulaSkapet - Trygg Förlossning</Typography>
         
         <Typography paragraph> Grattis till graviditeten, och så fint att du hittat till oss.  </Typography> 
         <Typography paragraph>Våra Doulor finns i Stockholm, med omnejd och finns till för att du ska få det stöd som just du/just ni bevöver inför, under och efter förlossning. Oavsett om du är den som ska föda, är partner eller stödperson till någon som ska föda, precis har fött barn eller bara är nyfiken på vad en doula gör, så har du kommit helt rätt.
@@ -43,7 +42,7 @@ Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta 
 >
   ta kontakt med oss!
           </CTAButton>
-          </Typography>
+          </Typography> */}
      
         <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
       </ContentSection>
