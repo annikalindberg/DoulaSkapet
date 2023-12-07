@@ -9,7 +9,7 @@ import partnerTb from '../assets/images/partnerdoula-tb.webp'; */
 import styled from 'styled-components';
 import { Box, Typography, Container } from '@mui/material';
 import { MdOutlinePregnantWoman } from 'react-icons/md'; // Example icon
-
+import InfoIcon from '@mui/icons-material/Info';
 
 // Styled components
 const Section = styled(Box)`
@@ -41,7 +41,17 @@ const Fakta = () => {
         <SectionHeader variant="h2" gutterBottom>
           Vad är en Doula?
         </SectionHeader>
-        <SectionContent>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+            <InfoIcon sx={{ mr: 1 }} />
+                     <Typography>Expertise in various birthing methods.</Typography>
+                       <InfoIcon sx={{ mr: 1 }} />
+                     <Typography>Expertise in various birthing methods.</Typography>
+                       <InfoIcon sx={{ mr: 1 }} />
+            <Typography>Expertise in various birthing methods.</Typography>
+          </Box>
+        <SectionContent>          <Typography paragraph >
+         Att föda barn är en av de mest kraftfulla upplevelser en människa kan gå igenom, och oavsett hur födseln går till så påverkar det oss djupt på många plan: fysiologiskt, emotionellt, mentalt och själsligt.
+          </Typography>
           <Typography paragraph>
             En doula är en person som har erfarenhet av förlossning och är tränad i att ge stöd och information till den födande kvinnan och hennes närmaste under graviditet, förlossning och den första tiden efteråt. Ordet doula kommer från grekiskan och betyder fritt översatt 'kvinna som ger omvårdnad'. Att kvinnor med erfarenhet från barnafödande hjälper andra kvinnor som föder barn är en urgammal företeelse.
           </Typography>

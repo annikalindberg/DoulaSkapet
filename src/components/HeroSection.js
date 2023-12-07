@@ -30,10 +30,21 @@ const HeroSection = () => {
 >
   DoulaSkapet - Trygg Förlossning
 </Typography>
-             <Typography paragraph data-aos="fade-right"> Grattis till graviditeten, och så fint att du hittat till oss.  </Typography> 
-                     <Box>
-          {/* Bullet points or short paragraphs with icons */}
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+       <Typography paragraph fontSize={{ xs: '0.5rem', sm: '0.8rem', md: '1.4rem', lg: '1.75rem' }}
+         data-aos="fade-right"> Grattis till graviditeten! Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt. </Typography> 
+       <Box>
+         <Typography variant='h2' data-aos="fade-left">DoulaSkapet</Typography>
+         <Typography paragraph data-aos="fade-left">DoulaSkapet doulorna: Dunja, Karin, Jenny och Annika. Vi är verksamma och boende i Stockholm med omnejd och vårt gemensamma uppdrag är att vi ska erbjuda dig och din familj just det stöd som du - ni behöver, för att göra resan genom graviditeten och förlossningen till en så trygg och fantastisk upplevelse som möjligt. Vårt stöd är anpassat till att kunna skräddarsys helt efter behov och önskemål. Och vi älskar det vi gör. 
+         
+         </Typography>
+           <Typography paragraph>
+          
+          
+          Inom DoulaSkapet arbetar vi utifrån beprövade metoder, samt utifrån den unika person du/ni är och dina/era val. </Typography>
+        </Box>
+
+             
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <InfoIcon sx={{ mr: 1 }} />
                      <Typography>Expertise in various birthing methods.</Typography>
                        <InfoIcon sx={{ mr: 1 }} />
@@ -41,34 +52,27 @@ const HeroSection = () => {
                        <InfoIcon sx={{ mr: 1 }} />
             <Typography>Expertise in various birthing methods.</Typography>
           </Box>
-          {/* Repeat for other points */}
-        </Box>
-
-             <Typography paragraph data-aos="fade-left">Våra Doulor finns i Stockholm, med omnejd och finns till för att du ska få det stöd som just du/just ni bevöver
-                 inför, under och efter förlossning. Oavsett om du är den som ska föda, är partner eller stödperson till någon som ska föda, precis har fött barn eller bara är nyfiken på vad en doula gör, så har du kommit helt rätt.
-          
-          Inom DoulaSkapet arbetar vi utifrån beprövade metoder, samt utifrån den unika person du/ni är och dina/era val. </Typography>
-          
              <Typography
-                 variant='h2'
+                 variant='h3'
                  sx={{
                       fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' }, // Adjust font size based on screen size
     mt: 6, mb:3 // Adds margin-top for spacing above the element
                  }}
              >DoulaSkapet - vår filosofi </Typography>
-              <Typography paragraph >
-Att föda barn är en av de mest kraftfulla upplevelser en människa kan gå igenom, och oavsett hur födseln går till så påverkar det oss djupt på många plan: fysiologiskt, emotionellt, mentalt och själsligt.
-
-Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta vid en förlossning. Relationen mellan doulan och den födande bygger på ett ömsesidig förtroende, respekt, öppet sinne, fingertoppskänsla och erfarenhet. Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt.</Typography>
+    
         <Typography paragraph>
-          
-          Hoppas att du hittar det du söker, annars är du varmt välkommen att  </Typography>
+         Relationen mellan doulan och den födande bygger på ett ömsesidigt förtroende, en djup respekt och lyhördhet för den födandes behov och önskan, ett ständigt öppet sinne samt en fingertoppskänsla byggd på en lång erfarenhet och en intuitiv förmåga.
+         </Typography>
+          <Typography paragraph>
+         Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Från "plusset på stickan" till och med den fjärde trimestern, eller postpartum - den första tiden med er nya lilla familjemedlem, så har vi det ni behöver i form av stöd och trygghet.
+         
+         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. </Typography>
         <CTAButton
           as="a"
           href={`mailto:doulaskapet@gmail.com`}
           aria-label="Maila en förfrågan via email"
         >
-          ta kontakt med oss!
+          ta kontakt med oss idag!
         </CTAButton>
       </Box>
          <Box
@@ -82,7 +86,8 @@ Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta 
             width: '100%' // Responsive image width
 
         }}
-      />
+     />
+     <Typography paragraph> Eller kika in på våra respektive profil för att se vilka olika tjänster vi kan erbjuda!</Typography>
     </Box>
   );
 };
