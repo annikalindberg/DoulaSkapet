@@ -13,16 +13,15 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 
-const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; // These are your page names as they will appear in the menu. To add a space between words, use a space in the string. For example: 'Doula Paket' but then you need to add the route in App.js as well. 
+const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; 
 
-// declare state variables using React's useState hook. anchorElNav and anchorElUser hold the anchor elements for navigation and user menus, initialized as null. 
+
 function ResponsiveAppBar() {
   const location = useLocation();
   const currentPage = location.pathname;
   const [anchorElNav, setAnchorElNav] = React.useState(null); 
 
 
-  // eventhandlers for opening and closing the menu. handleOpenNavMenu and handleOpenUserMenu set the anchorElNav and anchorElUser to the currentTarget of the event, which is the element that triggered the event. handleCloseNavMenu and handleCloseUserMenu set the anchorElNav and anchorElUser to null, closing the menu.
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -45,7 +44,7 @@ function ResponsiveAppBar() {
               <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem" }} />
             </Box>
           </Link>
-{/* This v section creates a menu icon (hamburger icon) for mobile views. When clicked, it opens a menu (Menu) containing navigation items. The IconButton is a button specifically designed to hold icons. */}
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -126,7 +125,7 @@ function ResponsiveAppBar() {
             })}
           </Box>
            <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
-            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/doulaskapet__tryggforlossning/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}>
                 <Instagram />
               </IconButton>

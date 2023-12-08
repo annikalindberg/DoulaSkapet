@@ -2,12 +2,7 @@ import React from 'react';
 import PresentationsCards from '../components/PresentationsCards';
 import Grid from '@mui/material/Grid';
 import { Box, Typography, Paper } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Dunja from '../assets/images/Dunja.jpeg';
-/* import Jenny from '../assets/images/Jenny.jpeg';
- */import Karin from '../assets/images/Karin.jpeg';
 
-import TestimonialSlider from '../components/TestemonialsSlider';
 
 const Doulor = () => {
   const handleReadMore = (title) => {
@@ -18,65 +13,65 @@ const Doulor = () => {
   // Image paths for the packages
 const doulaImages = {
   1: {
-    mobile: Dunja,
-    alt: 'Basic Doula Support',
+    mobile: '/optimized-images/Annika.webp', // HERE IT WORKS WITH any image
+    alt: 'Annika Lindberg',
   },
+
   2: {
-mobile: Dunja,
-    alt: 'Premium Doula Support',
+    mobile: '/optimized-images/Karin.webp', // not working
+    alt : 'Karin Dernulf',
   },
   3: {
-    mobile: Karin,
-    alt: 'Premium Doula Support',
-  },
+    mobile: '/optimized-images/Dunja.webp', //not working 
+    alt: 'Dunja Grisell',
+    },
+  
   4: {
-    mobile: Karin,
-    alt: 'Premium Doula Support',
-  },
+    mobile: '/optimized-images/Jenny.webp', 
+    alt: 'Jenny',
+    },
   };
+
 
   // Details for the packages
   const doulor = [
     {
       id: 1,
-      title: 'Jenny',
-      description: 'Jenny ...',
-      price: 'Prisuppgifter kommer...',
-      image: doulaImages[1],
+      title: 'Annika Lindberg',
+      description: ' Som doula drivs jag av ett stort intresse för allt som har med graviditet, födande och kroppen att göra, och ägnar mig själv åt yoga, meditation och breathwork som olika tekniker för att "komma ner i kroppen". I födandets skeden vill vi vara i kroppen snarare än i i hjärnan, vilket ofta är den största utmaningen utifrån det vi är vana vid. Jag har egen levd erfarenhet av IVF och att föda barn utanför heteronormen. Jag bor med min fru, vår dotter Ronja och våra hundar i ett radhus i Skogås, Stockholm. En stor del i mitt doulande är att skapa ett tryggt rum, "ett sacred space" för födandet. Min övertygelse är nämligen att alla kroppar som kan bära ett barn, också kan föda barn. Jag vet även att den födande kroppen ser ut på olika sätt, den kan bära på erfarenheter av olika slag, men oavsett hur hur den är utformad eller känns inifrån så KAN DEN FÖDA. Så länge den har de yttre förutsättningar som krävs för födandet att ske. Och det är här jag som doula kommer in i bilden.',
+      image: doulaImages[1],  
     },
     {
       id: 2,
-      title: 'Akut-Doula',
-      description: 'Ibland blir det inte som en tänkt sig. Vi erbjuder tjänsten akut-doula om vi har möjlighet. Kontakta oss direkt via "akut-doula" formuläret, där vi ser till att svara så snart vi bara kan',
+      title: 'Karin Dernulf',
+      description: 'Vid en förlossning kan man behöva hjälp att lita på sin kropp & att den klarar den fysiska prestationen. Kroppen har oanade krafter och förmågor och det ska vi ta tillvara på. Jag hjälper dig att ha tillit till din kropp och att lyssna på den under förlossningen.Till vardags jobbar jag som leg. kiropraktor och har en god förmåga att vara lyhörd för vad varje person behöver för att känna sig trygg. Att nu få doula födande är ett stort förtroende och jag ser fram emot att få vägleda fler i detta magiska ögonblick i livet.',
       price: 'Prisuppgifter kommer...',
       image: doulaImages[2], // Link the images directly here
 
     },
     {
       id: 3,
-      title: 'Doula Postpartum Support',
-      description: 'Description of Doula Support...',
-      price: 'Prisuppgifter kommer snart...',
+      title: 'Dunja Grisell',
+      description: 'Jag har egen erfarenhet av att föda på sjukhus, på sjukhus med egen barnmorska, planerad hemförlossning samt kejsarfödsel. Jag är även utbildad peer supporter, vilket innebär att jag har erfarenhet och kunskap om hur man stöttar människor i svåra livsomständigheter, vid kris och i återhämntning. Jag jobbar traumamedvetet, vilket innebär att jag gärna har extra samtal kring eventuella trauman som kan finnas kring sjukvård eller den egna kroppen. Mitt fokus är trygghet och relationsskapande. Hur skapar vi trygghet i en otrygg värld? Jag vill stärka dig i att känna dig trygg i din egen kropp. Det är inte ett maraton du ska springa, det är ditt livs största utmaning vad gäller din tillit till dig själv och din kropp.',
+      price: 'Prisuppgifter kommer...',
       image: doulaImages[3],
+    },
+    {
+      id: 4,
+      title: 'Jenny ',
+      description: 'Till vardags pluggar jag till sjuksköterska, är mamma till en liten Astrid, fru till min man och bor i radhus i Gustavsberg. Egen förlossningserfarenhet är genom ur-akut kejsarfödsel i 30:e graviditetsveckan och därefter boendes på Neonatal-avdelning i 10 veckor. Att föda för tidigt kan vara både planerat och oplanerat och oavsett varför och hur så vet jag att i en sådan situation behövs extra mycket stöd! Jag är superintresserad av allt som har med graviditet och förlossning att göra och att nu ha påbörjat mitt doula-arbete känns SÅ spännande! Att föda barn är något magiskt. Det är tungt, vackert, läskigt, spännande, overkligt, obehagligt, underbart, smärtsamt och allt däremellan – självklart behövs stöd i det som sker, både fysiskt och mentalt till födande och en ev. partner. Du/ni har all rätt till en positiv förlossningsupplevelse, ditt barn har rätt till en anknytande första tid i livet utanför magen och detta vill jag som doula stötta er till att få! Mina ledord är lyhördhet, samspel och trygghet.',
+      price: 'Prisuppgifter kommer snart...',
+      image: doulaImages[4],
     }
   ];
 
-  const testimonials = [
-        { quote: '"Jag är så innerligt tacksam för att Karin fanns vid min sida. Som självstående bestämde jag mig tidigt för att jag ville ha en doula. Kontakten med Karin under graviditeten och som partner under profylaxkursen, byggde upp en stark tillit. Att sedan ha Karin vid sin sida hemma då verkarbetet började ta form, som bollplank och i kontakten med BB var guld värt. "' },
-        { quote: '"Den trygghet som jag upplevde både i hennes närvaro och sätt var ovärderlig. Hennes omsorg, lugn, beslutsfattande, klokskap och också fysiska enorma kunskap från sitt yrke som kiropraktor och massör gör henne otroligt lämpad till att vara just doula. "' },
-        { quote: '"Hjälpen genom värkarbetet bara genom att trycka på vissa punkter till att ringa samtal, räkna tid mellan värkar och ordna det som behövdes ordnas. Orden, ledsagningen och omsorgen under förlossningen gav stabilitet, kontinuitet och trygghet. Jag kan inte tänka mig någon bättre person än Karin i rollen och jag är så tacksam för allt hon gjorde för mig både innan hemma och på sjukhuset då min dotter föddes. Hennes närvaro både före under och efter. Beslutet att ha med henne på resan är något som jag fortfarande tänker tillbaka på och gläds åt."' },
-    {
-      quote: '"Att ha Karin vid min sida under denna process var ovärdeligt. Ska du föda barn, med partner, som ensamstående eller som jag självstående så kan jag verkligen rekommendera att ha Karin vid din och er sida." ',
-      author: ' - Susanna',
-    }
-];    
 
-
+  
    return (
-        <Box>
-            <Grid container>
+<Box sx={{ maxWidth: 'lg', margin: 'auto', paddingTop: '50px' }}> {/* Adjust the maxWidth value as needed */}
+            <Grid container spacing={2}  justifyContent="center">
                 {doulor.map((doula) => (
-                    <Grid item xs={12} sm={12} md={6} key={doula.id}>
+                    <Grid item xs={12} sm={6} md={6} key={doula.id} sx={{ display: 'flex', justifyContent: 'center' }}>
                         <PresentationsCards
                             title={doula.title}
                             image={doula.image} // Pass the image here
@@ -85,10 +80,11 @@ mobile: Dunja,
                     </Grid>
                 ))}
             </Grid>
-         <TestimonialSlider testimonials={testimonials} />
+        
     </Box >
-      
-  );
+   );
 };
+
+
 
 export default Doulor;

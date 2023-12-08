@@ -28,6 +28,42 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Absolutely, here are the steps to follow for the Image Optimization Process, which you can include in your README under the "Image Optimization Process" header:
+
+## Image Optimization Process
+
+This project includes an automated image optimization process using Sharp, a high-performance Node.js module. This process ensures that all images are uniformly resized and converted to a web-friendly format, enhancing the application's performance.
+
+### Steps to Optimize Images:
+
+1. **Prepare Your Images**:
+   - Place any new images you want to optimize in the `src/assets/images` directory.
+
+2. **Run the Optimization Script**:
+   - Execute the script by running `npm run prebuild` in your terminal. This command processes all the images in the `src/assets/images` directory, resizing and converting them to the specified format and dimensions.
+   - The processed images will be saved in the `public/optimized-images` directory.
+
+3. **Update Image References in Your Application**:
+   - In your React components, reference the optimized images from the `public/optimized-images` directory. For example:
+     ```jsx
+     <img src="/optimized-images/your-optimized-image.webp" alt="Descriptive Alt Text" />
+     ```
+
+4. **Rebuild Your Application**:
+   - After updating image references, rebuild your application to reflect these changes. Use the command:
+     ```bash
+     npm run build
+     ```
+
+5. **Deploy Your Application**:
+   - Once you have rebuilt your application with the optimized images, proceed with your usual deployment process.
+
+### Notes:
+
+- **Script Location**: The image optimization script, `optimize-images.js`, is located in the root directory of the project.
+- **Automated Creation of Directories**: If the `public/optimized-images` directory does not exist, the script will automatically create it.
+- **Supported Formats**: The script currently processes JPEG, PNG, and WebP formats. Other formats like SVG are skipped.
+- **Supported Image Dimensions**: The script currently processes images with a width of 800px or greater. Images with a width less than 800px are skipped.
 
 ### `npm run eject`
 

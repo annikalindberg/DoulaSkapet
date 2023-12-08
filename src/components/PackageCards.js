@@ -11,7 +11,7 @@ const DoulaPackageCard = ({ title, image, description, onReadMore }) => {
   const hasImage = image && image.mobile && image.tablet && image.desktop;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }}> 
       {hasImage && (
         <ResponsiveImage
           mobile={image.mobile}

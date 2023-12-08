@@ -2,15 +2,7 @@ import React from 'react';
 import DoulaPackageCard from '../components/PackageCards'; // Adjust the import path as necessary
 import Grid from '@mui/material/Grid';
 import { Box, Typography, Paper } from '@mui/material';
-import partnerDoulaMobile from '../assets/images/partnerdoula-mb.webp';
-import partnerDoulaTablet from '../assets/images/partnerdoula-tb.webp';
-import partnerDoulaDesktop from '../assets/images/partnerdoula-dt.webp';
-import twoMomsMobile from '../assets/images/twomoms-mobile.webp';
-import twoMomsTablet from '../assets/images/twomoms-tablet .webp';
-import twoMomsDesktop from '../assets/images/twomoms-desktop.webp';
-import babyfeetDesktop from '../assets/images/babyfeet-desktop.webp';
-import babyfeetMobile from '../assets/images/babyfeet-mobile.webp';
-import babyfeetTablet from '../assets/images/babyfeet-tablet.webp';
+
 
 import TestimonialSlider from '../components/TestemonialsSlider';
 
@@ -22,22 +14,23 @@ const DoulaPaket = () => {
   // Image paths for the packages
 const packageImages = {
   1: {
-    mobile: partnerDoulaMobile,
-    tablet: partnerDoulaTablet,
-    desktop: partnerDoulaDesktop,
-    alt: 'Basic Doula Support',
+    mobile: '/optimized-images/twomoms-mobile.webp',
+    tablet: '/optimized-images/twomoms-tablet.webp',
+    desktop: '/optimized-images/twomoms-desktop.webp',
+    alt: 'Two moms with baby',
   },
   2: {
-    mobile: twoMomsMobile,
-    tablet: twoMomsTablet,
-    desktop: twoMomsDesktop,
-    alt: 'Premium Doula Support',
+    mobile: '/optimized-images/partnerdoula-mb.webp',
+    tablet: '/optimized-images/partnerdoula-tb.webp',
+    desktop: '/optimized-images/partnerdoula-dt.webp',
+    alt: 'Partner adn doula supporting pregnant woman',
+ 
   },
   3: {
-    mobile: babyfeetMobile,
-    tablet: babyfeetTablet,
-    desktop: babyfeetDesktop,
-    alt: 'Premium Doula Support',
+    mobile: '/optimized-images/babyfeet-mobile.webp',
+    tablet: '/optimized-images/babyfeet-tablet.webp',
+    desktop: '/optimized-images/babyfeet-desktop.webp',
+    alt: 'baby feet',
   },
   };
 
