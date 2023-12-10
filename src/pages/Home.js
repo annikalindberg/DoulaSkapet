@@ -22,27 +22,6 @@ const Home = () => {
     <Container>
       <ContentSection>
         <HeroSection />
-{/*         <Typography variant="h1" gutterBottom>DoulaSkapet - Trygg Förlossning</Typography>
-        
-        <Typography paragraph> Grattis till graviditeten, och så fint att du hittat till oss.  </Typography> 
-        <Typography paragraph>Våra Doulor finns i Stockholm, med omnejd och finns till för att du ska få det stöd som just du/just ni bevöver inför, under och efter förlossning. Oavsett om du är den som ska föda, är partner eller stödperson till någon som ska föda, precis har fött barn eller bara är nyfiken på vad en doula gör, så har du kommit helt rätt.
-          
-          Inom DoulaSkapet arbetar vi utifrån beprövade metoder, samt utifrån den unika person du/ni är och dina/era val. </Typography>
-        <Typography paragraph >DoulaSkapet - vår filosofi
-Att föda barn är en av de mest kraftfulla upplevelser en människa kan gå igenom, och oavsett hur födseln går till så påverkar det oss djupt på många plan: fysiologiskt, emotionellt, mentalt och själsligt.
-
-Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta vid en förlossning. Relationen mellan doulan och den födande bygger på ett ömsesidig förtroende, respekt, öppet sinne, fingertoppskänsla och erfarenhet. Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt.</Typography>
-        <Typography paragraph>
-          
-          Hoppas att du hittar det du söker, annars är du varmt välkommen att  
-  <CTAButton
-  as="a"
-  href={`mailto:doulaskapet@gmail.com`}
-  aria-label="Maila en förfrågan via email"
->
-  ta kontakt med oss!
-          </CTAButton>
-          </Typography> */}
      
         <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
       </ContentSection>
@@ -88,11 +67,9 @@ Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta 
         <Typography paragraph>
           Finns det en partner/stödperson med, är det en stor fördel att ha med sig en doula som kan stötta både dig och din partner/stödperson under förlossningen. Du som partner/stödperson är den som känner den som föder allra bäst, och doulans uppgift är därför att se till att DU har det stöd som DU behöver för att vara det. Med en doula har du som partner/stödperson en större möjlighet att vara mer delaktig i och vara mer närvarande för den som föder. Många upplever att med doulans närvaro tenderar partnerns/ stödpersonens engagemang att öka under förlossningen och upplever sig kunna vara mer närvarande. </Typography>
         <Typography variant='h2'>DoulaSkapet - trygghet på dina villkor</Typography>
-        <Typography paragraph> Graviditet och födsel innebär ofta att vila i det okända, men vi fokuserar på de aspekter som faktiskt går att planera och förbereda för att skapa så mycket trygghet som möjligt. DoulaSkapets doulor är alla certifierade förlossningsdoulor som arbetar utifrån samma stabila grund och är utbildare inom Föda Utan Rädslas-metoder.</Typography>
+  
         <Typography variant='h3'>Föda Utan Rädsla (FUR) </Typography>
-        <Typography paragraph>Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen, samt välkomna ett nytt litet liv till världen. 
-
-          Vi är alla diplomerade doulor som jobbar utifrån Föda Utan Rädsla-metoden. Metoden har praktiska och effektiva verktyg för att minska stress och rädsla under förlossningen. Föda Utan Rädsla-metoden har redan använts av tusentals födande i flera länder och allt fler professionella vårdgivare och sjukhus låter sig utbildas i vår unika omvårdnadsmodell (SAFE). FUR-metoden fokuserar på att stärka din och ditt barns egen förmåga och kraft som redan finns inom er. Vi vet att både du och barnet redan har all kunskap ni behöver för att föda och födas. Våra metoder vilar på en stabil grund av fysiologisk kunskap och innehåller en bredd av verktyg som är utvecklade kring bevisade effekter. Läs mer om Föda Utan Rädsla-metoden här:  </Typography>
+        <Typography paragraph>Föda Utan Rädsla-metoden har redan använts av tusentals födande i flera länder och allt fler professionella vårdgivare och sjukhus låter sig utbildas i vår unika omvårdnadsmodell (SAFE). FUR-metoden fokuserar på att stärka din och ditt barns egen förmåga och kraft som redan finns inom er. Vi vet att både du och barnet redan har all kunskap ni behöver för att föda och födas. Våra metoder vilar på en stabil grund av fysiologisk kunskap och innehåller en bredd av verktyg som är utvecklade kring bevisade effekter. Läs mer om Föda Utan Rädsla-metoden här:  </Typography>
         <a
           href="https://fodautanradsla.se/om/metoden"
           target="_blank"
@@ -104,7 +81,7 @@ Vi i DoulaSkapet tycker det är helt fantastiskt att få närvara och få delta 
             Vi vill att du/ni ska känna trygghet och förutsägbarhet på alla sätt där det går. </Typography>
         <Typography variant='h3'>Du är unik </Typography>  
           <Typography paragraph> Precis som att du är unik så är din födsel det, oavsett om det är din första eller tredje så är varje person och varje barn unikt och har behov som är unika. Inom DoulaSkapet är vi noga med att inte tro oss veta, utan vill lära känna dig som födande och eventuell partner/stödperson/medförälder innan vi skräddarsyr vårt stöd. Vi vill kunna möta varje unik situation med respekt, omsorg och professionalitet. Vi är också medvetna om att graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanhang utifrån en minoritetsstress som är svår att sätta sig in i utan att själv ha egen levd erfarenhet.</Typography> 
-        <Typography paragraph> Våra doulor bär på egen erfarenhet av att föda utanför heteronormen, och har förståelse för de unika behov och erfarenheter det kan medföra som gravid och som partner till den som föder Som doulor vill vi skapa en så trygg upplevelse som möjligt i mötet med förlossningsvården.</Typography>.
+    
         <Typography variant='h3'> Traumamedvetenhet </Typography>
         <Typography paragraph> Vi är medvetna om att det kan finnas en historia av trauma i bagaget hos den som föder, och att det kan påverka förlossningsupplevelsen. Inom DoulaSkapet arbetar vi traumamedvetenhet och möter dig/er utifrån det. </Typography>
         <Typography variant='h3'> Tillgång till nätverk och kompetens </Typography>

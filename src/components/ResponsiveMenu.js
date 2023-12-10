@@ -11,7 +11,7 @@ import logoImage from '../assets/nobg-logo.svg';
 import { Instagram, Facebook, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-
+import { useTheme } from '@mui/material/styles';
 
 const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; 
 
@@ -20,7 +20,7 @@ function ResponsiveAppBar() {
   const location = useLocation();
   const currentPage = location.pathname;
   const [anchorElNav, setAnchorElNav] = React.useState(null); 
-
+      const theme = useTheme();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
 //  disableGutters removes default padding. sx is the style prop for MUI components.
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "primary.light"}}>
+    <AppBar position="static" sx={{ bgcolor: theme.palette.custom.glassBackgroundDark}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* v wraps the logo with a link leading to / */}

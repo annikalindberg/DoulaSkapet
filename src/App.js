@@ -10,8 +10,8 @@ import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import Fakta from './pages/Fakta';
 import styled from 'styled-components';
-import background from './assets/images/bg-img.svg';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import background from './assets/images/bg-doulaskapet.svg';
+ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <Router>
       <ThemeProvider theme={Theme} >
-        <Background>
+      <Background> 
           <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -50,7 +50,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />
-        </Background>
+       </Background>
       </ThemeProvider>
     </Router>
   );

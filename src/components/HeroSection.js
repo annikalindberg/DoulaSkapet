@@ -66,16 +66,18 @@ const HeroSection = () => {
           <Typography paragraph>
          Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Från "plusset på stickan" till och med den fjärde trimestern, eller postpartum - den första tiden med er nya lilla familjemedlem, så har vi det ni behöver i form av stöd och trygghet.
          
-         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. </Typography>
-        <CTAButton
+         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att 
+         <CTAButton
+    
           as="a"
           href={`mailto:doulaskapet@gmail.com`}
           aria-label="Maila en förfrågan via email"
         >
-          ta kontakt med oss idag!
-        </CTAButton>
-      </Box>
+       skicka en förfrågan!
+       </CTAButton>  </Typography> <Typography paragraph> Eller kika in på våra respektive profil för att se vilka olika tjänster vi kan erbjuda!</Typography>   </Box>  
+       
          <Box
+ 
              data-aos="fade-left"
         component="img"
         src={HighFiveSVG}
@@ -87,7 +89,7 @@ const HeroSection = () => {
 
         }}
      />
-     <Typography paragraph> Eller kika in på våra respektive profil för att se vilka olika tjänster vi kan erbjuda!</Typography>
+ 
     </Box>
   );
 };
