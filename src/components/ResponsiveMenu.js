@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,8 +13,10 @@ import { Instagram, Facebook, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+import Submenu from './SubMenu';
 
 const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; 
+
 
 
 function ResponsiveAppBar() {
@@ -21,18 +24,34 @@ function ResponsiveAppBar() {
   const currentPage = location.pathname;
   const [anchorElNav, setAnchorElNav] = React.useState(null); 
       const theme = useTheme();
+  const [openDesktopSubmenu, setOpenDesktopSubmenu] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = (event, page) => {
     setAnchorElNav(event.currentTarget);
+    if (page === 'DoulaPaket') {
+      setOpenSubmenu(!openSubmenu);
+    } else {
+      setOpenSubmenu(false);
+    }
+    console.log(page);
+    console.log(openSubmenu);
+  };
+  // Function to handle opening submenus in desktop mode
+  const handleDesktopSubmenuOpen = (page) => {
+    setOpenDesktopSubmenu(page);
   };
 
+  // Function to handle closing submenus in desktop mode
+  const handleDesktopSubmenuClose = () => {
+    setOpenDesktopSubmenu(null);
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    setOpenSubmenu(false); // Close the submenu when the menu is closed
   };
 
-
-//  disableGutters removes default padding. sx is the style prop for MUI components.
+const [openSubmenu, setOpenSubmenu] = React.useState(false);  
 
   return (
     <AppBar position="static" sx={{ bgcolor: theme.palette.custom.glassBackgroundDark}}>
@@ -75,52 +94,62 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-            {pages.map((page) => {
+              {pages.map((page) => {
                 const toPath = page === 'Home' ? '/' : `/${page.replace(' ', '-')}`;
-                const isActive = currentPage === toPath;
-
-
-              return (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: isActive ? 'secondary.main' : 'primary.dark',
-                  fontWeight: isActive ? 'bold' : 'normal',
-                  display: 'block',
-                }}
-                >
-                  <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
-                    {page}
-                  </Link>
-                </Button>
-              );
+                const menuItems = [
+                  <Button
+                    key={page}
+                    onClick={(e) => handleOpenNavMenu(e, page)}
+                    sx={{
+                      my: 2,
+                      color: 'primary.dark',
+                      fontWeight: 'normal',
+                      display: 'block',
+                    }}
+                  >
+                    <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {page}
+                    </Link>
+                  </Button>,
+                  <Submenu
+                    key={`${page}-submenu`}
+                    pageName={page}
+                    isOpen={openSubmenu && page === 'DoulaPaket'}
+                    handleCloseNavMenu={handleCloseNavMenu}
+                  />
+                ];
+                return menuItems;
               })}
-                  </Menu>
+            </Menu>
           </Box>
-
 
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => {
               const toPath = page === 'Home' ? '/' : `/${page.replace(' ', '-')}`;
               const isActive = currentPage === toPath;
 
-              return (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ 
-                    my: 2, 
-                    color: isActive ? 'secondary.main' : 'primary.dark', 
-                    fontWeight: isActive ? 'bold' : 'normal', 
-                    display: 'block' 
-                  }}
-                >
-                  <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
-                    {page}
-                  </Link>
-                </Button>
+                          return (
+                            <div
+                              style={{position: 'relative'}}
+                              key={page}
+                              onMouseEnter={() => handleDesktopSubmenuOpen(page)} onMouseLeave={handleDesktopSubmenuClose}>
+                  <Button
+                    sx={{ my: 2, color: 'primary.dark', fontWeight: 'normal', display: 'block' }}
+                  >
+                    <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {page}
+                    </Link>
+                  </Button>
+                  {/* Display the submenu for this page if it is open */}
+                              {openDesktopSubmenu === page && (
+                                
+                    <Submenu
+                      pageName={page}
+                      isOpen={true}  // Always open since we are handling it with mouse events
+                      handleCloseNavMenu={handleDesktopSubmenuClose}
+                    />
+                  )}
+                </div>
               );
             })}
           </Box>

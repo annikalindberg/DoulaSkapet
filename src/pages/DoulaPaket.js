@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import { Box, Typography, Paper } from '@mui/material';
 
 
-import TestimonialSlider from '../components/TestemonialsSlider';
+import TestimonialSlider from './TestemonialsSlider';
 
 const DoulaPaket = () => {
   const handleReadMore = (title) => {

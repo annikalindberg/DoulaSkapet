@@ -17,7 +17,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-
+import PostpartumSupport from './pages/PostPartumSupport';
+import AkutDoula from './pages/AkutDoula';  
+import Baspaket from './pages/DoulaPaketBas';
 
 const Background = styled.div`
 background-image: url(${background});    
@@ -45,7 +47,9 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Doulor" element={< Doulor />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
-            
+            <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
+            <Route path="/DoulaPaket/PostpartumSupport" element={<PostpartumSupport />} />
+            <Route path="/DoulaPaket/Akut-Doula" element={<AkutDoula />} />
             <Route path="/Fakta" element={< Fakta/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
