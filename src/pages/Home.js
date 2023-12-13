@@ -22,7 +22,7 @@ const Home = () => {
     <Container>
       <ContentSection>
         <HeroSection />
-     
+
         <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
       </ContentSection>
 

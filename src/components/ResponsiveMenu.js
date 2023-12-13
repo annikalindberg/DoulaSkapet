@@ -54,7 +54,10 @@ function ResponsiveAppBar() {
 const [openSubmenu, setOpenSubmenu] = React.useState(false);  
 
   return (
-    <AppBar position="static" sx={{ bgcolor: theme.palette.custom.glassBackgroundDark}}>
+    <AppBar position="static" sx={{
+      color: theme.palette.text.dark,
+      bgcolor: theme.palette.custom.glassBackgroundDark
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* v wraps the logo with a link leading to / */}

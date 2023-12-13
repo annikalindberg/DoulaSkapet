@@ -4,39 +4,48 @@ import { Box, Typography } from '@mui/material';
 import HighFiveSVG from '../assets/highfive.svg'; // Adjust the path
 import { CTAButton } from './Buttons';
 import InfoIcon from '@mui/icons-material/Info';
-
+import DoulaSlider from './DoulaSlider';
 
 const HeroSection = () => {
+ 
  return (
 
-    <Box
+<Box
       sx={{
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
+        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-around',
-        textAlign: { xs: 'center', md: 'left' }
+        textAlign: 'center',
+        gap: 2 // Adds space between elements
       }}
       data-aos="fade-up"
     >
-      <Box sx={{ maxWidth: { md: '60%' } }}>
+      <Box sx={{ maxWidth: '70%'}}> 
         <Typography variant="h1" gutterBottom sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' }, mt: 8, mb: 5 }}>
           DoulaSkapet - Trygg Förlossning
         </Typography>
-        <Typography paragraph fontSize={{ xs: '0.5rem', sm: '0.8rem', md: '1.4rem', lg: '1.75rem' }}>
+        <Typography gutterBottom paragraph >
           Grattis till graviditeten! Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
         </Typography> 
        <Box>
-         <Typography variant='h2' data-aos="fade-left">DoulaSkapet</Typography>
-         <Typography paragraph data-aos="fade-left">DoulaSkapet doulorna: Dunja, Karin, Jenny och Annika. Vi är verksamma och boende i Stockholm med omnejd och vårt gemensamma uppdrag är att vi ska erbjuda dig och din familj just det stöd som du - ni behöver, för att göra resan genom graviditeten och förlossningen till en så trygg och fantastisk upplevelse som möjligt. Vårt stöd är anpassat till att kunna skräddarsys helt efter behov och önskemål. Och vi älskar det vi gör. 
+         <Typography gutterBottom variant='h2' >DoulaSkapet</Typography>
+         <Typography gutterBottom paragraph >DoulaSkapet består av doulorna: Dunja, Karin, Jenny och Annika. Vi är verksamma och boende i Stockholm med omnejd och vårt gemensamma uppdrag är att vi ska erbjuda dig och din familj just det stöd som du - ni behöver, för att göra resan genom graviditeten och förlossningen till en så trygg och fantastisk upplevelse som möjligt. Vårt stöd är anpassat till att kunna skräddarsys helt efter behov och önskemål. Och vi älskar det vi gör. 
          
          </Typography>
-           <Typography paragraph>
+         < Typography
+           gutterBottom
+           variant='h3' data-aos="fade-left">Möt våra fantastiska Doulor</Typography>
+         <DoulaSlider
+           
+           
+          /> 
+       </Box>
+       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
+           <Typography gutterBottom paragraph>
           
           
           Inom DoulaSkapet arbetar vi utifrån beprövade metoder, samt utifrån den unika person du/ni är och dina/era val. </Typography>
-        </Box>
-
+</Box>
              
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <InfoIcon sx={{ mr: 1 }} />
@@ -72,13 +81,13 @@ const HeroSection = () => {
       
        {/* <Typography paragraph> Eller kika in på våra respektive profil för att se vilka olika tjänster vi kan erbjuda!
        </Typography> */}   </Box>  
-       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, mt: 3 }}>
+       <Box sx={{ display: 'flex', flexDirection: { xs: 'column'}, gap: 2, mt: 3 }}>
           <CTAButton href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
-            Contact Us for a Free Consultation
+            Boka kostnadsfritt möte
        </CTAButton>
        
           <CTAButton variant="outlined" href="/doulapaket" aria-label="Gå till DoulaPaket">
-            Explore Our Doula Packages
+            Doulatjänster
        </CTAButton>
        
         </Box>

@@ -5,7 +5,7 @@ import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Home from './pages/Home';
-import Doulor from './pages/Doulor';
+import {Doulor} from './pages/Doulor';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import Fakta from './pages/Fakta';
@@ -49,8 +49,8 @@ const App = () => {
             <Route path="/Doulor" element={< Doulor />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
-            <Route path="/DoulaPaket/PostpartumSupport" element={<PostpartumSupport />} />
-            <Route path="/DoulaPaket/Akut-Doula" element={<AkutDoula />} />
+            <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
+            <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
             <Route path="/Fakta" element={< Fakta/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
