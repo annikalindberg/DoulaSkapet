@@ -28,7 +28,9 @@ const Home = () => {
 
       <ContentSection>
 
-        <ResponsiveImage mobile={handsholdingbabyMb} tablet={handsholdingbabyTb} desktop={handsholdingbabyDt} alt="Hands holding baby" />
+        <ResponsiveImage
+          
+          mobile={handsholdingbabyMb} tablet={handsholdingbabyTb} desktop={handsholdingbabyDt} alt="Hands holding baby" />
     
 
 

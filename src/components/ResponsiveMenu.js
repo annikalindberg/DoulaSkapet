@@ -92,6 +92,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+              /*   bgcolor: theme.palette.custom.glassBackgroundDark, Does not affect the unfolded menu*/
               }}
             >
               {pages.map((page) => {
@@ -102,12 +103,12 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                     onClick={(e) => handleOpenNavMenu(e, page)}
                     sx={{
                       my: 2,
-                      color: 'primary.dark',
+                      color: theme.palette.text.dark,
                       fontWeight: 'normal',
                       display: 'block',
                     }}
                   >
-                    <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to={toPath} style={{ textDecoration: 'none', color: theme.palette.text.dark }}>
                       {page}
                     </Link>
                   </Button>,
@@ -134,7 +135,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                               key={page}
                               onMouseEnter={() => handleDesktopSubmenuOpen(page)} onMouseLeave={handleDesktopSubmenuClose}>
                   <Button
-                    sx={{ my: 2, color: 'primary.dark', fontWeight: 'normal', display: 'block' }}
+                    sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}
                   >
                     <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
                       {page}
@@ -143,7 +144,8 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                   {/* Display the submenu for this page if it is open */}
                               {openDesktopSubmenu === page && (
                                 
-                    <Submenu
+                                <Submenu
+                                
                       pageName={page}
                       isOpen={true}  // Always open since we are handling it with mouse events
                       handleCloseNavMenu={handleDesktopSubmenuClose}

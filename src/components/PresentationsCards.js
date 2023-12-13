@@ -40,7 +40,7 @@ return (
         width: '100%', // This will ensure the image is as wide as the card
         height: 340, // You can keep a fixed height or make it responsive based on your design
         objectFit: 'cover', // This will cover the available area, cropping the image if necessary
-        borderRadius: '50%', // This will make the image round
+        borderTopRadius: '40%', // This will make the image round
 
     }}
 />
@@ -52,24 +52,26 @@ return (
         <Typography variant="body2" color="text.secondary">
           {isTextVisible ? description : truncateText(description)}
         </Typography>
-      </CardContent>
       <CardActions>
-           <Button
+                     <Button
     size="small"
     sx={{
-        bgcolor: theme.palette.secondary.main,
-        color: theme.palette.secondary.contrastText,
-        textTransform: 'none',
-        fontWeight: 'bold',
-        '&:hover': {
-            bgcolor: theme.palette.secondary.contrastText, color: theme.palette.secondary.main,
-        },
+      mt: 2,
+      bgcolor: theme.palette.secondary.main,
+      color: theme.palette.secondary.contrastText,
+      width: '100%',
+      textTransform: 'none',
+      fontWeight: 'bold',
+      '&:hover': {
+        bgcolor: theme.palette.secondary.contrastText, color: theme.palette.secondary.main,
+      },
     }}
-                startIcon={isTextVisible ? <ExpandLessIcon /> : <ExpandMoreIcon  />}
+    startIcon={isTextVisible ? <ExpandLessIcon /> : <ExpandMoreIcon  />}
     onClick={toggleTextVisibility}>
-    {isTextVisible ? 'Minimera...' : 'Expandera...'}
+    {isTextVisible ? 'Se mindre...' : 'Se mer...'}
 </Button>
       </CardActions>
+      </CardContent>
     </Card>
   );
 };

@@ -10,7 +10,7 @@ import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import Fakta from './pages/Fakta';
 import styled from 'styled-components';
-import background from './assets/images/bg-doulaskapet.svg';
+import background from './assets/bg-bellies.svg';
  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,9 +25,10 @@ const Background = styled.div`
 background-image: url(${background});    
 background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+
   min-height: 100vh;
   width: 100%;
+  
 `;
 
 const App = () => {

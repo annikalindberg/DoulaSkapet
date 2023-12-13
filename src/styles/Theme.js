@@ -9,7 +9,7 @@ export const Theme = createTheme({
     },
     secondary: {
       // A complementary color that's calm and not too loud
-      main: '#fffff5f2',
+      main: '#d3c1b0a8;',
       contrastText: '#563C5C', // New deeper purple/burgundy for better contrast
     },
     background: {
@@ -21,6 +21,7 @@ export const Theme = createTheme({
       // For text, using a darker shade that ensures accessibility
       primary: '#4A2F43',
       secondary: '#6D6875',
+      dark: '#4A4033'
     },
    action: {
       active: '#DDB6C6',
@@ -41,6 +42,7 @@ export const Theme = createTheme({
   },
   components: {
     // Override MUI components styles globally here if needed
+    
   },
   typography: {
     h1: {
