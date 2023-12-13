@@ -41,6 +41,8 @@ return (
                   erbjuder={doula.erbjuder}
             image={doula.image}
             description={doula.description}
+            bor={doula.bor}
+            pris={doula.pris}
           />
           <Link to="/doulor" style={{ textDecoration: 'none' }}>
           

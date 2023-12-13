@@ -56,7 +56,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
   return (
     <AppBar position="static" sx={{
       color: theme.palette.text.dark,
-      bgcolor: theme.palette.custom.glassBackgroundDark
+       bgcolor: theme.palette.custom.glassBackgroundDark
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>

@@ -10,7 +10,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { doulorArray } from '../components/DoulorArray';
 import { Link } from 'react-router-dom';
 
-const PresentationsCards = ({ name, image, description, erbjuder }) => {
+const PresentationsCards = ({ name, image, description, erbjuder, bor, pris }) => {
 
     const [isTextVisible, setIsTextVisible] = useState(false);
     const theme = useTheme();
@@ -23,14 +23,14 @@ const PresentationsCards = ({ name, image, description, erbjuder }) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
    };
   const serviceUrls = {
-        'Föda Utan Rädsla': '/DoulaPaket/Baspaket',
-        'Postpartumsupport': '/DoulaPaket/Postpartumsupport',
+        'Baspaket': '/DoulaPaket/Baspaket',
+        'Postpartum': '/DoulaPaket/Postpartumsupport',
         'AkutDoula': '/DoulaPaket/AkutDoula',
     };
 
 return (
      <Card sx={{
-            maxWidth: 345, // Set a maxWidth for the card
+            maxWidth: 400, // Set a maxWidth for the card
             m: 2, // Add margin
             borderRadius: '16px', // Rounded corners
             display: 'flex',
@@ -46,7 +46,7 @@ return (
     alt={name}
     sx={{
         width: '100%', // This will ensure the image is as wide as the card
-        height: 340, // You can keep a fixed height or make it responsive based on your design
+        /* height: 340, */ // You can keep a fixed height or make it responsive based on your design
         objectFit: 'cover', // This will cover the available area, cropping the image if necessary
         borderTopRadius: '40%', // This will make the image round
 
@@ -59,7 +59,7 @@ return (
       <Typography gutterBottom variant="h5" component="div" color={"text.secondary"}> {name}
       </Typography>
         <Typography sx={{padding: 1}}gutterBottom variant="body2" color="text.secondary">Erbjuder: 
-     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+     <Box sx={{ display: 'flex'/* , flexDirection: 'column' */, flexWrap: 'wrap', gap: 1 }}>
                 {erbjuder.map((service, index) => (
                     <Button
                         key={index}
@@ -84,9 +84,14 @@ return (
                         {service}
                     </Button>
                 ))}
+          
+
             </Box>
       </Typography>
-      
+      <Typography gutterBottom variant="body2" component="div" color={"text.secondary"}> Bor: {bor}
+      </Typography>
+          <Typography gutterBottom variant="body2" component="div" color={"text.secondary"}>Pris:  {pris}
+      </Typography>
         <Typography variant="body2" color="text.secondary">
           {isTextVisible ? description : truncateText(description)}
         </Typography>

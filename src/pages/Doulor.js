@@ -28,8 +28,11 @@ export const Doulor = () => {
      
               name={doula.name}
               image={doula.image}
+              pris={doula.pris}
+              bor={doula.bor}
               description={doula.description}
               erbjuder={doula.erbjuder}
+            
               
             />
             
