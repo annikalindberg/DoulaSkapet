@@ -6,7 +6,6 @@ import { CTAButton } from '../components/Buttons';
 import InfoIcon from '@mui/icons-material/Info';
 import CustomNetlifyForm from '../components/CustomGoogleForm';
 import ResponsiveImage from '../components/responsiveImages';
-import styled from 'styled-components';
 import { doulorArray } from '../components/DoulorArray';
 
 const AnnikaProfilePage = () => {

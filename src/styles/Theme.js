@@ -28,7 +28,7 @@ export const Theme = createTheme({
       active: '#DDB6C6',
       hover: 'rgba(221,182,198,0.08)',
       selected: 'rgba(221,182,198,0.16)',
-      disabled: 'rgba(221,182,198,0.3)',
+      disabled: 'rgb(14, 12, 13)',
       disabledBackground: 'rgba(221,182,198,0.12)',
       activeText: '#4A2F43',
       hoverText: '#4A2F43',

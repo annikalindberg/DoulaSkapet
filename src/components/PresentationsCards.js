@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { CardMedia, useTheme, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { doulorArray } from '../components/DoulorArray';
 import { Link } from 'react-router-dom';
 
 const PresentationsCards = ({ name, image, description, erbjuder, bor, pris }) => {

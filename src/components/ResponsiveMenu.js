@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -122,6 +121,11 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                       color: theme.palette.text.dark,
                       fontWeight: 'normal',
                       display: 'block',
+                       '&:hover': {
+      backgroundColor: theme.palette.action.hover, // Subtle background color on hover
+      textDecoration: 'underline', // Underline text on hover
+      color: theme.palette.action.hoverText, // Keep the text color same as hover
+    },
                     }}
                   >
                     <Link to={toPath} style={{ textDecoration: 'none', color: theme.palette.text.dark }}>
@@ -150,9 +154,27 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                               style={{position: 'relative'}}
                               key={page}
                               onMouseEnter={() => handleDesktopSubmenuOpen(page)} onMouseLeave={handleDesktopSubmenuClose}>
-                  <Button
-                    sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}
-                  >
+<Button
+  sx={{
+    my: 2,
+    color: isActive ? theme.palette.action.activeText : theme.palette.action.disabled, 
+    backgroundColor: isActive ? theme.palette.action.active : 'transparent', // Background color for active state
+    fontWeight: 'normal',
+    display: 'block',
+    textDecoration: 'none', // Ensure no underline by default
+    '&:hover': {
+      backgroundColor: theme.palette.action.hover, // Subtle background color on hover
+      textDecoration: 'underline', // Underline text on hover
+      color: theme.palette.action.hoverText, // Keep the text color same as hover
+    },
+    '&:disabled': {
+      color: theme.palette.action.disabledText,
+      backgroundColor: theme.palette.action.disabledBackground,
+    },
+  }}
+>
+ 
+
                     <Link to={toPath} style={{ textDecoration: 'none', color: 'inherit' }}>
                       {page}
                     </Link>

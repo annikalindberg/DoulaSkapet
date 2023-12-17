@@ -1,21 +1,14 @@
 
 import React from 'react';
-import { Box, Typography, Container, List, ListItem } from '@mui/material';
-import styled from 'styled-components';
 import ResponsiveImage from '../components/responsiveImages';
 import babyfeetDt from '../assets/images/babyfeet-desktop.webp';
 import babyfeetMb from '../assets/images/babyfeet-mobile.webp';
 import  babyfeetTb  from '../assets/images/babyfeet-tablet.webp';
-import  handsholdingbabyDt  from '../assets/images/handsholdingbaby-desktop.webp';
-import handsholdingbabyMb  from '../assets/images/handsholdingbaby-mobile.webp';
-import  handsholdingbabyTb  from '../assets/images/handsholdingbaby-tablet.webp';
 import  twomomsMb from '../assets/images/twomoms-mobile.webp';
 import  twomomsDt from '../assets/images/twomoms-desktop.webp';
 import HeroSection from '../components/HeroSection';
+import { Container, Typography, List, ListItem } from '@mui/material';
 
-const ContentSection = styled(Box)`
-  margin-bottom: 2rem;
-`;
 
 const Home = () => {
   return (

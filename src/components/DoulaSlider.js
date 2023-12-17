@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Slider from 'react-slick'; // Assuming you're using react-slick
 import PresentationsCards from './PresentationsCards';
 import { Link } from 'react-router-dom';
-import { Grid, Container, Typography, Button } from '@mui/material';
 import styled from 'styled-components';
 import { doulorArray } from './DoulorArray';
 

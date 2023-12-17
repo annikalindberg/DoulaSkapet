@@ -5,9 +5,7 @@ import HighFiveSVG from '../assets/highfive.svg'; // Adjust the path
 import { CTAButton } from './Buttons';
 import InfoIcon from '@mui/icons-material/Info';
 import DoulaSlider from './DoulaSlider';
-import ResponsiveImage from './responsiveImages';
-import background from '../assets/bg-bellies.svg';
-import styled from 'styled-components';
+
 
 const HeroSection = () => {
   const theme = useTheme();

@@ -1,7 +1,7 @@
 import React from 'react';
 import DoulaPackageCard from '../components/PackageCards'; // Adjust the import path as necessary
 import Grid from '@mui/material/Grid';
-import { Box, Typography, Paper } from '@mui/material';
+import { Box } from '@mui/material';
 
 
 import TestimonialSlider from './TestemonialsSlider';
