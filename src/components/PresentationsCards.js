@@ -30,7 +30,7 @@ const PresentationsCards = ({ name, image, description, erbjuder, bor, pris }) =
 
 return (
      <Card sx={{
-            maxWidth: 400, // Set a maxWidth for the card
+    maxWidth: 400, // Set a maxWidth for the card
             m: 2, // Add margin
             borderRadius: '16px', // Rounded corners
             display: 'flex',
@@ -48,7 +48,8 @@ return (
         width: '100%', // This will ensure the image is as wide as the card
         /* height: 340, */ // You can keep a fixed height or make it responsive based on your design
         objectFit: 'cover', // This will cover the available area, cropping the image if necessary
-        borderTopRadius: '40%', // This will make the image round
+      borderTopRadius: '40%', // This will make the image round
+        maxHeight: 340,
 
     }}
       />

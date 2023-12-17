@@ -20,31 +20,25 @@ const ContentSection = styled(Box)`
 const Home = () => {
   return (
     <Container>
-      <ContentSection>
-        <HeroSection />
-
-        <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
-      </ContentSection>
-
-      <ContentSection>
-
-        <ResponsiveImage
-          
-          mobile={handsholdingbabyMb} tablet={handsholdingbabyTb} desktop={handsholdingbabyDt} alt="Hands holding baby" />
+   
     
-
-
-      </ContentSection>
-
-      <ContentSection>
-        <Typography variant="h2">Varför anlita en Doula</Typography>
+        <HeroSection />
+´
+      <container>
+        <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
+  
+    
+        <Typography variant="h2">Varför anlita en Doula</Typography></container>
         <Typography paragraph>
           Ge dig själv och din bebis de bästa förutsättningar för en trygg start 
         </Typography>
         <Typography paragraph>
-          Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography>        <Typography paragraph>
+        Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography>
+      
+      <Typography paragraph>
           Det finns en hel del forskning som visar på fördelarna med att anlita en doula. Flera studier har visat att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder. Mer specifikt har forskningen visat att doulan kan bidra till:
         </Typography>
+
                 <Typography variant="h3">Stöd i forskningen</Typography>
         <List aria-label="Fördelar med att anlita en doula">
           <ListItem>Mindre behov av medicinsk smärtlindring</ListItem>
@@ -89,9 +83,23 @@ const Home = () => {
         <Typography variant='h3'> Tillgång till nätverk och kompetens </Typography>
         <Typography paragraph> Med vår erfarenhet och tillgång till ett omfattande nätverk av experter och resurser, är vi starkare tillsammans. "Ensam är inte stark" är ett mantra som vi lever efter, och tillsammans kan vi erbjuda en omfattande och kvalitativ tjänst, har vi lyxen att ha ett stort nätverk av andra doulor, barnmorskor, amningsrådgivare, psykologer, psykoterapeuter, kiropraktorer och massörer som vi kan rekommendera/rådgöra med vid behov. </Typography>
         <Typography variant='h4'> Med DoulaSkapet är du och din familj i goda händer </Typography>
+        <Typography
+                 variant='h3'
+                 sx={{
+                      fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' }, // Adjust font size based on screen size
+    mt: 6, mb:3 // Adds margin-top for spacing above the element
+                 }}
+             >DoulaSkapet - vår filosofi </Typography>
+    
+        <Typography paragraph>
+         Relationen mellan doulan och den födande bygger på ett ömsesidigt förtroende, en djup respekt och lyhördhet för den födandes behov och önskan, ett ständigt öppet sinne samt en fingertoppskänsla byggd på en lång erfarenhet och en intuitiv förmåga.
+         </Typography>
+          <Typography paragraph>
+         Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Från "plusset på stickan" till och med den fjärde trimestern, eller postpartum - den första tiden med er nya lilla familjemedlem, så har vi det ni behöver i form av stöd och trygghet.
+         
+         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!       </Typography>
 
 
-      </ContentSection>
 
 
     </Container>

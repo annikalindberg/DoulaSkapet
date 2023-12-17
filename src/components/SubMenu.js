@@ -5,8 +5,14 @@ import Button from '@mui/material/Button';
 import { Theme } from '../styles/Theme';
 
 const Submenu = ({ pageName, isOpen, handleCloseNavMenu }) => {
-  // Define submenu items for the "Doulor" page
-  const submenuItems = pageName === 'DoulaPaket' ? ['Baspaket', 'PostpartumSupport', 'AkutDoula'] : [];
+  let submenuItems = [];
+
+  if (pageName === 'DoulaPaket') {
+    submenuItems = ['Baspaket', 'PostpartumSupport', 'AkutDoula'];
+  } else if (pageName === 'Doulor') {
+    submenuItems = ['Annika']; // Add other submenu items if needed
+  }
+
 
   return (
     <div >

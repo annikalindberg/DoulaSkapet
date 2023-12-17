@@ -2,14 +2,14 @@
 import React from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
 import HighFiveSVG from '../assets/highfive.svg'; // Adjust the path
-import { CTAButton } from './Buttons';
+import { CTAButton } from '../components/Buttons';
 import InfoIcon from '@mui/icons-material/Info';
-import DoulaSlider from './DoulaSlider';
-import ResponsiveImage from './responsiveImages';
-import background from '../assets/bg-bellies.svg';
+import CustomNetlifyForm from '../components/CustomGoogleForm';
+import ResponsiveImage from '../components/responsiveImages';
 import styled from 'styled-components';
+import { doulorArray } from '../components/DoulorArray';
 
-const HeroSection = () => {
+const AnnikaProfilePage = () => {
   const theme = useTheme();
 
   
@@ -25,7 +25,8 @@ const HeroSection = () => {
         gap: 2 // Adds space between elements
       }}
       data-aos="fade-up"
-   >
+     >
+         <ResponsiveImage image={doulorArray[3].image} alt={doulorArray[3].name} />
     
      
      <Box
@@ -39,8 +40,7 @@ const HeroSection = () => {
        }}> 
        
         <Typography variant="h1" gutterBottom sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' }, mt: 8, mb: 5 }}>
-          DoulaSkapet - Trygg Förlossning
-        </Typography>
+Annika Doula        </Typography>
         <Typography gutterBottom paragraph >
           Grattis till graviditeten! Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
         </Typography> 
@@ -53,17 +53,11 @@ const HeroSection = () => {
           <Typography
            gutterBottom
            variant='h3' data-aos="fade-left">Möt våra fantastiska Doulor</Typography>
-         <DoulaSlider
-           
-           
-          /> 
+        
        </Box>
        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
          <Typography gutterBottom variant='h2' >DoulaSkapet</Typography>
-           <Typography gutterBottom paragraph>
-          
-          
-          Inom DoulaSkapet arbetar vi utifrån beprövade metoder, samt utifrån den unika person du/ni är och dina/era val. </Typography>
+        <CustomNetlifyForm />
 </Box>
              
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -108,4 +102,4 @@ const HeroSection = () => {
  
   );
 };
-export default HeroSection;
+export default AnnikaProfilePage;

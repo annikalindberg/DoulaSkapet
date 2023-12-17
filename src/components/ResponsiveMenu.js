@@ -28,7 +28,7 @@ function ResponsiveAppBar() {
 
   const handleOpenNavMenu = (event, page) => {
     setAnchorElNav(event.currentTarget);
-    if (page === 'DoulaPaket') {
+    if (page === 'DoulaPaket' || page === 'Doulor'  ) {
       setOpenSubmenu(!openSubmenu);
     } else {
       setOpenSubmenu(false);
@@ -56,18 +56,23 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
   return (
     <AppBar position="static" sx={{
       color: theme.palette.text.dark,
-       bgcolor: theme.palette.custom.glassBackgroundDark
+      bgcolor: theme.palette.custom.glassBackground // bg for unfolded and folded menu
     }}>
-      <Container maxWidth="xl">
+        <Container maxWidth="xl"
+   
+        >
         <Toolbar disableGutters>
           {/* v wraps the logo with a link leading to / */}
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
               <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem" }} />
-            </Box>
+              </Box>
+
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{
+              flexGrow: 1, display: { xs: 'flex', md: 'none' }
+            }}>
             <IconButton
               size="large"
               aria-label="menu"
@@ -75,29 +80,37 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              
             >
               <MenuIcon />
             </IconButton>
 
-            <Menu
+              <Menu // Mobile menu (folded)
+                
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
+              anchorEl={anchorElNav} // Anchor element is the button that opens the menu (IconButton in this case)
+              anchorOrigin={{ // Position the menu below the anchor element (button) when 
+                vertical: 'bottom', // Change to 'top' if menu is at the bottom
                 horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: 'top', // this is the point on the menu which will be anchored to the anchor element 
+                horizontal: 'left', // this is the point on the menu which will be anchored to the anchor element
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              PaperProps={{
+                sx: {
+                  color: theme.palette.text.dark,
+                  bgcolor: theme.palette.background.solidPaper, // bg for unfolded and folded menu
+                },
+              }}
               sx={{
                 display: { xs: 'block', md: 'none' },
-              /*   bgcolor: theme.palette.custom.glassBackgroundDark, Does not affect the unfolded menu*/
+
               }}
-            >
+            > 
               {pages.map((page) => {
                 const toPath = page === 'Home' ? '/' : `/${page.replace(' ', '-')}`;
                 const menuItems = [
@@ -118,7 +131,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
                   <Submenu
                     key={`${page}-submenu`}
                     pageName={page}
-                    isOpen={openSubmenu && page === 'DoulaPaket'}
+                    isOpen={openSubmenu && (page === 'DoulaPaket' || page === 'Doulor')}
                     handleCloseNavMenu={handleCloseNavMenu}
                   />
                 ];
@@ -158,7 +171,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
               );
             })}
           </Box>
-           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', }}>
             <a href="https://www.instagram.com/doulaskapet__tryggforlossning/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}>
                 <Instagram />
@@ -177,7 +190,7 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+      </AppBar>
   );
 }
 export default ResponsiveAppBar;

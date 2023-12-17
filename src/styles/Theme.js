@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-
+// use in component by importing: import { Theme } from '../styles/Theme'; and then using it like this: <ThemeProvider theme={Theme}>...</ThemeProvider> 
 export const Theme = createTheme({
   palette: {
     primary: {
@@ -15,7 +15,8 @@ export const Theme = createTheme({
     background: {
       // The light pastel pink background of the entire page
       default: '#FFF7F8',
-      paper: '#FFE9EC',
+      paper: '#f9efff57',
+      solidPaper: '#efe1f8'
     },
     text: {
       // For text, using a darker shade that ensures accessibility

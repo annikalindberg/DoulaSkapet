@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import PostpartumSupport from './pages/PostPartumSupport';
 import AkutDoula from './pages/AkutDoula';  
 import Baspaket from './pages/DoulaPaketBas';
+import AnnikaProfilePage from './pages/AnnikaProfilePage';
 
 const Background = styled.div`
 background-image: url(${background});    
@@ -42,11 +43,12 @@ const App = () => {
   return (
     <Router>
       <ThemeProvider theme={Theme} >
-      <Background> 
-          <ResponsiveMenu />
+       <Background> 
+         <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Doulor" element={< Doulor />} />
+<Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
             <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
@@ -56,7 +58,7 @@ const App = () => {
           </Routes>
           <StickyFooter />
        </Background>
-      </ThemeProvider>
+       </ThemeProvider>
     </Router>
   );
 };
