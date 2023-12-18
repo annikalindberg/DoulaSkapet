@@ -8,7 +8,7 @@ import { CardMedia, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-const DoulaPackageCard = ({ title, image, description, onReadMore }) => {
+const DoulaPackageCard = ({ title, image, description }) => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const theme = useTheme();
 
@@ -20,7 +20,7 @@ const DoulaPackageCard = ({ title, image, description, onReadMore }) => {
   };
 
   // Ensure the image object has the necessary properties before trying to access them
-  const hasImage = image && image.mobile && image.tablet && image.desktop;
+  /* const hasImage = image && image.mobile && image.tablet && image.desktop; */
 
   return (
      <Card sx={{
