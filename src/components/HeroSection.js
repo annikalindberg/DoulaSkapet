@@ -14,25 +14,18 @@ const HeroSection = () => {
 
  return (
  
-<Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
-        gap: 2 // Adds space between elements
-      }}
-      data-aos="fade-up"
-   >
+
     
      
      <Box
        xs={{maxWidth: '70%'}}
        sx={{
-       maxWidth: '90%',
+         maxWidth: '100%',
+         
        pl: 4,
        pr: 4,
-       bgcolor: theme.palette.background.paper
+         bgcolor: theme.palette.background.paper,
+       border: '1px solid green'
 
        }}> 
        
@@ -117,7 +110,7 @@ const HeroSection = () => {
      />
  
      </Box>
-     </Box>
+
  
   );
 };

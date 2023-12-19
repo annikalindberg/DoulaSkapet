@@ -1,11 +1,4 @@
-// In src/pages/OmOss.js
 import React from 'react';
-import ResponsiveImage from '../components/responsiveImages';
-import twomomsMb from '../assets/images/twomoms-mobile.webp';
-import twomomsDt from '../assets/images/twomoms-desktop.webp';
-/* import partneDt from '../assets/images/partnerdoula-dt.webp';
-import partnerMb from '../assets/images/partnerdoula-mb.webp';
-import partnerTb from '../assets/images/partnerdoula-tb.webp'; */
 import styled from 'styled-components';
 import { Box, Typography, Container, ListItem, List } from '@mui/material';
 import { MdOutlinePregnantWoman } from 'react-icons/md'; // Example icon
@@ -25,7 +18,7 @@ const SectionHeader = styled(Typography)`
 const SectionContent = styled(Typography)`
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #6d6875; // Soft gray, adjust as needed
+/*   color: #6d6875; // Soft gray, adjust as needed */
 `;
 
 const ImageContainer = styled(Box)`
@@ -63,11 +56,7 @@ const Fakta = () => {
       </Section>
 
       <ImageContainer>
-        <ResponsiveImage
-          style={{ borderRadius: '1150px', maxWidth: '500px' }}
-          mobile={twomomsMb}
-          desktop={twomomsDt}
-          alt="Two moms with their baby" />
+     <img src="/optimized-images/twomoms.webp" alt="Two moms" style={{ width: '100%', paddingTop: "4rem" }} />
       </ImageContainer>
 
       {/* Repeat the pattern for other sections */}
@@ -92,7 +81,7 @@ const Fakta = () => {
          <Typography paragraph>
           Av studierna framgår också att föräldrar som haft stöd av doula är mer delaktiga i förlossningen och känner sig mer tillfreds med sin upplevelse.
         </Typography>
-       <ResponsiveImage mobile={twomomsMb} desktop={twomomsDt} alt="Two moms" />
+      
              <Typography variant='h3'>Ett välkommet stöd i förlossningsvården </Typography>
         <Typography paragraph> Vårt samarbete med sjukvården har visat sig vara mycket värdefullt. Barnmorskor och övrig vårdpersonal uppskattar ofta vår närvaro eftersom effekten av en ökad oxytocinmängd ger ett lugn och en positiv atomsfär i förlossningsrummet. Det gynnar alltså både dig som blivande förälder och ditt sjukvårdsteam.
         </Typography>

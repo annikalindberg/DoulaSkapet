@@ -65,17 +65,18 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
           {/* v wraps the logo with a link leading to / */}
           <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-              <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem" }} />
+              <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem", paddingBottom:"4rem" }} />
               </Box>
 
           </Link>
 
             <Box sx={{
-              flexGrow: 1, display: { xs: 'flex', md: 'none' }
+            flexGrow: 1, display: { xs: 'flex', md: 'none' },
+            justifyContent: 'center',
+            alignItems: 'center',
+           
           }}>
-            <Typography variant="h6" noWrap component="div">
-              Your Header Text
-            </Typography>
+
             <IconButton
               size="large"
               aria-label="menu"
@@ -88,8 +89,8 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
               <MenuIcon />
             </IconButton>
             
-  <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
-    Your Header Text
+    <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center'}}>
+    DoulaSkapet
   </Typography>
               <Menu // Mobile menu (folded)
                 
