@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
+import { Typography } from '@mui/material'; 
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -71,7 +72,10 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
 
             <Box sx={{
               flexGrow: 1, display: { xs: 'flex', md: 'none' }
-            }}>
+          }}>
+            <Typography variant="h6" noWrap component="div">
+              Your Header Text
+            </Typography>
             <IconButton
               size="large"
               aria-label="menu"
@@ -83,7 +87,10 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
             >
               <MenuIcon />
             </IconButton>
-
+            
+  <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+    Your Header Text
+  </Typography>
               <Menu // Mobile menu (folded)
                 
               id="menu-appbar"

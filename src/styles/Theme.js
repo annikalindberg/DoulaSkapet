@@ -42,8 +42,23 @@ export const Theme = createTheme({
     },
   },
   components: {
-    // Override MUI components styles globally here if needed
-    
+    MuiLink: {
+      styleOverrides: {
+        root: {  // 'root' key targets the base style of the component
+          color: '#341f33', // Link color
+          textDecoration: 'underline', // Underline for links
+          fontWeight: 'bold', // Bold for emphasis
+          '&:hover': {
+            color: '#113790', // Darker color on hover
+            textDecoration: 'none', // Removing underline on hover
+          },
+          '&:focus': {
+            outline: '3px solid #4A2F43', // Focus outline for accessibility
+
+    },
+        },
+      },
+    },
   },
   typography: {
     h1: {
@@ -79,7 +94,52 @@ export const Theme = createTheme({
       '@media (max-width:600px)': {
         fontSize: '0.975rem',
       },
+      },
+     subtitle1: {
+      fontSize: '1rem',
+      fontWeight: 500,
+      lineHeight: 1.4,
+      letterSpacing: '0.00938em',
     },
+    subtitle2: {
+      fontSize: '0.875rem',
+      fontWeight: 500,
+      lineHeight: 1.57,
+      letterSpacing: '0.00714em',
+      },
+    //overline can be uses for custom headers and body text when you want to emphasize something
+    overline: {
+      fontSize: '0.75rem',
+      fontWeight: 400,
+      lineHeight: 2.66,
+      letterSpacing: '0.08333em',
+      textTransform: 'uppercase',
     },
+    customHeader: {
+      fontSize: '2rem',
+      fontWeight: 700,
+      lineHeight: 1.2,
+      marginTop: '16px',
+      marginBottom: '8px',
+      },
+    // customBody can be used for body text. Its a bit smaller than body1 and body2 and has a bit more line height
+    customBody: {
+      fontSize: '1rem',
+      fontWeight: 400,
+      lineHeight: 1.5,
+      marginTop: '8px',
+      marginBottom: '8px',
+      },
+    
+    customBodyItalic: {
+  fontSize: '1rem',
+  fontWeight: 400,
+  lineHeight: 1.5,
+  fontStyle: 'italic', // Adding italic style
+},
+
+    
+    },
+
   },
 });

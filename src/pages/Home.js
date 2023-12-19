@@ -4,10 +4,9 @@ import ResponsiveImage from '../components/responsiveImages';
 import babyfeetDt from '../assets/images/babyfeet-desktop.webp';
 import babyfeetMb from '../assets/images/babyfeet-mobile.webp';
 import  babyfeetTb  from '../assets/images/babyfeet-tablet.webp';
-import  twomomsMb from '../assets/images/twomoms-mobile.webp';
-import  twomomsDt from '../assets/images/twomoms-desktop.webp';
+
 import HeroSection from '../components/HeroSection';
-import { Container, Typography, List, ListItem } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 
 const Home = () => {
@@ -21,14 +20,15 @@ const Home = () => {
         <ResponsiveImage mobile={babyfeetMb} tablet={babyfeetTb} desktop={babyfeetDt} alt="Baby feet" />
   
     
-        <Typography variant="h2">Varför anlita en Doula</Typography></container>
-        <Typography paragraph>
+       {/*  <Typography variant="h2">Varför anlita en Doula</Typography> */}
+      </container>
+       {/*  <Typography paragraph>
           Ge dig själv och din bebis de bästa förutsättningar för en trygg start 
         </Typography>
         <Typography paragraph>
         Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography>
-      
-      <Typography paragraph>
+       */}
+{/*       <Typography paragraph>
           Det finns en hel del forskning som visar på fördelarna med att anlita en doula. Flera studier har visat att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder. Mer specifikt har forskningen visat att doulan kan bidra till:
         </Typography>
 
@@ -43,18 +43,18 @@ const Home = () => {
           <ListItem>Ökad känsla av välbefinnande</ListItem>
           <ListItem>Ökad känsla av tillfredsställelse</ListItem>
           <ListItem>Ökad känsla av att vara en bra partner</ListItem>
-        </List>
+        </List> */}
         
-        <Typography paragraph>
+     {/*    <Typography paragraph>
           Av studierna framgår också att föräldrar som haft stöd av doula är mer delaktiga i förlossningen och känner sig mer tillfreds med sin upplevelse.
-        </Typography>
-        <ResponsiveImage mobile={twomomsMb} desktop={twomomsDt} alt="Two moms" />
-        <Typography variant='h3'>Ett välkommet stöd i förlossningsvården </Typography>
+        </Typography> */}
+        {/* <ResponsiveImage mobile={twomomsMb} desktop={twomomsDt} alt="Two moms" /> */}
+{/*         <Typography variant='h3'>Ett välkommet stöd i förlossningsvården </Typography>
         <Typography paragraph> Vårt samarbete med sjukvården har visat sig vara mycket värdefullt. Barnmorskor och övrig vårdpersonal uppskattar ofta vår närvaro eftersom effekten av en ökad oxytocinmängd ger ett lugn och en positiv atomsfär i förlossningsrummet. Det gynnar alltså både dig som blivande förälder och ditt sjukvårdsteam.
         </Typography>
-        <Typography variant='h3'>Partnerns roll</Typography>
+ */}{/*         <Typography variant='h3'>Partnerns roll</Typography>
         <Typography paragraph>
-          Finns det en partner/stödperson med, är det en stor fördel att ha med sig en doula som kan stötta både dig och din partner/stödperson under förlossningen. Du som partner/stödperson är den som känner den som föder allra bäst, och doulans uppgift är därför att se till att DU har det stöd som DU behöver för att vara det. Med en doula har du som partner/stödperson en större möjlighet att vara mer delaktig i och vara mer närvarande för den som föder. Många upplever att med doulans närvaro tenderar partnerns/ stödpersonens engagemang att öka under förlossningen och upplever sig kunna vara mer närvarande. </Typography>
+          Finns det en partner/stödperson med, är det en stor fördel att ha med sig en doula som kan stötta både dig och din partner/stödperson under förlossningen. Du som partner/stödperson är den som känner den som föder allra bäst, och doulans uppgift är därför att se till att DU har det stöd som DU behöver för att vara det. Med en doula har du som partner/stödperson en större möjlighet att vara mer delaktig i och vara mer närvarande för den som föder. Många upplever att med doulans närvaro tenderar partnerns/ stödpersonens engagemang att öka under förlossningen och upplever sig kunna vara mer närvarande. </Typography>  */}
         <Typography variant='h2'>DoulaSkapet - trygghet på dina villkor</Typography>
   
         <Typography variant='h3'>Föda Utan Rädsla (FUR) </Typography>
@@ -68,13 +68,15 @@ const Home = () => {
         <Typography variant='h3'>Förutsägbarhet i det oförutsägbara </Typography>
         <Typography paragraph>Vi anlitar alltid i första hand våra egna doulor som backup, och erbjuder alltid att få träffa även den doula som är tilltänkt som backup, samt möjilghet att byta till en annan backup om så önskas. Vi vet att valet av doula är högst personligt och måste bygga på ömsesidigt förtroende.
             Vi vill att du/ni ska känna trygghet och förutsägbarhet på alla sätt där det går. </Typography>
-        <Typography variant='h3'>Du är unik </Typography>  
-          <Typography paragraph> Precis som att du är unik så är din födsel det, oavsett om det är din första eller tredje så är varje person och varje barn unikt och har behov som är unika. Inom DoulaSkapet är vi noga med att inte tro oss veta, utan vill lära känna dig som födande och eventuell partner/stödperson/medförälder innan vi skräddarsyr vårt stöd. Vi vill kunna möta varje unik situation med respekt, omsorg och professionalitet. Vi är också medvetna om att graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanhang utifrån en minoritetsstress som är svår att sätta sig in i utan att själv ha egen levd erfarenhet.</Typography> 
+        <Typography variant='h3'>Personligt och profesionellt </Typography>  
+          <Typography paragraph> Precis som att du är unik så är din födsel det, oavsett om det är din första eller tredje så är varje person och varje barn unikt och har behov som är unika. Inom DoulaSkapet är vi noga med att inte tro oss veta, utan vill lära känna dig som födande och eventuell partner/stödperson/medförälder innan vi skräddarsyr vårt stöd. Vi vill kunna möta varje unik situation med respekt, omsorg och professionalitet. </Typography> 
     
         <Typography variant='h3'> Traumamedvetenhet </Typography>
-        <Typography paragraph> Vi är medvetna om att det kan finnas en historia av trauma i bagaget hos den som föder, och att det kan påverka förlossningsupplevelsen. Inom DoulaSkapet arbetar vi traumamedvetenhet och möter dig/er utifrån det. </Typography>
+      <Typography paragraph> Vi är medvetna om att det kan finnas en historia av trauma i bagaget hos den som föder, och att det kan påverka förlossningsupplevelsen. Inom DoulaSkapet arbetar vi traumamedvetenhet och möter dig/er utifrån det. </Typography>
+      
         <Typography variant='h3'> Tillgång till nätverk och kompetens </Typography>
-        <Typography paragraph> Med vår erfarenhet och tillgång till ett omfattande nätverk av experter och resurser, är vi starkare tillsammans. "Ensam är inte stark" är ett mantra som vi lever efter, och tillsammans kan vi erbjuda en omfattande och kvalitativ tjänst, har vi lyxen att ha ett stort nätverk av andra doulor, barnmorskor, amningsrådgivare, psykologer, psykoterapeuter, kiropraktorer och massörer som vi kan rekommendera/rådgöra med vid behov. </Typography>
+      <Typography paragraph> Med vår erfarenhet och tillgång till ett omfattande nätverk av experter och resurser, är vi starkare tillsammans. "Ensam är inte stark" är ett mantra som vi lever efter, och tillsammans kan vi erbjuda en omfattande och kvalitativ tjänst, har vi lyxen att ha ett stort nätverk av andra doulor, barnmorskor, amningsrådgivare, psykologer, psykoterapeuter, kiropraktorer och massörer som vi kan rekommendera/rådgöra med vid behov. </Typography>
+      
         <Typography variant='h4'> Med DoulaSkapet är du och din familj i goda händer </Typography>
         <Typography
                  variant='h3'

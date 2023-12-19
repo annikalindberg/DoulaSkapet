@@ -7,7 +7,7 @@ import twomomsDt from '../assets/images/twomoms-desktop.webp';
 import partnerMb from '../assets/images/partnerdoula-mb.webp';
 import partnerTb from '../assets/images/partnerdoula-tb.webp'; */
 import styled from 'styled-components';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Container, ListItem, List } from '@mui/material';
 import { MdOutlinePregnantWoman } from 'react-icons/md'; // Example icon
 import InfoIcon from '@mui/icons-material/Info';
 
@@ -72,7 +72,33 @@ const Fakta = () => {
 
       {/* Repeat the pattern for other sections */}
       {/* For each section, you can alternate between text and images to create a flow */}
+      
+            <Typography paragraph>
+          Det finns en hel del forskning som visar på fördelarna med att anlita en doula. Flera studier har visat att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder. Mer specifikt har forskningen visat att doulan kan bidra till:
+        </Typography>
 
+                <Typography variant="h3">Stöd i forskningen</Typography>
+        <List aria-label="Fördelar med att anlita en doula">
+          <ListItem>Mindre behov av medicinsk smärtlindring</ListItem>
+          <ListItem>Lägre risk för medicinska komplikationer</ListItem>
+          <ListItem>Bättre förlossningsupplevelser</ListItem>
+          <ListItem>Lägre risk för kejsarsnitt</ListItem>
+          <ListItem>Lägre risk för förlossningsdepression</ListItem>
+          <ListItem>Bättre förutsättningar till en välfungerande amningsstart</ListItem>
+          <ListItem>Ökad känsla av välbefinnande</ListItem>
+          <ListItem>Ökad känsla av tillfredsställelse</ListItem>
+          <ListItem>Ökad känsla av att vara en bra partner</ListItem>
+        </List>
+         <Typography paragraph>
+          Av studierna framgår också att föräldrar som haft stöd av doula är mer delaktiga i förlossningen och känner sig mer tillfreds med sin upplevelse.
+        </Typography>
+       <ResponsiveImage mobile={twomomsMb} desktop={twomomsDt} alt="Two moms" />
+             <Typography variant='h3'>Ett välkommet stöd i förlossningsvården </Typography>
+        <Typography paragraph> Vårt samarbete med sjukvården har visat sig vara mycket värdefullt. Barnmorskor och övrig vårdpersonal uppskattar ofta vår närvaro eftersom effekten av en ökad oxytocinmängd ger ett lugn och en positiv atomsfär i förlossningsrummet. Det gynnar alltså både dig som blivande förälder och ditt sjukvårdsteam.
+        </Typography>
+        <Typography variant='h3'>Partnerns roll</Typography>
+        <Typography paragraph>
+          Finns det en partner/stödperson med, är det en stor fördel att ha med sig en doula som kan stötta både dig och din partner/stödperson under förlossningen. Du som partner/stödperson är den som känner den som föder allra bäst, och doulans uppgift är därför att se till att DU har det stöd som DU behöver för att vara det. Med en doula har du som partner/stödperson en större möjlighet att vara mer delaktig i och vara mer närvarande för den som föder. Många upplever att med doulans närvaro tenderar partnerns/ stödpersonens engagemang att öka under förlossningen och upplever sig kunna vara mer närvarande. </Typography>
     </Container>
   );
 }
