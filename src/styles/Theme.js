@@ -61,55 +61,72 @@ export const Theme = createTheme({
       },
     },
   },
-  typography: {
+    typography: {
+    // Setting the default font family to Lato
+    fontFamily: '"Lato", sans-serif',
     h1: {
-      fontSize: '2rem', // default
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '2rem',
+      fontWeight: 400, // Adjust weight as needed
       '@media (min-width:600px)': { fontSize: '2.5rem' },
       '@media (min-width:900px)': { fontSize: '3rem' },
       '@media (min-width:1200px)': { fontSize: '3.5rem' },
     },
     h2: {
-      fontSize: '1.5rem', // default
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '1.5rem',
+      fontWeight: 400, // Adjust weight as needed
       '@media (min-width:600px)': { fontSize: '1.75rem' },
       '@media (min-width:900px)': { fontSize: '2rem' },
       '@media (min-width:1200px)': { fontSize: '2.25rem' },
     },
     h3: {
-      fontSize: '1.2rem', // default
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '1.2rem',
+      fontWeight: 400, // Adjust weight as needed
       '@media (min-width:600px)': { fontSize: '1.5rem' },
       '@media (min-width:900px)': { fontSize: '1.75rem' },
       '@media (min-width:1200px)': { fontSize: '2rem' },
     },
-    // You can continue defining other variants like h3, h4, body1, body2, etc.
     body1: {
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: 1.5,
-      '@media (max-width:600px)': {
-        fontSize: '0.875rem',
-      },
+      '@media (max-width:600px)': { fontSize: '0.875rem' },
+    },
     paragraph: {
       fontSize: '1.2rem',
       fontWeight: 400,
       lineHeight: 1.5,
-      '@media (max-width:600px)': {
-        fontSize: '0.975rem',
-      },
-      },
-     subtitle1: {
-      fontSize: '1rem',
+      '@media (max-width:600px)': { fontSize: '0.975rem' },
+      '@media (min-width:600px)': { fontSize: '1.1rem' },
+      '@media (min-width:900px)': { fontSize: '1.2rem' },
+      '@media (min-width:1200px)': { fontSize: '1.3rem' },
+
+    },
+    subtitle1: {
+      fontFamily: '"Lato", sans-serif',
+      fontSize: '2rem',
       fontWeight: 500,
       lineHeight: 1.4,
       letterSpacing: '0.00938em',
+      '@media (max-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:600px)': { fontSize: '1.3rem' },
+      '@media (min-width:900px)': { fontSize: '1.5rem' },
+      '@media (min-width:1200px)': { fontSize: '1.7rem' },
+
     },
-    subtitle2: {
+    italic: {
+      fontFamily: '"Lato", sans-serif',
       fontSize: '0.875rem',
       fontWeight: 500,
       lineHeight: 1.57,
       letterSpacing: '0.00714em',
-      },
-    //overline can be uses for custom headers and body text when you want to emphasize something
+      fontStyle: 'italic',
+
+    },
     overline: {
+      fontFamily: '"Lato", sans-serif',
       fontSize: '0.75rem',
       fontWeight: 400,
       lineHeight: 2.66,
@@ -117,30 +134,27 @@ export const Theme = createTheme({
       textTransform: 'uppercase',
     },
     customHeader: {
+      fontFamily: '"Playfair Display", serif',
       fontSize: '2rem',
       fontWeight: 700,
       lineHeight: 1.2,
       marginTop: '16px',
       marginBottom: '8px',
-      },
-    // customBody can be used for body text. Its a bit smaller than body1 and body2 and has a bit more line height
+    },
     customBody: {
+      fontFamily: '"Lato", sans-serif',
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: 1.5,
       marginTop: '8px',
       marginBottom: '8px',
-      },
-    
-    customBodyItalic: {
-  fontSize: '1rem',
-  fontWeight: 400,
-  lineHeight: 1.5,
-  fontStyle: 'italic', // Adding italic style
-},
-
-    
     },
-
+    customBodyItalic: {
+      fontFamily: '"Lato", sans-serif',
+      fontSize: '1rem',
+      fontWeight: 400,
+      lineHeight: 1.5,
+      fontStyle: 'italic',
+    },
   },
 });

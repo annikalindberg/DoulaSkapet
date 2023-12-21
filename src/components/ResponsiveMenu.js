@@ -90,11 +90,11 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
             </IconButton>
 
             <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
-            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, overFlow: 'hidden' }}>
                 <img
                   src={mobileLogo}
                   alt="Logo"
-                  style={{ width: '230px', paddingTop: "4rem", paddingBottom: "4rem", paddingLeft:'1.5rem' }} />
+                  style={{ paddingTop: "4rem", paddingBottom: "4rem", paddingLeft:'1.5rem' }} />
               </Box>
 
           </Link>

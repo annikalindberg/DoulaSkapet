@@ -9,9 +9,9 @@ import {Doulor} from './pages/Doulor';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import Fakta from './pages/Fakta';
-import styled from 'styled-components';
-import background from './assets/bg-bellies.svg';
- import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+/* import styled from 'styled-components';
+ *//* import background from './assets/bg-bellies.svg';
+ */ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
@@ -22,7 +22,7 @@ import AkutDoula from './pages/AkutDoula';
 import Baspaket from './pages/DoulaPaketBas';
 import AnnikaProfilePage from './pages/AnnikaProfilePage';
 
-const Background = styled.div`
+/* const Background = styled.div`
 background-image: url(${background});    
 background-size: cover;
   background-position: center;
@@ -30,7 +30,7 @@ background-size: cover;
   min-height: 100vh;
   width: 100%;
   
-`;
+`; */
 
 const App = () => {
   useEffect(() => {
@@ -43,8 +43,8 @@ const App = () => {
   return (
     <Router>
       <ThemeProvider theme={Theme} >
-       <Background> 
-         <ResponsiveMenu />
+{/*        <Background> 
+ */}         <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Doulor" element={< Doulor />} />
@@ -57,8 +57,8 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />
-       </Background>
-       </ThemeProvider>
+{/*        </Background>
+ */}       </ThemeProvider>
     </Router>
   );
 };

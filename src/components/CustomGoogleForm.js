@@ -124,7 +124,7 @@ const CustomNetlifyForm = () => {
       />
       
            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-      <Button
+{/*       <Button
         type="submit"
         variant="contained"
         color="primary"
@@ -132,17 +132,18 @@ const CustomNetlifyForm = () => {
         sx={{ mt: 2, fontWeight: 'bold' }}
       >
         Submit
-      </Button>
+      </Button> */}
 
       <Button
         type="submit"
         variant="contained"
-        color="primary"
+          color="primary"
+        /*    disabled={!isFormValid()} */
         sx={{ mt: 2, fontWeight: 'bold' }}
       >
         Submit
       </Button>
-          <Button
+ {/*          <Button
        
         variant="text"
 
@@ -155,7 +156,7 @@ const CustomNetlifyForm = () => {
               }}
       >
         Read Privacy Notice
-      </Button>
+      </Button> */}
 
       {/* Privacy Notice Modal */}
       <Modal
