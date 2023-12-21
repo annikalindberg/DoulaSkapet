@@ -13,28 +13,24 @@ const HeroSection = () => {
   
 
  return (
- 
 
-    
-     
      <Box
        xs={{maxWidth: '70%'}}
        sx={{
          maxWidth: '100%',
-         
+            paddingTop: '2rem',
        pl: 4,
        pr: 4,
          bgcolor: theme.palette.background.paper,
        border: '1px solid green'
 
-       }}> 
-       
-        <Typography variant="h1" gutterBottom sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' }, mt: 8, mb: 5 }}>
-          DoulaSkapet - Trygg Förlossning
-        </Typography>
-        <Typography gutterBottom paragraph >
-          Grattis till graviditeten! Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
-       </Typography> 
+     }}> 
+    
+        <Typography variant='overline'>
+       Grattis till graviditeten!  </Typography>
+     <typography paragraph gutterBottom>
+       Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
+     </typography>
        <Typography variant="h2" gutterBottom>Varför anlita en Doula</Typography>
        
         <Typography paragraph>

@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
-import { Typography } from '@mui/material'; 
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -14,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import Submenu from './SubMenu';
+import mobileLogo from '../assets/MobileLogo.png';
 
 const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt' ]; 
 
@@ -88,10 +88,17 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
             >
               <MenuIcon />
             </IconButton>
-            
-    <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center'}}>
-    DoulaSkapet
-  </Typography>
+
+            <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+                <img
+                  src={mobileLogo}
+                  alt="Logo"
+                  style={{ width: '230px', paddingTop: "4rem", paddingBottom: "4rem", paddingLeft:'1.5rem' }} />
+              </Box>
+
+          </Link>
+
               <Menu // Mobile menu (folded)
                 
               id="menu-appbar"

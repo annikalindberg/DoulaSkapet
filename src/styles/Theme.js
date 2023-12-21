@@ -22,7 +22,8 @@ export const Theme = createTheme({
       // For text, using a darker shade that ensures accessibility
       primary: '#4A2F43',
       secondary: '#6D6875',
-      dark: '#4A4033'
+      dark: '#4A4033',
+      light: 'rgb(248, 248, 248)',
     },
    action: {
       active: '#DDB6C6',
