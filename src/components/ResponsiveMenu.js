@@ -89,15 +89,25 @@ const [openSubmenu, setOpenSubmenu] = React.useState(false);
               <MenuIcon />
             </IconButton>
 
-            <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
-            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, overFlow: 'hidden' }}>
-                <img
-                  src={mobileLogo}
-                  alt="Logo"
-                  style={{ paddingTop: "4rem", paddingBottom: "4rem", paddingLeft:'1.5rem' }} />
-              </Box>
-
-          </Link>
+  <Box sx={{
+  display: { xs: 'flex', md: 'none' },
+  mr: 1,
+  overflow: 'hidden' // Corrected property name
+}}>
+  <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+    <img
+      src={mobileLogo}
+      alt="Logo"
+      style={{ 
+        maxWidth: '100%', // Ensure the image does not exceed the width of the container
+        height: 'auto', 
+        paddingTop: "4rem", 
+        paddingBottom: "4rem", 
+        paddingLeft: '1.5rem' 
+      }} 
+    />
+  </Link>
+</Box>
 
               <Menu // Mobile menu (folded)
                 
