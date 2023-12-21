@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomNetlifyForm from '../components/CustomGoogleForm'
 
@@ -7,6 +7,9 @@ const AnnikaProfilePage = () => {
   const theme = useTheme();
 
   return (
+    <Container
+      sx={{ marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%', px: { xs: 2, sm: 3, md: 4, lg: 10 }, py: { xs: 2, sm: 3, md: 4, lg: 10 } }}
+    >
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
       <Grid container spacing={2} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
         <Grid item xs={12} md={6} lg={4} sx={{ p: '8px' }}>
@@ -49,7 +52,8 @@ const AnnikaProfilePage = () => {
         {/* Add more content as needed */}
       </Box>
       {/* Rest of your component */}
-    </Box>
+      </Box>
+      </Container>
   );
 };
 
