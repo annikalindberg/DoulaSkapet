@@ -16,7 +16,8 @@ export const Theme = createTheme({
       // The light pastel pink background of the entire page
       default: '#FFF7F8',
       paper: '#f9efff57',
-      solidPaper: '#efe1f8'
+      solidPaper: '#efe1f8',
+      solidYellow: '#f5f6c9'
     },
     text: {
       // For text, using a darker shade that ensures accessibility
@@ -26,11 +27,12 @@ export const Theme = createTheme({
       light: 'rgb(248, 248, 248)',
     },
    action: {
-      active: '#DDB6C6',
+     active: '#DDB6C6',
+     activeText: '#4A2F43',
       hover: 'rgba(221,182,198,0.08)',
       selected: 'rgba(221,182,198,0.16)',
       disabled: 'rgb(14, 12, 13)',
-      disabledBackground: 'rgba(221,182,198,0.12)',
+      disabledBackground: 'rgba(221,182,∏198,0.12)',
       activeText: '#4A2F43',
       hoverText: '#4A2F43',
       selectedText: '#4A2F43',
@@ -82,7 +84,7 @@ export const Theme = createTheme({
     },
     h3: {
       fontFamily: '"Playfair Display", serif',
-      fontSize: '1.2rem',
+      fontSize: '1rem',
       fontWeight: 400, // Adjust weight as needed
       '@media (min-width:600px)': { fontSize: '1.5rem' },
       '@media (min-width:900px)': { fontSize: '1.75rem' },
@@ -109,6 +111,7 @@ export const Theme = createTheme({
       fontSize: '2rem',
       fontWeight: 500,
       lineHeight: 1.4,
+     
       letterSpacing: '0.00938em',
       '@media (max-width:600px)': { fontSize: '1rem' },
       '@media (min-width:600px)': { fontSize: '1.3rem' },

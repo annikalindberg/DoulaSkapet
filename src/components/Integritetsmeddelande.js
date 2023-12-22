@@ -1,9 +1,16 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
 
 const PrivacyNotice = () => {
+  const theme = useTheme();
+
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{
+      p: 2,
+      bgColor: theme.palette.background.solidYellow,
+    }}>
       <Typography variant="h6" gutterBottom>
         Integritetsmeddelande för Kontaktformulär
       </Typography>

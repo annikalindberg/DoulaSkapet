@@ -1,11 +1,14 @@
 import React from "react";
-import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button, Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export const SuccessDialog = ({open, onClose}) => {
-  
+  const theme = useTheme();
   
   return (
+   
     <Dialog open={open} onClose={onClose}>
+      <Box sx={{ bgcolor: theme.palette.background.solidYellow }}>
       <DialogTitle>Submission Successful</DialogTitle>
       <DialogContent>
         <DialogContentText>
@@ -13,10 +16,16 @@ export const SuccessDialog = ({open, onClose}) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose} color="primary">
+        <Button onClick={onClose} sx={{
+            bgcolor: theme.palette.primary.main,
+          color: theme.palette.primary.contrastText,
+        }}>
           Close
         </Button>
-      </DialogActions>
+        </DialogActions>
+      </Box>
     </Dialog>
+    
+     
   );
 };

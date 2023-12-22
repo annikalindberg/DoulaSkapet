@@ -10,6 +10,7 @@ export const CTAButton = styled(Button)(({ theme }) => ({
   textTransform: 'none', // Normal text casing
   fontWeight: 'bold', // Bold font for emphasis
   boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)', // Subtle shadow for depth
+  uppercase: 'uppercase', // Uppercase text for emphasis
 
   '&:hover': {
     backgroundColor: theme.palette.primary.dark, // Darker shade on hover

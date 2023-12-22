@@ -3,6 +3,7 @@ import { Box, TextField, Button, Typography, Snackbar, Alert, Modal, Checkbox, F
 import { useTheme } from '@mui/material/styles';
 import PrivacyNotice from './Integritetsmeddelande';
 import { SuccessDialog } from './SuccessDialog';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 const CustomNetlifyForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const CustomNetlifyForm = () => {
     const [submitStatus, setSubmitStatus] = useState({ success: false, error: false });
   const [openModal, setOpenModal] = useState(false);
   const [successDialogOpen, setSuccessDialogOpen] = useState(false);
+const [loading, setLoading] = useState(false);
 
   
     const theme = useTheme();
@@ -33,6 +35,7 @@ const CustomNetlifyForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const isCurrentlyValid = isFormValid();
 
    if (isCurrentlyValid) {
@@ -47,7 +50,8 @@ const CustomNetlifyForm = () => {
     setSubmitStatus({ success: true });
   } else {
     setSubmitStatus({ error: true });
-  }
+   }
+    setLoading(false);
 };
 
 
@@ -138,15 +142,17 @@ const CustomNetlifyForm = () => {
            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
 
 
-     <Button
+   <LoadingButton
   type="submit"
+  loading={loading}
   variant="contained"
   color="primary"
-  disabled={!isFormValid()} // Correct usage
-  sx={{ mt: 2, fontWeight: 'bold' }}
+  disabled={!isFormValid()}
+  sx={{ mt: 2, fontWeight: 'bold'}}
 >
-  Submit
-</Button>
+  SKICKA
+</LoadingButton>
+
 
 
       <Modal

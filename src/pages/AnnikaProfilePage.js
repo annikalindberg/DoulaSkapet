@@ -1,22 +1,99 @@
 import React from 'react';
-import { Box, Grid, Typography, Container } from '@mui/material';
-/* import { useTheme } from '@mui/material/styles';
- */import CustomNetlifyForm from '../components/CustomGoogleForm'
+import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import CustomNetlifyForm from '../components/CustomGoogleForm'
+import { theme } from '../styles/Theme';
 
 const AnnikaProfilePage = () => {
-  /* const theme = useTheme();
- */
+   const theme = useTheme();
+ 
   return (
     <Container
-      sx={{ marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%', px: { xs: 2, sm: 3, md: 4, lg: 10 }, py: { xs: 2, sm: 3, md: 4, lg: 10 } }}
+      sx={{ marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%', px: { xs: 2, sm: 3, md: 4, lg: 10 }, py: { xs: 2, sm: 3, md: 4, lg: 10 }, bgcolor: theme.palette.custom.glassBackground }}
     >
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
-      <Grid container spacing={2} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
+      <Grid container spacing={5} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
         <Grid item xs={12} md={6} lg={4} sx={{ p: '8px' }}>
-          <Box component="img" src="/optimized-images/Annika.webp" alt="Profile Image" sx={{ width: '100%', height: 'auto', borderRadius: '15px' }} />
+            <Box component="img" src="/optimized-images/Annika.webp" alt="Profile Image" sx={{ width: '100%', height: 'auto', borderRadius: '15px' }} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
+              <Typography variant="h3" gutterBottom >
+                Annika Lindberg
+              </Typography>
+              <Typography variant="paragraph" gutterBottom >
+                ERBJUDER
+              </Typography>
+              <Box  sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', textAlign: 'center', gap: '16px', flexWrap: 'wrap' } } >
+            <Button
+                     
+                        variant="outlined"
+                        color="primary"
+                        component={Link}
+                        to={'/Baspaket'}
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      textTransform: 'none',
+                      justifyContent: 'flex-start',
+               bgcolor: theme.palette.background.paper,
+                      color: theme.palette.text.dark,
+                      
+                      '&:hover': {
+                        bgcolor: theme.palette.secondary.contrastText,
+                        color: theme.palette.secondary.main,
+                      },
+                    }}
+                    >
+                        Baspaket  
+              </Button>
+              <Button
+                     
+                        variant="outlined"
+                        color="primary"
+                        component={Link}
+                        to={'/Postpartumsupport'}
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      textTransform: 'none',
+                      justifyContent: 'flex-start',
+               bgcolor: theme.palette.background.paper,
+                      color: theme.palette.text.dark,
+                      
+                      '&:hover': {
+                        bgcolor: theme.palette.secondary.contrastText,
+                        color: theme.palette.secondary.main,
+                      },
+                    }}
+                    >
+                Postpartumsupport
+              </Button>
+              <Button
+                     
+                        variant="outlined"
+                        color="primary"
+                        component={Link}
+                        to={'/AkutDoula'}
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      textTransform: 'none',
+                      justifyContent: 'flex-start',
+               bgcolor: theme.palette.background.paper,
+                      color: theme.palette.text.dark,
+                      
+                      '&:hover': {
+                        bgcolor: theme.palette.secondary.contrastText,
+                        color: theme.palette.secondary.main,
+                      },
+                    }}
+                    >
+                AkutDoula
+              </Button>
+              </Box>
+            </Box>
         </Grid>
         <Grid item xs={12} md={6} lg={6} sx={{ textAlign: 'left', p: '8px' }}>
-          <Typography variant="h1" gutterBottom sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' }, mt: '32px', mb: '20px' }}>
+          <Typography variant="h1" gutterBottom >
           Annika Lindberg 
         </Typography>
           <Typography paragraph>
