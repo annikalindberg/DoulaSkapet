@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, TextField, Button, Typography, Snackbar, Alert, Modal, Checkbox, FormControlLabel, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import PrivacyNotice from './Integritetsmeddelande';
+import { SuccessDialog } from './SuccessDialog';
 
 const CustomNetlifyForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,10 @@ const CustomNetlifyForm = () => {
     consent: false,
   });
     const [submitStatus, setSubmitStatus] = useState({ success: false, error: false });
-    const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false);
+
+  
     const theme = useTheme();
 
   const handleChange = (event) => {
@@ -21,19 +25,31 @@ const CustomNetlifyForm = () => {
         setFormData({ ...formData, consent: event.target.checked });
     };
 
-    /* const isFOrmValid = () => {
-        return formData.consent && formData.name && formData.email && formData.message;
+    const isFormValid = () => {
+  const isValid = formData.consent && formData.name && formData.email && formData.message;
+  console.log('Is form valid:', isValid); // Logs the validity of the form
+  return isValid;
+};
 
-    } */
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (formData.consent && formData.name && formData.email && formData.message) {
-      setSubmitStatus({ success: true });
-    } else {
-      // Handle validation errors as needed
-      setSubmitStatus({ error: true });
-    }
-  };
+    const isCurrentlyValid = isFormValid();
+
+   if (isCurrentlyValid) {
+    // Simulate form submission logic here (e.g., sending data to a server)
+
+    // Open the success dialog
+    setSuccessDialogOpen(true);
+
+    // Reset form data
+    setFormData({ name: '', email: '', message: '', consent: false });
+
+    setSubmitStatus({ success: true });
+  } else {
+    setSubmitStatus({ error: true });
+  }
+};
+
 
   const handleCloseSnackbar = () => {
     setSubmitStatus({ success: false, error: false });
@@ -47,10 +63,6 @@ const CustomNetlifyForm = () => {
     setOpenModal(false);
   };
 
-  const isFormValid = () => {
-    // Check if form data is valid
-    return formData.consent && formData.name && formData.email && formData.message;
-  };
 
 
 
@@ -124,41 +136,19 @@ const CustomNetlifyForm = () => {
       />
       
            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-{/*       <Button
-        type="submit"
-        variant="contained"
-        color="primary"
-        disabled={!isFormValid()} // Here is where you check if the form is valid before enabling the button
-        sx={{ mt: 2, fontWeight: 'bold' }}
-      >
-        Submit
-      </Button> */}
 
-      <Button
-        type="submit"
-        variant="contained"
-          color="primary"
-        /*    disabled={!isFormValid()} */
-        sx={{ mt: 2, fontWeight: 'bold' }}
-      >
-        Submit
-      </Button>
- {/*          <Button
-       
-        variant="text"
 
-        onClick={handleOpenModal}
-              sx={{
-                  mt: 1,
-                  fontSize: '0.75rem',
-                  bgcolor: theme.palette.secondary.main,
-                    color: theme.palette.secondary.contrastText,
-              }}
-      >
-        Read Privacy Notice
-      </Button> */}
+     <Button
+  type="submit"
+  variant="contained"
+  color="primary"
+  disabled={!isFormValid()} // Correct usage
+  sx={{ mt: 2, fontWeight: 'bold' }}
+>
+  Submit
+</Button>
 
-      {/* Privacy Notice Modal */}
+
       <Modal
         open={openModal}
         onClose={handleCloseModal}
@@ -206,6 +196,11 @@ const CustomNetlifyForm = () => {
         </Alert>
       </Snackbar>
       </Box>
+      <SuccessDialog
+  open={successDialogOpen}
+  onClose={() => setSuccessDialogOpen(false)}
+/>
+
     </Box>
   );
 };
