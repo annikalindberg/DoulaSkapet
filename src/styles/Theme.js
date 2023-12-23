@@ -26,7 +26,7 @@ export const Theme = createTheme({
       dark: '#4A4033',
       light: 'rgb(248, 248, 248)',
     },
-   action: {
+/*    action: {
      active: '#DDB6C6',
      activeText: '#4A2F43',
       hover: 'rgba(221,182,198,0.08)',
@@ -37,7 +37,7 @@ export const Theme = createTheme({
       hoverText: '#4A2F43',
       selectedText: '#4A2F43',
       disabledText: '#4A2F43',
-    },
+    }, */
     custom: {
       // For glassmorphism effect, semi-transparent white with a hint of the primary color
       glassBackground: 'rgb(243 238 232 / 85%)',

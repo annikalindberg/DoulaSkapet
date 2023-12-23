@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomNetlifyForm from '../components/CustomGoogleForm'
-import { theme } from '../styles/Theme';
 
 const AnnikaProfilePage = () => {
    const theme = useTheme();
