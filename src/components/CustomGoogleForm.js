@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, Typography, Snackbar, Alert, Modal, Checkbox, FormControlLabel, Link } from '@mui/material';
+import { Box, TextField, Typography, Snackbar, Alert, Modal, Checkbox, FormControlLabel, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import PrivacyNotice from './Integritetsmeddelande';
 import { SuccessDialog } from './SuccessDialog';

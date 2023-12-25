@@ -1,10 +1,11 @@
 // HeroSection.js
 import React from 'react';
 import { Box, Typography, useTheme, Link} from '@mui/material';
-import HighFiveSVG from '../assets/twowomen.svg';
-import { CTAButton } from './Buttons';
+import twowomen from '../assets/twowomen.svg';
 import InfoIcon from '@mui/icons-material/Info';
 import DoulaSlider from './DoulaSlider';
+import Button from '@mui/material/Button';
+
 
 
 const HeroSection = () => {
@@ -80,13 +81,13 @@ const HeroSection = () => {
        <Box sx={{ display: 'flex', flexDirection: { xs: 'column'}, gap: 2, mt: 3 }}><Typography>
          Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!
        </Typography>
-          <CTAButton href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
+          <Button variant='contained' href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
             Boka kostnadsfritt möte
-       </CTAButton>
+       </Button>
        
-          <CTAButton variant="outlined" href="/doulapaket" aria-label="Gå till DoulaPaket">
+          <Button variant="contained" href="/doulapaket" aria-label="Gå till DoulaPaket">
             Doulatjänster
-       </CTAButton>
+       </Button>
        
         </Box>
 
@@ -95,8 +96,8 @@ const HeroSection = () => {
  
              data-aos="fade-left"
         component="img"
-        src={HighFiveSVG}
-        alt="High Five"
+        src={twowomen}
+        alt="Pregnant woman and doula"
         sx={{
           maxWidth: '200px',
           mt: { xs: 2, md: 0 }, // Add top margin on small screens

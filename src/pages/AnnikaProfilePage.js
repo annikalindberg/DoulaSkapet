@@ -2,14 +2,26 @@ import React from 'react';
 import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomNetlifyForm from '../components/CustomGoogleForm'
-import lgbt  from '../assets/lgbtq.svg'
+import lgbt from '../assets/lgbtq.svg'
+import backgroundImage from '../assets/bg-bellies.svg'
+import rebozo from '../assets/rebozo.svg'
 
 const AnnikaProfilePage = () => {
    const theme = useTheme();
  
   return (
-    <Container
-      sx={{ marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%', px: { xs: 2, sm: 3, md: 4, lg: 10 }, py: { xs: 2, sm: 3, md: 4, lg: 10 }, bgcolor: theme.palette.custom.glassBackground }}
+      <Container
+      sx={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: '100%',
+        px: { xs: 2, sm: 3, md: 4, lg: 10 },
+        py: { xs: 2, sm: 3, md: 4, lg: 10 },
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Cover the entire container
+        backgroundPosition: 'center', // Center the image
+        backgroundRepeat: 'no-repeat', // Do not repeat the image
+      }}
     >
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
       <Grid container spacing={5} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
@@ -90,8 +102,36 @@ const AnnikaProfilePage = () => {
                 AkutDoula
               </Button>
               </Box>
+   <Box display="flex" gap={2} sx={{ textAliogn:'flexStart', flexDirection: 'column', justifyContent:'flexStart', alignItems:'flexStart'}}>
+
+      <Typography varianant="subtitle2" sx={{fontWeight: '500'}} > Priser </Typography>
+      <Typography variant="overline" >
+       Baspaket: 10 000 SEK</Typography>
+              <Typography variant="overline" >
               
-            </Box>
+                Postpartumsupport: 700 SEK i timmen  (för Doulaklienter) </Typography> <Typography variant='body2'>(För övriga 850 SEK)
+                </Typography>
+                
+  </Box>
+
+
+                      <Box
+ 
+             data-aos="fade-left"
+        component="img"
+        src={rebozo}
+        alt="Pregnant woman and doula"
+        sx={{
+          maxWidth: '200px',
+          mt: { xs: 2, md: 0 }, // Add top margin on small screens
+            width: '100%' // Responsive image width
+
+        }}
+     />
+ 
+     </Box>
+              
+         
 
 
         </Grid>
