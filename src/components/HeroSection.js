@@ -26,12 +26,12 @@ const HeroSection = () => {
 
      }}> 
     
-        <Typography variant='overline'>
+        <Typography gutterBottom variant='overline' >
        Grattis till graviditeten!  </Typography>
-     <typography paragraph gutterBottom>
+     <typography gutterBottom paragraph>
        Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
      </typography>
-       <Typography variant="h2" gutterBottom>Varför anlita en Doula</Typography>
+       <Typography variant="h2" >Varför anlita en Doula</Typography>
        
         <Typography paragraph>
          Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography> <Typography paragraph>

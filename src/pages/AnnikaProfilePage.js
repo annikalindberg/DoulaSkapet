@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomNetlifyForm from '../components/CustomGoogleForm'
+import lgbt  from '../assets/lgbtq.svg'
 
 const AnnikaProfilePage = () => {
    const theme = useTheme();
@@ -89,13 +90,16 @@ const AnnikaProfilePage = () => {
                 AkutDoula
               </Button>
               </Box>
+              
             </Box>
+
+
         </Grid>
         <Grid item xs={12} md={6} lg={6} sx={{ textAlign: 'left', p: '8px' }}>
           <Typography variant="h1" gutterBottom >
           Annika Lindberg 
         </Typography>
-          <Typography paragraph>
+          <Typography paragraph data-aos="fade-up">
   Som doula drivs jag av ett stort intresse för allt som har med graviditet, födande och 
   kroppen att göra, och ägnar mig själv åt yoga, meditation och breathwork som olika 
   tekniker för att "komma ner i kroppen". I födandets skeden vill vi vara i 
@@ -105,12 +109,27 @@ const AnnikaProfilePage = () => {
          
         <Typography paragraph gutterBottom>Jag bor med min fru, vår dotter Ronja och våra hundar i ett radhus i Skogås, Stockholm. En stor del i mitt doulande är att skapa ett tryggt rum, "ett sacred space" för födandet. Min övertygelse är nämligen att alla kroppar som kan bära ett barn, också kan föda barn. Jag vet även att den födande kroppen ser ut på olika sätt, den kan bära på erfarenheter av olika slag, men oavsett hur den är utformad eller känns inifrån så KAN DEN FÖDA. Så 
   länge den har de yttre förutsättningar som krävs för födandet att ske. Och det är här jag 
-            som doula kommer in i bilden.
-            <Typography variant='subtitle1'> Queermedevetet doulaskap </Typography>
+              som doula kommer in i bilden.
+              <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'center', gap: '16px', flexWrap: 'wrap', mt: '20px', mb: '10px' } } data-aos="fade-up" >
+                          <Box
+              component="img"
+              src={lgbt}
+              alt="LGBT Support"
+              sx={{
+                width: {
+                  xs: '30px', // Width on extra-small screens
+                  sm: '40px', // Width on small screens
+                  md: '50px'  // Width on medium and larger screens
+                },
+                height: 'auto', // Height will adjust automatically
+                mt: 2
+              }}
+/>
+              <Typography variant='subtitle1'> Queermedevetet doulaskap </Typography>
+              </Box>
             <Typography paragraph gutterBottom> Graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanhang utifrån en minoritetsstress som är svår att sätta sig in i utan att själv ha egen levd erfarenhet. Jag har erfarenhet att bära och föda barn utanför heternormen, samt genomgå ivf-behandling som lesbiskt par. Jag har även arbetat med HBTQI+ frågor i olika sammanhang under många år. Jag har en stor förståelse för de utmaningar som kan uppstå i mötet med vården och kan erbjuda stöd utifrån ett HBTQI+ medvetet perspektiv.
             </Typography>
-</Typography> <Typography> Jag har egen levd erfarenhet av IVF och att föda barn utanför heteronormen. 
-        </Typography>
+</Typography> 
 
           {/* Add more content as needed */}
         </Grid>
