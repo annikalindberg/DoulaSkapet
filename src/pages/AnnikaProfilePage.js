@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import CustomNetlifyForm from '../components/CustomGoogleForm'
 import lgbt from '../assets/lgbtq.svg'
 import backgroundImage from '../assets/bg-bellies.svg'
 import rebozo from '../assets/rebozo.svg'
+import CustomFormspreeForm from '../components/FormspreeForm';
 
 const AnnikaProfilePage = () => {
    const theme = useTheme();
@@ -176,7 +176,7 @@ const AnnikaProfilePage = () => {
       </Grid>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
          <Typography gutterBottom variant='h2' >DoulaSkapet</Typography>
-        <CustomNetlifyForm />
+        <CustomFormspreeForm />
 </Box>
 
       <Box sx={{ maxWidth: '70%', mx: 'auto', bgcolor: '#FFF7F8' }}>

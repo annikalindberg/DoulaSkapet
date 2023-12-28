@@ -55,8 +55,10 @@ const Fakta = () => {
         </SectionContent>
       </Section>
 
-      <ImageContainer>
-     <img src="/optimized-images/twomoms.webp" alt="Two moms" style={{ width: '100%', paddingTop: "4rem" }} />
+      <ImageContainer> {/* Make it pick right image depending on screensize */}
+        <img
+
+          src="/optimized-images/twomoms.webp" alt="Two moms" style={{ width: '100%', paddingTop: "4rem" }} />
       </ImageContainer>
 
       {/* Repeat the pattern for other sections */}
