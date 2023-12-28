@@ -5,20 +5,42 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import PrivacyNotice from './Integritetsmeddelande';
 
 const CustomFormspreeForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    consent: false,
+  });
   const [state, handleSubmit] = useForm('xyyrygee'); // Replace 'your-form-id' with your actual Formspree form ID
   const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
 
-  const isFormValid = () => {
-    return state.submitting || state.succeeded;
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const handleCheckboxChange = (event) => {
+    setFormData({ ...formData, consent: event.target.checked });
+  };
+
+  const isFormValid = () => {
+    // Use formData to check if the form is valid
+    return formData.name && formData.email && formData.message && formData.consent;
+  };
+
+  // Adjusted handleSubmit function to use formData
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (isFormValid()) {
+      handleSubmit(formData);
+    }
+  };
   return (
     <Box
       component="form"
-      onSubmit={handleSubmit}
+      onSubmit={handleFormSubmit} // Use adjusted handleFormSubmit function
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -30,14 +52,19 @@ const CustomFormspreeForm = () => {
       }}
     >
       <Typography variant="h5" sx={{ color: 'text.primary', mb: 2 }}>
-        Contact Us
-      </Typography>
-      <TextField
+    Välkommen att kontakta oss! Vi svarar vanligtvis inom några dagar. 
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.primary', mb: 2 }}>
+              OBS! Gäller det akut doula, eller om ärendet är brådskande, ring eller smsa Annika istället på 070-7533568.
+            </Typography>
+     <TextField
         label="Name"
         variant="outlined"
         name="name"
-        required
-        fullWidth
+              value={formData.name}
+              required
+                fullWidth
+        onChange={handleChange}
         sx={{ bgcolor: 'background.default' }}
       />
       <ValidationError field="name" prefix="Name" errors={state.errors} />
@@ -45,7 +72,9 @@ const CustomFormspreeForm = () => {
         label="Email"
         variant="outlined"
         name="email"
-        type="email"
+              type="email"
+              value={formData.email}
+                onChange={handleChange}
         required
         fullWidth
         sx={{ bgcolor: 'background.default' }}
@@ -54,7 +83,9 @@ const CustomFormspreeForm = () => {
       <TextField
         label="Message"
         variant="outlined"
-        name="message"
+              name="message"
+                value={formData.message}
+                    onChange={handleChange}
         multiline
         rows={4}
         required
@@ -66,7 +97,9 @@ const CustomFormspreeForm = () => {
         control={
           <Checkbox
             required
-            name="consent"
+                      name="consent"
+                      checked={formData.consent}
+                        onChange={handleCheckboxChange}
           />
         }
         label={
@@ -78,16 +111,16 @@ const CustomFormspreeForm = () => {
           </Typography>
         }
       />
-      <LoadingButton
-        type="submit"
-        loading={state.submitting}
-        variant="contained"
-        color="primary"
-        disabled={!isFormValid()}
-        sx={{ mt: 2, fontWeight: 'bold' }}
-      >
-        SKICKA
-      </LoadingButton>
+     <LoadingButton
+  type="submit"
+  loading={state.submitting}
+  variant="contained"
+  color="primary"
+  disabled={!isFormValid()}
+  sx={{ mt: 2, fontWeight: 'bold' }}
+>
+  SKICKA
+</LoadingButton>
 
       <Modal
         open={openModal}
@@ -118,7 +151,7 @@ const CustomFormspreeForm = () => {
         onClose={() => {}}
       >
         <Alert severity="success" sx={{ width: '100%' }}>
-          Message sent successfully!
+          Tack för att du kontaktar oss! Vi återkommer så snart vi kan.
         </Alert>
       </Snackbar>
      <Snackbar
@@ -127,11 +160,13 @@ const CustomFormspreeForm = () => {
   onClose={() => {}}
 >
   <Alert severity="error" sx={{ width: '100%' }}>
-    An error occurred. Please try again.
+    Oj, något gick fel. Försök igen!
   </Alert>
-</Snackbar>
+          </Snackbar>
+            
 
-    </Box>
+      </Box>
+      
   );
 };
 

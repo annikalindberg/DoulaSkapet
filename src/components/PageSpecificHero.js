@@ -46,7 +46,10 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         gap: 2,
         border: '1px solid red',
       }}
+      {...image && { style: { backgroundImage: `url(${image})` } }}
     >
+      {/* You can include an image here */}
+     
         <Typography
            variant="h1" gutterBottom
            sx={{
@@ -56,7 +59,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
            }}
         >
       
-        DoulaSkapet - Trygg Förlossning
+        {title}
       </Typography>
       {/* You can include subtitle and other content here */}
     </StyledHeroBox>

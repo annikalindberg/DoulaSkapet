@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-    <PageSpecificHero />
+    <PageSpecificHero title="DoulaSkapet - Trygg Förlossnin"/>
         <Box
         sx={{
  

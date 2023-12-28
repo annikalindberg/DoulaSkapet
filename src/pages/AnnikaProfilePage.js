@@ -5,12 +5,13 @@ import lgbt from '../assets/lgbtq.svg'
 import backgroundImage from '../assets/bg-bellies.svg'
 import rebozo from '../assets/rebozo.svg'
 import CustomFormspreeForm from '../components/FormspreeForm';
+import PageSpecificHero from '../components/PageSpecificHero';
 
 const AnnikaProfilePage = () => {
    const theme = useTheme();
  
   return (
-      <Container
+    <Container
       sx={{
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -23,6 +24,12 @@ const AnnikaProfilePage = () => {
         backgroundRepeat: 'no-repeat', // Do not repeat the image
       }}
     >
+      <PageSpecificHero
+        title="Annika Lindberg"
+        subtitle=""
+        image="/Optimized-images/babyfeet-tablet.webp"
+      />
+
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
       <Grid container spacing={5} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
         <Grid item xs={12} md={6} lg={4} sx={{ p: '8px' }}>
