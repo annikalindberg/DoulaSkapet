@@ -2,13 +2,16 @@ import React from 'react';
 import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import lgbt from '../assets/lgbtq.svg'
-import backgroundImage from '../assets/bg-bellies.svg'
 import rebozo from '../assets/rebozo.svg'
 import CustomFormspreeForm from '../components/FormspreeForm';
 import PageSpecificHero from '../components/PageSpecificHero';
+import PageWrapper from '../components/PageWrapper';
 
 const AnnikaProfilePage = () => {
-   const theme = useTheme();
+  const theme = useTheme();
+  const subtitle = "“Birth is not only about making babies. Birth is about making mothers--strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
+  const title = "Annika Lindberg";
+
  
   return (
     <Container
@@ -18,22 +21,22 @@ const AnnikaProfilePage = () => {
         maxWidth: '100%',
         px: { xs: 2, sm: 3, md: 4, lg: 10 },
         py: { xs: 2, sm: 3, md: 4, lg: 10 },
-        backgroundImage: `url(${backgroundImage})`, // Set background image
-        backgroundSize: 'cover', // Cover the entire container
-        backgroundPosition: 'center', // Center the image
-        backgroundRepeat: 'no-repeat', // Do not repeat the image
+        border: '1px solid green',
+
       }}
     >
       <PageSpecificHero
-        title="Annika Lindberg"
-        subtitle=""
-        image="/Optimized-images/babyfeet-tablet.webp"
+    
+        title={title}
+        subtitle={subtitle} sx={{ border: '1px solid blue' }}
+        image="/Optimized-images/annikaHero.webp"
       />
+      <PageWrapper>
 
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
       <Grid container spacing={5} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
         <Grid item xs={12} md={6} lg={4} sx={{ p: '8px' }}>
-            <Box component="img" src="/optimized-images/Annika.webp" alt="Profile Image" sx={{ width: '100%', height: 'auto', borderRadius: '15px' }} />
+            <Box component="img" src="/optimized-images/Annika.webp" alt="Profile Image" sx={{ /* width: '100%', */ height: 'auto', borderRadius: '15px', mb: '16px' }} />
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
               <Typography variant="h3" gutterBottom >
                 Annika Lindberg
@@ -131,7 +134,7 @@ const AnnikaProfilePage = () => {
         sx={{
           maxWidth: '200px',
           mt: { xs: 2, md: 0 }, // Add top margin on small screens
-            width: '100%' // Responsive image width
+           /*  width: '100%' // Responsive image width */
 
         }}
      />
@@ -194,8 +197,10 @@ const AnnikaProfilePage = () => {
         {/* Add more content as needed */}
       </Box>
       {/* Rest of your component */}
-      </Box>
-      </Container>
+        </Box>
+        </PageWrapper>
+    </Container>
+    
   );
 };
 

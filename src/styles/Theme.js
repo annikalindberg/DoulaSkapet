@@ -121,11 +121,15 @@ export const Theme = createTheme({
     },
     italic: {
       fontFamily: '"Lato", sans-serif',
-      fontSize: '0.875rem',
+      fontSize: '1rem',
       fontWeight: 500,
       lineHeight: 1.57,
       letterSpacing: '0.00714em',
       fontStyle: 'italic',
+           '@media (max-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:600px)': { fontSize: '1.3rem' },
+      '@media (min-width:900px)': { fontSize: '1.5rem' },
+      '@media (min-width:1200px)': { fontSize: '1.7rem' },
 
     },
     overline: {

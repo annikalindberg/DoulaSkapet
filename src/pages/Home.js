@@ -3,33 +3,17 @@ import React from 'react';
 
 
 import HeroSection from '../components/HeroSection';
-import { Box, Typography} from '@mui/material';
+import { Typography} from '@mui/material';
 import PageSpecificHero from '../components/PageSpecificHero';
-import { useTheme } from '@mui/material/styles';
+import  PageWrapper  from '../components/PageWrapper';
 
 const Home = () => {
-  const theme = useTheme();
 
   return (
     <>
     <PageSpecificHero title="DoulaSkapet - Trygg Förlossnin"/>
-        <Box
-        sx={{
- 
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    maxWidth: {
-      xs: '100%', // Max width for extra-small screens
-      sm: '90%',  // Max width for small screens
-      md: '80%',  // Max width for medium screens
-      lg: '70%',  // Max width for large screens
-      xl: '60%'   // Max width for extra-large screens
-          },
-    bgcolor: theme.palette.background.paper,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }}
-> 
+        
+      <PageWrapper>
    
         <HeroSection />
 ´
@@ -73,7 +57,7 @@ const Home = () => {
          Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Från "plusset på stickan" till och med den fjärde trimestern, eller postpartum - den första tiden med er nya lilla familjemedlem, så har vi det ni behöver i form av stöd och trygghet.
          
          Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!       </Typography>
-</Box>
+</PageWrapper>
 </>
 
 

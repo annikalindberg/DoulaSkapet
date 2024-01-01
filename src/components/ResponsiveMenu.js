@@ -11,8 +11,10 @@ import logoImage from '../assets/nobg-logo.svg';
 import { Instagram, Facebook, Email } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
-/* import mobileLogo from '../assets/MobileLogo.png';
- */
+
+import HomeIcon from '@mui/icons-material/Home'; 
+
+ 
 const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
@@ -39,15 +41,23 @@ function ResponsiveAppBar() {
           </Link>
 
           {/* Mobile menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center', alignItems: 'center' }}>
-            <IconButton size="large" aria-label="menu" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flexStart', alignItems: 'center' }}>
+            <Link to="/" sx={{ mx: 2, display: 'flex', alignItems: 'center' }}>
+              <HomeIcon sx={{ color: theme.palette.primary.dark, display: { xs: 'flex', md: 'none' } }} />
+            </Link>
+
+            <IconButton size="large" aria-label="menu" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="">
               <MenuIcon />
             </IconButton>
             <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}
               PaperProps={{ sx: { color: theme.palette.text.dark, bgcolor: theme.palette.background.solidPaper } }} sx={{ display: { xs: 'block', md: 'none' } }}>
               {pages.map((page) => (
                 <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
-                  <Link to={`/${page}`} style={{ textDecoration: 'none', color: theme.palette.text.dark }}>{page}</Link>
+                      {/* Check if the page is 'Home' and adjust the Link accordingly */}
+      <Link to={page === 'Home' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        {page}
+      </Link>
+
                 </Button>
               ))}
             </Menu>
@@ -57,7 +67,11 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button key={page} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
-                <Link to={`/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>{page}</Link>
+                    {/* Check if the page is 'Home' and adjust the Link accordingly */}
+      <Link to={page === 'Home' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        {page}
+      </Link>
+
               </Button>
             ))}
           </Box>

@@ -10,7 +10,6 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { Link } from 'react-router-dom';
 
 const PresentationsCards = ({ name, image, description, erbjuder, bor, pris }) => {
-
     const [isTextVisible, setIsTextVisible] = useState(false);
     const theme = useTheme();
 
@@ -24,8 +23,10 @@ const PresentationsCards = ({ name, image, description, erbjuder, bor, pris }) =
   const serviceUrls = {
         'Baspaket': '/DoulaPaket/Baspaket',
         'Postpartum': '/DoulaPaket/Postpartumsupport',
-        'AkutDoula': '/DoulaPaket/AkutDoula',
-    };
+    'AkutDoula': '/DoulaPaket/AkutDoula',
+        'AnnikasProfilsida': '/Doulor/Annika',
+  };
+  
 
 return (
      <Card sx={{
@@ -60,7 +61,32 @@ return (
       </Typography>
         <Typography sx={{padding: 1}}gutterBottom variant="body2" color="text.secondary">Erbjuder: 
      <Box sx={{ display: 'flex'/* , flexDirection: 'column' */, flexWrap: 'wrap', gap: 1 }}>
-                {erbjuder.map((service, index) => (
+          {erbjuder.map((service, index) => (
+            service === 'AnnikasProfilsida' ? (
+              <Button
+                key={index}
+                variant="contained"
+                color="primary"
+                component={Link}
+                to={serviceUrls[service]}
+                                sx={{
+                                  // Additional styles for Annika's profile button
+                                  
+                                mt: 1,
+                                mb: 1,
+                                textTransform: 'none',
+                                bgcolor: theme.palette.secondary.main,
+                                color: theme.palette.secondary.contrastText,
+                                '&:hover': {
+                                    bgcolor: theme.palette.secondary.dark,
+                                },
+                                }}
+              
+                        >
+                            Go to Annika's Profile
+                        </Button>
+            ) : (
+                
                     <Button
                         key={index}
                         variant="outlined"
@@ -83,7 +109,8 @@ return (
                     >
                         {service}
                     </Button>
-                ))}
+            )))}
+  
           
 
             </Box>
@@ -100,15 +127,11 @@ return (
     size="small"
     sx={{
       mt: 2,
-      
-      bgcolor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
+
       width: '100%',
       textTransform: 'none',
       fontWeight: 'bold',
-      '&:hover': {
-        bgcolor: theme.palette.secondary.contrastText, color: theme.palette.secondary.main,
-      },
+      
     }}
     startIcon={isTextVisible ? <ExpandLessIcon /> : <ExpandMoreIcon  />}
     onClick={toggleTextVisibility}>

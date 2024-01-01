@@ -28,7 +28,7 @@ export const doulorArray = [
       id: 1,
         name: 'Annika Lindberg',
         bor: 'Skogås, Stockholm',
-        erbjuder: ['Baspaket', 'Postpartum', 'AkutDoula'],
+        erbjuder: ['Baspaket', 'Postpartum', 'AkutDoula', 'AnnikasProfilsida'],
     description: ' Som doula drivs jag av ett stort intresse för allt som har med graviditet, födande och kroppen att göra, och ägnar mig själv åt yoga, meditation och breathwork som olika tekniker för att "komma ner i kroppen". I födandets skeden vill vi vara i kroppen snarare än i i hjärnan, vilket ofta är den största utmaningen utifrån det vi är vana vid. Jag har egen levd erfarenhet av IVF och att föda barn utanför heteronormen. Jag bor med min fru, vår dotter Ronja och våra hundar i ett radhus i Skogås, Stockholm. En stor del i mitt doulande är att skapa ett tryggt rum, "ett sacred space" för födandet. Min övertygelse är nämligen att alla kroppar som kan bära ett barn, också kan föda barn. Jag vet även att den födande kroppen ser ut på olika sätt, den kan bära på erfarenheter av olika slag, men oavsett hur hur den är utformad eller känns inifrån så KAN DEN FÖDA. Så länge den har de yttre förutsättningar som krävs för födandet att ske. Och det är här jag som doula kommer in i bilden.',
       pris: 'Gå till Annikas profilsida för prisuppgifter',
       image: doulaImages[1],  
