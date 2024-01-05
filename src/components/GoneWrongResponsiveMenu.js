@@ -14,7 +14,7 @@ import { useTheme } from '@mui/material/styles';
 import Submenu from './SubMenu';
 import mobileLogo from '../assets/MobileLogo.png';
 
-const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

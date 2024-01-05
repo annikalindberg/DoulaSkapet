@@ -15,7 +15,7 @@ import { useTheme } from '@mui/material/styles';
 import HomeIcon from '@mui/icons-material/Home'; 
 
  
-const pages = ['Home', 'Doulor', 'Fakta', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'DoulaSkapet', 'VarförDoula', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
                       {/* Check if the page is 'Home' and adjust the Link accordingly */}
-      <Link to={page === 'Home' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         {page}
       </Link>
 
@@ -68,7 +68,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button key={page} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
                     {/* Check if the page is 'Home' and adjust the Link accordingly */}
-      <Link to={page === 'Home' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         {page}
       </Link>
 

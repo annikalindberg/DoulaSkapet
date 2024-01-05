@@ -15,7 +15,7 @@ export const Theme = createTheme({
     background: {
       // The light pastel pink background of the entire page
       default: '#FFF7F8',
-      paper: '#f9efff57',
+      paper: '#bdb1b16e',
       solidPaper: '#efe1f8',
       solidYellow: '#f5f6c9'
     },
@@ -156,12 +156,10 @@ export const Theme = createTheme({
       marginTop: '8px',
       marginBottom: '8px',
     },
-    customBodyItalic: {
-      fontFamily: '"Lato", sans-serif',
-      fontSize: '1rem',
-      fontWeight: 400,
-      lineHeight: 1.5,
-      fontStyle: 'italic',
-    },
+
+
+    
+       
+    
   },
 });

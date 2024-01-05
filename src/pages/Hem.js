@@ -1,19 +1,17 @@
 
 import React from 'react';
-
-
 import HeroSection from '../components/HeroSection';
 import { Typography} from '@mui/material';
 import PageSpecificHero from '../components/PageSpecificHero';
 import  PageWrapper  from '../components/PageWrapper';
 
-const Home = () => {
+const Hem = () => {
 
   return (
-    <>
+      <PageWrapper>
+    
     <PageSpecificHero title="DoulaSkapet - Trygg Förlossnin"/>
         
-      <PageWrapper>
    
         <HeroSection />
 ´
@@ -58,11 +56,10 @@ const Home = () => {
          
          Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!       </Typography>
 </PageWrapper>
-</>
 
 
 
   );
 }
 
-export default Home;
+export default Hem;

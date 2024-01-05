@@ -26,7 +26,7 @@ const ImageContainer = styled(Box)`
   
 `;
 
-const Fakta = () => {
+const VarförDoula = () => {
   return (
     <Container>
       <Section>
@@ -94,4 +94,4 @@ const Fakta = () => {
   );
 }
 
-export default Fakta;
+export default VarförDoula;

@@ -4,11 +4,11 @@ import ResponsiveMenu from './components/ResponsiveMenu';
 import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
-import Home from './pages/Home';
-import {Doulor} from './pages/Doulor';
+import Hem from './pages/Hem';
+import DoulaSkapet from './pages/DoulaSkapet';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
-import Fakta from './pages/Fakta';
+import VarförDoula from './pages/VarförDoula';
 /* import styled from 'styled-components';
  *//* import background from './assets/bg-bellies.svg';
  */ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -46,14 +46,14 @@ const App = () => {
 {/*        <Background> 
  */}         <ResponsiveMenu />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Doulor" element={< Doulor />} />
+            <Route path="/" element={<Hem />} />
+            <Route path="/DoulaSkapet" element={< DoulaSkapet />} />
 <Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
             <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
-            <Route path="/Fakta" element={< Fakta/>} />
+            <Route path="/VarförDoula" element={< VarförDoula/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

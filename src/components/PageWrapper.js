@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-const PageWrapper = ({ children }) => {
+export const PageWrapper = ({ children }) => {
   const theme = useTheme();
 
   return (
@@ -10,14 +10,13 @@ const PageWrapper = ({ children }) => {
       sx={{
         marginRight: 'auto',
         marginLeft: 'auto',
+        paddingRight: theme.spacing(2),
+        paddingLeft: theme.spacing(2),
         maxWidth: {
           xs: '100%',
           sm: '90%',
-          md: '80%',
-          lg: '70%',
-          xl: '60%'
+      
         },
-        bgcolor: theme.palette.background.paper,
         justifyContent: 'center',
         alignItems: 'center',
       }}
