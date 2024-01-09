@@ -1,136 +1,68 @@
 import React from 'react';
-import { Box, Typography, Grid, Paper } from '@mui/material';
-import { CallToAction } from '@mui/icons-material';
-import { CTAButton } from '../components/Buttons';
-
+import { Card, CardContent, Typography, Box, Grid, List, ListItem } from '@mui/material';
+import { packages } from '../components/PackageData'; // Adjust the import path as necessary
 
 const PostpartumSupportPage = () => {
+  // Locate the specific Postpartumstöd package
+  const postpartumPackage = packages.find(pkg => pkg.title === 'Postpartumstöd – tiden efter förlossningen');
+
+  // If package is not found, render a placeholder or a not found message
+  if (!postpartumPackage) {
+    return <div>Package not found</div>;
+  }
+
   return (
-    <Box sx={{ p: 4 }}>
-      <Typography variant="h2" gutterBottom>
-        Postpartum Stöd 
-      </Typography>
-      <Typography variant="h3" gutterBottom>
-        Stöd Under Den Fjärde Trimestern
-      </Typography>
-      <Typography paragraph>
-              Välkommen till en ny fas i ditt liv som nybliven förälder. Efter förlossningen börjar en spännande men ofta krävande tid där allt fokus ligger på den lilla nykomlingen.<br />
-               Vi i DoulaSkapet förstår att denna period kan vara överväldigande, och vi är här för att ge dig det stöd du behöver under första tiden efter förlossninge
-      </Typography>
-      {/* Placeholder for Image */}
-      <Paper elevation={3} sx={{ p: 2, my: 2 }}>
-        <img src="placeholder.jpg" alt="Placeholder" />
-      </Paper>
-      <Typography variant="h4" gutterBottom>
-        Hur Går Det Till?
-      </Typography>
-      <Typography paragraph>
-        DoulaSkapets postpartumstöd omfattar en rad tjänster för att underlätta din övergång till föräldraskapet...
-      </Typography>
-      {/* More content sections based on the PDF */}
-      <Typography variant="h4" gutterBottom>
-        Vad Kan En Behöva I Form Av Stöd?
-      </Typography>
-      <Grid container spacing={2}>
-        {/* Placeholder for each point of support */}
-        <Grid item xs={12} sm={6}>
-          <Paper elevation={3} sx={{ p: 2 }}>
-            <img src='/optimized-images/kvinna-barn.webp'alt="Placeholder" />
-            <Typography paragraph>möjlighet att prata igenom förlossningen och nuvarande livssituation.</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph> Vägledning i hur du kan skapa en närande och lugn miljö efter förlossningen.
-</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>Amningsstöd eller stöd i lyhörd flaskmatning
-</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>Bebispassning en stund så att du som förälder kan ta igen sömn eller få lite egentid 
-</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>Praktiska tips så som bebisomvårdnad, bärsjal och babypottning</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>Praktiska göromål som inköp, städning, matlagning mm.</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>hjälp med att hitta en bra sömnrytm.</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
+    <Box sx={{ my: 4 }}>
+  <Grid container spacing={2} justifyContent="center">
+    <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
+      <Card sx={{ maxWidth: '100%', borderRadius: '16px', backgroundColor: 'transparent' }}> {/* Max width 100% */}
+        <CardContent>
+              <Typography variant="h5" component="div" sx={{ mb: 2 }}>
+                {postpartumPackage.title}
+              </Typography>
+              <img src={postpartumPackage.image.mobile} alt={postpartumPackage.image.alt} style={{ width: '100%', height: 'auto', marginBottom: '16px' }} />
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                {postpartumPackage.description}
+              </Typography>
 
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
+              <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                {postpartumPackage.rubrik1}
+              </Typography>
+              <Typography sx={{ mb: 1 }}>{postpartumPackage.text1}</Typography>
 
+              <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                {postpartumPackage.rubrik2}
+              </Typography>
+              <List sx={{ mb: 2 }}>
+                <ListItem>{postpartumPackage.list1}</ListItem>
+                <ListItem>{postpartumPackage.list2}</ListItem>
+                <ListItem>{postpartumPackage.list3}</ListItem>
+                <ListItem>{postpartumPackage.list4}</ListItem>
+                <ListItem>{postpartumPackage.list5}</ListItem>
+                <ListItem>{postpartumPackage.list6}</ListItem>
+                <ListItem>{postpartumPackage.list7}</ListItem>
+                <ListItem>{postpartumPackage.list8}</ListItem>
+              </List>
 
-                      <Typography paragraph>Praktiska Verktyg: Tillgång till mallar och checklistor för att organisera och planera din postpartumtid.</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>hjälp med att hitta en bra sömnrytm.</Typography>
-                  </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                  <Paper elevation={3} sx={{ p: 2 }}>
-                      <img src="placeholder.jpg" alt="Placeholder" />
-                      <Typography paragraph>hjälp med att hitta en bra sömnrytm.</Typography>
-                  </Paper>
-                </Grid>
-        {/* Repeat for other points of support */}
-          </Grid>
-          <Typography variant="h4" gutterBottom>Hur ?</Typography>
-          <Typography paragraph>
-              Oavsett om era behov är att få kontinuerligt emotionellt stöd på plats och/eller via telefon eller om behovet är av mer tillfällig art, är det era behov som styr utformningen av stödet.</Typography> 
-          <Typography paragraph> Det bästa är om vi har möjlighet att göra en plan redan innan förlossningen, för att säkerställa att jag är tillgänlig. </Typography>
+              <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                {postpartumPackage.rubrik3}
+              </Typography>
+              <Typography sx={{ mb: 1 }}>{postpartumPackage.prisinformation}</Typography>
+              <Typography variant="body1" sx={{ mb: 2 }}>
+                {postpartumPackage.price}
+              </Typography>
 
-         
-          <Typography paragraph> Men tveka inte att kontakta mig även om det är kort varsel, det mesta går att lösa. </Typography> 
-          <CTAButton
-              to="/kontakt"
-              startIcon={<CallToAction />}>
-              Kontakta mig
-              </CTAButton>
-    
-          
-      {/* Other sections like Cost, Contact, Follow on social media */}
-      <Typography variant="h4" gutterBottom>
-        Kostnad
-      </Typography>
-      <Typography paragraph>
-        Är du Doulaklient till mig erbjuder jag postpartumstödet till ett lägre pris...
-      </Typography>
-      {/* Contact information */}
-      <Typography paragraph>
-        Vid frågor eller bokning skicka ett mejl till annika.edit.lindberg@gmail.com
-      </Typography>
-      {/* Social Media links */}
-      <Typography variant="h5">
-        Follow DoulaSkapet
-      </Typography>
-      {/* Links to social media */}
+              <Typography variant="body1" sx={{ mb: 2 }}>
+                {postpartumPackage.ctatext}
+              </Typography>
+              
+              <Typography variant="body1" sx={{ mb: 2, fontStyle: 'italic' }}>
+                {postpartumPackage.disclaimer}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

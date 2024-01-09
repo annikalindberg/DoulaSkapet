@@ -1,16 +1,16 @@
 import React from 'react';
-import { Box, Grid, Typography, Container, Button, Link } from '@mui/material';
+import { Box, Grid, Typography, Container, Button, } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import lgbt from '../assets/lgbtq.svg'
 import rebozo from '../assets/rebozo.svg'
 import CustomFormspreeForm from '../components/FormspreeForm';
 import PageSpecificHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
+import { Link as RouterLink } from 'react-router-dom'; // Import from react-router-dom
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
-  const subtitle = "“Birth is not only about making babies. Birth is about making mothers--strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
-  const title = "Annika Lindberg";
+  const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
 
  
   return (
@@ -26,9 +26,7 @@ const AnnikaProfilePage = () => {
       }}
     >
       <PageSpecificHero
-    
-        title={title}
-        subtitle={subtitle} sx={{ border: '1px solid blue' }}
+        subtitle={subtitle} 
         image="/Optimized-images/annikaHero.webp"
       />
       <PageWrapper>
@@ -46,11 +44,10 @@ const AnnikaProfilePage = () => {
               </Typography>
               <Box  sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', textAlign: 'center', gap: '16px', flexWrap: 'wrap' } } >
             <Button
-                     
+                     component={RouterLink}
                         variant="outlined"
                         color="primary"
-                        component={Link}
-                        to={'/Baspaket'}
+                        to='/DoulaPaket/Baspaket'
                     sx={{
                       mt: 1,
                       mb: 1,
@@ -68,11 +65,11 @@ const AnnikaProfilePage = () => {
                         Baspaket  
               </Button>
               <Button
-                     
+                     component={RouterLink}
                         variant="outlined"
                         color="primary"
-                        component={Link}
-                        to={'/Postpartumsupport'}
+                      
+                        to='/DoulaPaket/PostpartumSupport'
                     sx={{
                       mt: 1,
                       mb: 1,
@@ -90,11 +87,10 @@ const AnnikaProfilePage = () => {
                 Postpartumsupport
               </Button>
               <Button
-                     
+                     component={RouterLink}
                         variant="outlined"
                         color="primary"
-                        component={Link}
-                        to={'/AkutDoula'}
+                        to='DoulaPaket/AkutDoula'
                     sx={{
                       mt: 1,
                       mb: 1,
@@ -112,14 +108,18 @@ const AnnikaProfilePage = () => {
                 AkutDoula
               </Button>
               </Box>
-   <Box display="flex" gap={2} sx={{ textAliogn:'flexStart', flexDirection: 'column', justifyContent:'flexStart', alignItems:'flexStart'}}>
-
+  <Box display="flex" gap={2} sx={{ 
+    flexDirection: 'column', 
+    justifyContent: 'flex-start', 
+    alignItems: 'flex-start',
+    textAlign: 'left' // Changed from 'textAliogn: flexStart'
+}}> 
       <Typography varianant="subtitle2" sx={{fontWeight: '500'}} > Priser </Typography>
-      <Typography variant="overline" >
+      <Typography variant="body2" >
        Baspaket: 10 000 SEK</Typography>
-              <Typography variant="overline" >
+              <Typography variant="body2" >
               
-                Postpartumsupport: 700 SEK i timmen  (för Doulaklienter) </Typography> <Typography variant='body2'>(För övriga 850 SEK)
+                Postpartumsupport: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
                 </Typography>
                 
   </Box>
@@ -150,16 +150,12 @@ const AnnikaProfilePage = () => {
           Annika Lindberg 
         </Typography>
           <Typography paragraph data-aos="fade-up">
-  Som doula drivs jag av ett stort intresse för allt som har med graviditet, födande och 
-  kroppen att göra, och ägnar mig själv åt yoga, meditation och breathwork som olika 
-  tekniker för att "komma ner i kroppen". I födandets skeden vill vi vara i 
-  <Typography component="span" variant='customBodyItalic'> kroppen </Typography>
-  snarare än i hjärnan, vilket ofta är den största utmaningen utifrån det vi är vana vid. 
+  Som doula drivs jag av ett stort intresse för födandets fysiologi, och den fantastiska kroppens potential. 
+
   </Typography>
          
-        <Typography paragraph gutterBottom>Jag bor med min fru, vår dotter Ronja och våra hundar i ett radhus i Skogås, Stockholm. En stor del i mitt doulande är att skapa ett tryggt rum, "ett sacred space" för födandet. Min övertygelse är nämligen att alla kroppar som kan bära ett barn, också kan föda barn. Jag vet även att den födande kroppen ser ut på olika sätt, den kan bära på erfarenheter av olika slag, men oavsett hur den är utformad eller känns inifrån så KAN DEN FÖDA. Så 
-  länge den har de yttre förutsättningar som krävs för födandet att ske. Och det är här jag 
-              som doula kommer in i bilden.
+              <Typography paragraph gutterBottom>Jag har en bakgrund inom elitidrott och coach inom en fullkontaktsport, vilket gett mig effektiva verktyg och metoder att förbereda kroppen och det mentala inför krävande utmaningar. Här är mental förberedelse en lika självklar del som den fysiska vilket jag tagit med mig in i mitt Doulaskap och i hur jag coachar den födande inför och under födseln. Jag har genom åren samlat på mig en mängd effektiva metoder för att hitta de nycklar som fungerar, och jag brinner för att ständigt hitta de nya sätt som passar för varje individ. Som person är jag är intuitiv och inkännande, och jobbar mycket med att stärka den födande och coacha på ett lyhört sätt. Finns det en partner och/eller stödperson, så jobbar jag med att stärka er som ett team.    
+              </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'center', gap: '16px', flexWrap: 'wrap', mt: '20px', mb: '10px' } } data-aos="fade-up" >
                           <Box
               component="img"
@@ -177,11 +173,12 @@ const AnnikaProfilePage = () => {
 />
               <Typography variant='subtitle1'> Queermedevetet doulaskap </Typography>
               </Box>
-            <Typography paragraph gutterBottom> Graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanhang utifrån en minoritetsstress som är svår att sätta sig in i utan att själv ha egen levd erfarenhet. Jag har erfarenhet att bära och föda barn utanför heternormen, samt genomgå ivf-behandling som lesbiskt par. Jag har även arbetat med HBTQI+ frågor i olika sammanhang under många år. Jag har en stor förståelse för de utmaningar som kan uppstå i mötet med vården och kan erbjuda stöd utifrån ett HBTQI+ medvetet perspektiv.
+            <Typography paragraph gutterBottom> 
+                Förutom doula (och fd idrottare) är jag även genusvetare och jag har jobbat med utbildning och inkludering samt normkritik i över 20 års tid, vilket har gett mig en djup inblick hur normer och förväntningar påverkar kroppar på olika sätt i olika sammanhang. </Typography>
+                <Typography >
+Graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanhang utifrån en minoritetsstress som är svår att sätta sig in i utan att själv ha egen levd erfarenhet. Jag har erfarenhet att bära och föda barn utanför heternormen, samt genomgå ivf-behandling som lesbiskt par. Jag har även arbetat med HBTQI+ frågor i olika sammanhang under många år. Jag har en stor förståelse för de utmaningar som kan uppstå i mötet med vården och kan erbjuda stöd utifrån ett HBTQI+ medvetet perspektiv.
             </Typography>
-</Typography> 
 
-          {/* Add more content as needed */}
         </Grid>
       </Grid>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>

@@ -9,9 +9,8 @@ import DoulaSkapet from './pages/DoulaSkapet';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import VarförDoula from './pages/VarförDoula';
-/* import styled from 'styled-components';
- *//* import background from './assets/bg-bellies.svg';
- */ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
@@ -21,16 +20,8 @@ import PostpartumSupport from './pages/PostPartumSupport';
 import AkutDoula from './pages/AkutDoula';  
 import Baspaket from './pages/DoulaPaketBas';
 import AnnikaProfilePage from './pages/AnnikaProfilePage';
-
-/* const Background = styled.div`
-background-image: url(${background});    
-background-size: cover;
-  background-position: center;
-
-  min-height: 100vh;
-  width: 100%;
-  
-`; */
+import { gradientStyle } from './components/ReusableStyles';
+import Box from '@mui/material/Box';
 
 const App = () => {
   useEffect(() => {
@@ -39,12 +30,16 @@ const App = () => {
       once: true,
     });
   }, []);
+
+/*   const theme = useTheme(); */
+
   
   return (
     <Router>
       <ThemeProvider theme={Theme} >
-{/*        <Background> 
- */}         <ResponsiveMenu />
+      <Box sx={gradientStyle}>
+        
+          <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Hem />} />
             <Route path="/DoulaSkapet" element={< DoulaSkapet />} />
@@ -57,8 +52,8 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />
-{/*        </Background>
- */}       </ThemeProvider>
+       </Box> 
+      </ThemeProvider>
     </Router>
   );
 };

@@ -16,22 +16,12 @@ const HeroSection = () => {
   return (
 
      <PageWrapper>
-     {/*   xs={{maxWidth: '70%'}}
-       sx={{
-         maxWdth: '100%',
-            paddingTop: '2rem',
-       pl: 4,
-       pr: 4,
-         bgcolor: theme.palette.background.paper,
-       border: '1px solid green'
-
-     }}>   */}
-    
+   
         <Typography gutterBottom variant='overline' >
        Grattis till graviditeten!  </Typography>
-     <typography gutterBottom paragraph>
+     <Typography gutterBottom paragraph>
        Och så fint att du hittat till oss på DoulaSkapet! Oavsett vem du är eller var du just nu befinner dig på din resa, så har du kommit helt rätt.
-     </typography>
+     </Typography>
     
        
         <Typography gutterBottom paragraph>

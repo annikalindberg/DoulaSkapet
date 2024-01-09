@@ -89,7 +89,31 @@ export const Theme = createTheme({
       '@media (min-width:600px)': { fontSize: '1.5rem' },
       '@media (min-width:900px)': { fontSize: '1.75rem' },
       '@media (min-width:1200px)': { fontSize: '2rem' },
-    },
+      },
+      h4: {
+        fontFamily: '"Playfair Display", serif',
+        fontSize: '0.875rem',
+        textTransform: 'uppercase',
+  
+
+        '@media (min-width:600px)': { fontSize: '1rem' },
+        '@media (min-width:900px)': { fontSize: '1.25rem' },
+        '@media (min-width:1200px)': { fontSize: '1.5rem' },
+      },
+      h5: {
+        fontFamily: '"Playfair Display", serif',
+        fontSize: '0.75rem',
+        '@media (min-width:600px)': { fontSize: '0.875rem' },
+        '@media (min-width:900px)': { fontSize: '1rem' },
+        '@media (min-width:1200px)': { fontSize: '1.25rem' },
+      },
+      h6: {
+        fontFamily: '"Playfair Display", serif',
+        fontSize: '0.625rem',
+        '@media (min-width:600px)': { fontSize: '0.75rem' },
+        '@media (min-width:900px)': { fontSize: '0.875rem' },
+        '@media (min-width:1200px)': { fontSize: '1rem' },
+      },
     body1: {
       fontSize: '1rem',
       fontWeight: 400,
@@ -100,6 +124,7 @@ export const Theme = createTheme({
       fontSize: '1.2rem',
       fontWeight: 400,
       lineHeight: 1.5,
+ 
       '@media (max-width:600px)': { fontSize: '0.975rem' },
       '@media (min-width:600px)': { fontSize: '1.1rem' },
       '@media (min-width:900px)': { fontSize: '1.2rem' },
@@ -139,6 +164,8 @@ export const Theme = createTheme({
       lineHeight: 2.66,
       letterSpacing: '0.08333em',
       textTransform: 'uppercase',
+      marginTop: '50px', // this is not having any effect?
+      
     },
     customHeader: {
       fontFamily: '"Playfair Display", serif',

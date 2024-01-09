@@ -8,9 +8,10 @@ import  PageWrapper  from '../components/PageWrapper';
 const Hem = () => {
 
   return (
-      <PageWrapper>
     
-    <PageSpecificHero title="DoulaSkapet - Trygg Förlossnin"/>
+    <PageWrapper>
+    <PageSpecificHero component="h1"
+    title="DoulaSkapet - Trygg Förlossning" />
         
    
         <HeroSection />

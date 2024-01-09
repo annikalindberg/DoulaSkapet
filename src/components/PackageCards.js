@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { CardMedia, useTheme } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; // New icon import
 
-const DoulaPackageCard = ({ title, image, description }) => {
+import { Link } from 'react-router-dom';  
+
+const DoulaPackageCard = ({ title, image, description, linkPath }) => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const theme = useTheme();
 
@@ -58,23 +59,26 @@ const DoulaPackageCard = ({ title, image, description }) => {
           {isTextVisible ? description : truncateText(description)}
         </Typography>
       <CardActions>
-           <Button
-    size="small"
-            sx={{
-      mt: 2,
-      bgcolor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
-      width: '100%',
-      textTransform: 'none',
-      fontWeight: 'bold',
-      '&:hover': {
-        bgcolor: theme.palette.secondary.contrastText, color: theme.palette.secondary.main,
-      },
-    }}
-    startIcon={isTextVisible ? <ExpandLessIcon /> : <ExpandMoreIcon  />}
-    onClick={toggleTextVisibility}>
-    {isTextVisible ? 'Se mindre...' : 'Se mer...'}
-</Button>
+       <Button
+          component={Link} // Use Button as a Link
+          to={linkPath} // Link destination
+          size="small"
+          sx={{
+            mt: 2,
+            bgcolor: theme.palette.secondary.main,
+            color: theme.palette.secondary.contrastText,
+            width: '100%',
+            textTransform: 'none',
+            fontWeight: 'bold',
+            '&:hover': {
+              bgcolor: theme.palette.secondary.contrastText,
+              color: theme.palette.secondary.main,
+            },
+          }}
+          endIcon={<ArrowForwardIcon />} // New icon for the button
+        >
+          Läs mer
+        </Button>
       </CardActions>
       </CardContent>
     </Card>

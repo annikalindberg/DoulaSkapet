@@ -30,6 +30,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
+          mb: 5,
           py: {
             xs: 2,  // Equivalent to theme.spacing(2)
             sm: 3,  // Equivalent to theme.spacing(3)
@@ -55,7 +56,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         <Typography
            variant="h1" gutterBottom
            sx={{
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' }, mt: 8, mb: 5,
+               mt: 8, mb: 5,
              color: theme.palette.text.primary,
             
 
