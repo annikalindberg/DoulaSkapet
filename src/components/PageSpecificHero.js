@@ -73,11 +73,11 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         variant="italic"
         sx={{
          
-          textAlign: 'center', // Align text to the left
-
+          textAlign: 'center', 
+         
                   
 
-          // Adjust the font size and other styles as needed
+         
         }}
       >
         {subtitle}

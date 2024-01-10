@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,35 +10,29 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; // New icon imp
 import { Link } from 'react-router-dom';  
 
 const DoulaPackageCard = ({ title, image, description, linkPath }) => {
-  const [isTextVisible, setIsTextVisible] = useState(false);
   const theme = useTheme();
 
-  const toggleTextVisibility = () => {
-    setIsTextVisible(!isTextVisible);
-  };
-  const truncateText = (text, limit = 300) => {
+  
+  const truncateText = (text, limit = 150) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
   };
 
-  // Ensure the image object has the necessary properties before trying to access them
-  /* const hasImage = image && image.mobile && image.tablet && image.desktop; */
 
   return (
      <Card sx={{
-            maxWidth: 345, // Set a maxWidth for the card
-            m: 2, // Add margin
-            borderRadius: '16px', // Rounded corners
+            maxWidth: 300, 
+            m: 2, 
+            borderRadius: '16px',
             display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden', // This prevents the child elements from overflowing the border radius
+        overflow: 'hidden', 
               backgroundColor: 'transparent',
 
     }}>
-       {image && (
+       {image && ( 
                <CardMedia
     component="img"
-          image={image.mobile}
-       
+          image={image.mobile} 
         
 
     alt={title}
@@ -52,11 +46,13 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
 />
 
             )}
-<CardContent sx={{ bgcolor: theme.palette.custom.glassBackgroundDark}}> <Typography gutterBottom variant="h5" component="div">
+<CardContent sx={{ bgcolor: theme.palette.background.default}}> <Typography gutterBottom variant="h5" component="div">
       </Typography>
-        <Typography variant = "h5" color="text.secondary"> {title} </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {isTextVisible ? description : truncateText(description)}
+        <Typography variant="h4" sx={{
+          mb: 2, mt: 3, textAlign: 'center'
+        }}> {title} </Typography>
+        <Typography variant="body2" >
+               {truncateText(description)}
         </Typography>
       <CardActions>
        <Button
@@ -65,7 +61,7 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
           size="small"
           sx={{
             mt: 2,
-            bgcolor: theme.palette.secondary.main,
+            bgcolor: theme.palette.background.solidYellow,
             color: theme.palette.secondary.contrastText,
             width: '100%',
             textTransform: 'none',

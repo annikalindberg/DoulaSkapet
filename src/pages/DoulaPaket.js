@@ -22,9 +22,9 @@ const DoulaPaket = () => {
           return (
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={6}
+              xs={12} 
+              sm={12} 
+              md={4} // 2 cards per row on medium screens and up to show 3 cards per row on larger screens change this to md={4}
               key={pkg.id}
               sx={{
                 mt: 8,

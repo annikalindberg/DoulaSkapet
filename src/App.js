@@ -5,10 +5,10 @@ import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Hem from './pages/Hem';
-import DoulaSkapet from './pages/DoulaSkapet';
+import VilkaViÄr from './pages/VilkaViÄr';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
-import VarförDoula from './pages/VarförDoula';
+import DoulaEffekten from './pages/DoulaEffekten';
 
  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
@@ -42,13 +42,13 @@ const App = () => {
           <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Hem />} />
-            <Route path="/DoulaSkapet" element={< DoulaSkapet />} />
+            <Route path="/VilkaViÄr" element={< VilkaViÄr />} />
 <Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
             <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
-            <Route path="/VarförDoula" element={< VarförDoula/>} />
+            <Route path="/DoulaEffekten" element={< DoulaEffekten/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

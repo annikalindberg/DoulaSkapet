@@ -27,8 +27,8 @@ const HeroSection = () => {
         <Typography gutterBottom paragraph>
          Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography> <Typography paragraph>
   Mer om fördelarna med att anlita en doula och forskningen bakom det kan du läsa mer om under {' '}
-         <Link href="/VarförDoula">
-          Fakta
+         <Link href="/DoulaEffekten">
+          /Doulaeffekten
         </Link>
       </Typography>
 

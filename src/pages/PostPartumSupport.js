@@ -1,9 +1,12 @@
 import React from 'react';
-import { Card, CardContent, Typography, Box, Grid, List, ListItem } from '@mui/material';
+import { Card, CardContent, Typography, Box, Grid, List, ListItem , ListItemIcon } from '@mui/material';
 import { packages } from '../components/PackageData'; // Adjust the import path as necessary
+import { useTheme } from '@mui/material/styles';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const PostpartumSupportPage = () => {
-  // Locate the specific Postpartumstöd package
+  const theme = useTheme();
+
   const postpartumPackage = packages.find(pkg => pkg.title === 'Postpartumstöd – tiden efter förlossningen');
 
   // If package is not found, render a placeholder or a not found message
@@ -16,16 +19,16 @@ const PostpartumSupportPage = () => {
   <Grid container spacing={2} justifyContent="center">
     <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
       <Card sx={{ maxWidth: '100%', borderRadius: '16px', backgroundColor: 'transparent' }}> {/* Max width 100% */}
-        <CardContent>
-              <Typography variant="h5" component="div" sx={{ mb: 2 }}>
+        <CardContent  sx={{ bgcolor: theme.palette.background.default}}>
+              <Typography variant="h2" sx={{ mb: 2 }}>
                 {postpartumPackage.title}
               </Typography>
               <img src={postpartumPackage.image.mobile} alt={postpartumPackage.image.alt} style={{ width: '100%', height: 'auto', marginBottom: '16px' }} />
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                 {postpartumPackage.description}
               </Typography>
 
-              <Typography variant="subtitle1" sx={{ mb: 1 }}>
+              <Typography variant="h3" sx={{ mb: 1 }}>
                 {postpartumPackage.rubrik1}
               </Typography>
               <Typography sx={{ mb: 1 }}>{postpartumPackage.text1}</Typography>

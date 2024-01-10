@@ -32,7 +32,7 @@ export default function MyBreadcrumbs() {
             <Link component={RouterLink} color="inherit" underline="hover" to="/DoulaPaket">
                 DoulaPaket
             </Link>
-            <Link component={RouterLink} color="inherit" underline="hover" to="/VarförDoula">
+            <Link component={RouterLink} color="inherit" underline="hover" to="/Doulaeffekten">
                 Varför Doula?
             </Link>
             <Link component={RouterLink} color="inherit" underline="hover" to="/Kontakt">

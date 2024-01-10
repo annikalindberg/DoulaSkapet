@@ -6,7 +6,7 @@ import PageWrapper from '../components/PageWrapper';
 import PageSpecificHero from '../components/PageSpecificHero';
 import MyBreadcrumbs from '../components/BreadCrumbs';
 
-const DoulaSkapet = () => {
+const VilkaViÄr = () => {
 
  
    return (
@@ -51,4 +51,4 @@ const DoulaSkapet = () => {
   );
 };
 
-export default DoulaSkapet;
+export default VilkaViÄr;

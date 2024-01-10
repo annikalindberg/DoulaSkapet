@@ -1,8 +1,11 @@
 import React from 'react';
-import { Card, CardContent, Typography, Box, Grid, List, ListItem } from '@mui/material';
+import { Card, CardContent, Typography, Box, Grid, List, ListItem, ListItemIcon } from '@mui/material';
 import { packages } from '../components/PackageData'; // Adjust the import path as necessary
+import CircleIcon from '@mui/icons-material/Circle';
+import { useTheme } from '@mui/material/styles';
 
 const AkutDoulaPage = () => {
+  const theme = useTheme();
   // Locate the specific Akut-Doula package
   const akutDoulaPackage = packages.find(pkg => pkg.title === 'Akut-Doula');
 
@@ -16,7 +19,7 @@ const AkutDoulaPage = () => {
   <Grid container spacing={2} justifyContent="center">
     <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
       <Card sx={{ maxWidth: '100%', borderRadius: '16px', backgroundColor: 'transparent' }}> {/* Max width 100% */}
-        <CardContent>
+        <CardContent sx={{ bgcolor: theme.palette.background.default}}>
               <Typography variant="h2"  sx={{ mb: 2 }}>
                 {akutDoulaPackage.title}
               </Typography>
@@ -29,9 +32,16 @@ const AkutDoulaPage = () => {
                 {akutDoulaPackage.rubrik1}
               </Typography>
               <List sx={{ mb: 2 }}>
-                <ListItem>{akutDoulaPackage.list1}</ListItem>
-                <ListItem>{akutDoulaPackage.list2}</ListItem>
-                <ListItem>{akutDoulaPackage.list3}</ListItem>
+                {[akutDoulaPackage.list2_1, akutDoulaPackage.list2_2, akutDoulaPackage.list2_3, akutDoulaPackage.list2_4].map((item, index) => (
+                  <ListItem key={index} sx={{ alignItems: 'flex-start' }}>
+                    <ListItemIcon sx={{ minWidth: 'auto', marginRight: '8px', marginTop: '5px', color: 'text.secondary' }}>
+                      <CircleIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="body2">
+                      {item}
+                    </Typography>
+                  </ListItem>
+                ))}
               </List>
 
               <Typography sx={{ mb: 1 }}>{akutDoulaPackage.text1}</Typography>

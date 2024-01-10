@@ -14,8 +14,20 @@ import { useTheme } from '@mui/material/styles';
 
 import HomeIcon from '@mui/icons-material/Home'; 
 
+const camelCaseToWords = (str) => {
+  return str
+    // Handle special characters like 'Ä'
+    .replace(/Ä/g, ' Ä')
+    // Insert a space before all caps (excluding the first character)
+    .replace(/([A-Z][a-z])/g, ' $1')
+    // Uppercase the first character
+    .replace(/^./, (str) => str.toUpperCase());
+}
+
+
+
  
-const pages = ['Hem', 'DoulaSkapet', 'VarförDoula', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'VilkaViÄr', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,8 +47,8 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           {/* Logo */}
           <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-              <img src={logoImage} alt="Logo" style={{ width: '300px', paddingTop: "4rem", paddingBottom: "4rem" }} />
+            <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'flex' }, mr: 1 }}>
+              <img src={logoImage} alt="Logo" style={{ width: '200px', paddingTop: "4rem", paddingBottom: "4rem"}} sx={{}} />
             </Box>
           </Link>
 
@@ -50,12 +62,15 @@ function ResponsiveAppBar() {
               <MenuIcon />
             </IconButton>
             <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}
-              PaperProps={{ sx: { color: theme.palette.text.dark, bgcolor: theme.palette.background.solidPaper } }} sx={{ display: { xs: 'block', md: 'none' } }}>
+                slotProps={{ 
+    paper: { sx: { color: theme.palette.text.dark, bgcolor: theme.palette.background.solidPaper } }
+  }}
+ sx={{ display: { xs: 'block', md: 'none' } }}>
               {pages.map((page) => (
                 <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
                       {/* Check if the page is 'Home' and adjust the Link accordingly */}
       <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-        {page}
+                  {camelCaseToWords(page)}
       </Link>
 
                 </Button>
@@ -69,7 +84,7 @@ function ResponsiveAppBar() {
               <Button key={page} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
                     {/* Check if the page is 'Home' and adjust the Link accordingly */}
       <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-        {page}
+        {camelCaseToWords(page)}
       </Link>
 
               </Button>
@@ -77,7 +92,12 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* Social media icons */}
-          <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', }}>
+         <Box sx={{
+        display: { xs: 'none', md: 'flex' },
+        position: 'absolute',
+        right: 0, // Align to the right
+        top: 0, // Align to the top
+      }}>
             <a href="https://www.instagram.com/doulaskapet__tryggforlossning/" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}><Instagram /></IconButton>
             </a>
