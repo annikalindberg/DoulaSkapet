@@ -26,9 +26,7 @@ export default function MyBreadcrumbs() {
             <Link component={RouterLink} color="inherit" to="/">
                 Hem
             </Link>
-            <Link component={RouterLink} color="inherit" underline="hover" to="/DoulaSkapet">
-                DoulaSkapet
-            </Link>
+           
             <Link component={RouterLink} color="inherit" underline="hover" to="/DoulaPaket">
                 DoulaPaket
             </Link>

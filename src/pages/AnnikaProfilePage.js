@@ -35,7 +35,7 @@ const AnnikaProfilePage = () => {
       <Grid container spacing={5} justifyContent="center" sx={{ mt: '16px', mb: '16px' }}>
         <Grid item xs={12} md={6} lg={4} sx={{ p: '8px' }}>
             <Box component="img" src="/optimized-images/Annika.webp" alt="Profile Image" sx={{ /* width: '100%', */ height: 'auto', borderRadius: '15px', mb: '16px' }} />
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'center', gap: '16px' }} data-aos="fade-up">
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }} data-aos="fade-up">
               <Typography variant="h3" gutterBottom >
                 Annika Lindberg
               </Typography>
@@ -122,7 +122,17 @@ const AnnikaProfilePage = () => {
                 Postpartumsupport: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
                 </Typography>
                 
-  </Box>
+                </Box>
+                       <Box sx={{ display: 'flex', flexDirection: { xs: 'column'}, gap: 2, mt: 3 }}><Typography>
+         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!
+       </Typography>
+          <Button variant='contained' href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
+            Boka kostnadsfritt möte
+       </Button>
+       
+      
+       
+        </Box>
 
 
                       <Box
@@ -133,7 +143,7 @@ const AnnikaProfilePage = () => {
         alt="Pregnant woman and doula"
         sx={{
           maxWidth: '200px',
-          mt: { xs: 2, md: 0 }, // Add top margin on small screens
+          mt: { xs: 2, md: 4, ld: 6 }, // Add top margin on small screens
            /*  width: '100%' // Responsive image width */
 
         }}

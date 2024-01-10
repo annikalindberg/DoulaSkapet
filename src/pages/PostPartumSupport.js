@@ -36,15 +36,17 @@ const PostpartumSupportPage = () => {
               <Typography variant="subtitle1" sx={{ mb: 1 }}>
                 {postpartumPackage.rubrik2}
               </Typography>
-              <List sx={{ mb: 2 }}>
-                <ListItem>{postpartumPackage.list1}</ListItem>
-                <ListItem>{postpartumPackage.list2}</ListItem>
-                <ListItem>{postpartumPackage.list3}</ListItem>
-                <ListItem>{postpartumPackage.list4}</ListItem>
-                <ListItem>{postpartumPackage.list5}</ListItem>
-                <ListItem>{postpartumPackage.list6}</ListItem>
-                <ListItem>{postpartumPackage.list7}</ListItem>
-                <ListItem>{postpartumPackage.list8}</ListItem>
+         <List sx={{ mb: 2 }}>
+                {[postpartumPackage.list1, postpartumPackage.list2, postpartumPackage.list3, 
+                  postpartumPackage.list4, postpartumPackage.list5, postpartumPackage.list6, 
+                  postpartumPackage.list7, postpartumPackage.list8].map((item, index) => (
+                  <ListItem key={index}>
+                    <ListItemIcon>
+                      <CircleIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="body2">{item}</Typography>
+                  </ListItem>
+                ))}
               </List>
 
               <Typography variant="subtitle1" sx={{ mb: 1 }}>

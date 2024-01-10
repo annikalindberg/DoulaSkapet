@@ -1,9 +1,11 @@
 
 import React from 'react';
 import HeroSection from '../components/HeroSection';
-import { Typography} from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import PageSpecificHero from '../components/PageSpecificHero';
 import  PageWrapper  from '../components/PageWrapper';
+import InfoIcon from '@mui/icons-material/Info';
+import MyBreadcrumbs from '../components/BreadCrumbs';
 
 const Hem = () => {
 
@@ -11,14 +13,26 @@ const Hem = () => {
     
     <PageWrapper>
     <PageSpecificHero component="h1"
-    title="DoulaSkapet - Trygg Förlossning" />
+        title="DoulaSkapet - Trygg Förlossning" />
+      <MyBreadcrumbs />
         
    
-        <HeroSection />
-´
-    
-    
-        <Typography variant='h2'>DoulaSkapet - trygghet på dina villkor</Typography>
+      <HeroSection />
+      
+      <Typography variant='h2'>DoulaSkapet - trygghet på dina villkor</Typography>
+                        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+            <InfoIcon sx={{ mr: 1 }} />
+                     <Typography>Expertise in various birthing methods.</Typography>
+                       <InfoIcon sx={{ mr: 1 }} />
+                     <Typography>Expertise in various birthing methods.</Typography>
+                       <InfoIcon sx={{ mr: 1 }} />
+            <Typography>Expertise in various birthing methods.</Typography>
+         
+    </Box>
+   
+       <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen, samt välkomna ett nytt litet liv till världen. </Typography>
+
+       
   
         <Typography variant='h3'>Föda Utan Rädsla (FUR) </Typography>
         <Typography paragraph>Föda Utan Rädsla-metoden har redan använts av tusentals födande i flera länder och allt fler professionella vårdgivare och sjukhus låter sig utbildas i vår unika omvårdnadsmodell (SAFE). FUR-metoden fokuserar på att stärka din och ditt barns egen förmåga och kraft som redan finns inom er. Vi vet att både du och barnet redan har all kunskap ni behöver för att föda och födas. Våra metoder vilar på en stabil grund av fysiologisk kunskap och innehåller en bredd av verktyg som är utvecklade kring bevisade effekter. Läs mer om Föda Utan Rädsla-metoden här:  </Typography>

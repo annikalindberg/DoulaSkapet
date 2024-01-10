@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import logoImage from '../assets/nobg-logo.svg';
-import { Instagram, Facebook, Email } from '@mui/icons-material';
+import { Instagram, Facebook } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 
@@ -27,7 +27,7 @@ const camelCaseToWords = (str) => {
 
 
  
-const pages = ['Hem', 'VilkaViÄr', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,7 +81,13 @@ function ResponsiveAppBar() {
           {/* Desktop menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button key={page} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
+              <Button key={page} sx={{
+                my: 2,
+                color: theme.palette.text.dark,
+                fontWeight: 'normal',
+                display: 'block',
+
+              }}>
                     {/* Check if the page is 'Home' and adjust the Link accordingly */}
       <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         {camelCaseToWords(page)}
@@ -104,9 +110,9 @@ function ResponsiveAppBar() {
             <a href="https://www.facebook.com/doulaskapet" target="_blank" rel="noopener noreferrer">
               <IconButton sx={{ color: 'black' }}><Facebook /></IconButton>
             </a>
-            <a href="mailto:your.email@example.com">
+            {/* <a href="mailto:your.email@example.com">
               <IconButton sx={{ color: 'black' }}><Email /></IconButton>
-            </a>
+            </a> */}
           </Box>
         </Toolbar>
       </Container>

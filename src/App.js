@@ -5,7 +5,6 @@ import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Hem from './pages/Hem';
-import VilkaViÄr from './pages/VilkaViÄr';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import DoulaEffekten from './pages/DoulaEffekten';
@@ -42,7 +41,6 @@ const App = () => {
           <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Hem />} />
-            <Route path="/VilkaViÄr" element={< VilkaViÄr />} />
 <Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
