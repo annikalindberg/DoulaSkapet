@@ -59,7 +59,7 @@ const Hem = () => {
           />
         </Grid>
 
-        {/* Text Grid Item */}
+        {/* Text Grid Item FROM HERE and all the way down the textcontent has no margins on the left side on mobile view */}
         <Grid item xs={12} md={6}> 
               <Typography variant='h4' gutterBottom>Föda Utan Rädsla (FUR)</Typography>
             <Typography paragraph gutterBottom>Föda Utan Rädsla-metoden har redan använts av tusentals födande i flera länder och allt fler professionella vårdgivare och sjukhus låter sig utbildas i vår unika omvårdnadsmodell (SAFE). FUR-metoden fokuserar på att stärka din och ditt barns egen förmåga och kraft som redan finns inom er. Vi vet att både du och barnet redan har all kunskap ni behöver för att föda och födas. Våra metoder vilar på en stabil grund av fysiologisk kunskap och innehåller en bredd av verktyg som är utvecklade kring bevisade effekter. Läs mer om Föda Utan Rädsla-metoden här:  </Typography>
