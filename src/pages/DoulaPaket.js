@@ -2,7 +2,7 @@ import React from 'react';
 import DoulaPackageCard from '../components/PackageCards';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/material';
-import TestimonialSlider from './TestemonialsSlider';
+import TestimonialsSlider from './TestimonialsSlider';
 import { packages, testimonials } from '../components/PackageData';
 
 const DoulaPaket = () => {
@@ -43,7 +43,7 @@ const DoulaPaket = () => {
           );
         })}
       </Grid>
-      <TestimonialSlider testimonials={testimonials} />
+      <TestimonialsSlider testimonials={testimonials} />
     </Box> 
   );
 };

@@ -12,7 +12,24 @@ import styled from 'styled-components';
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 768, // Adjust the breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // Adjust the breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
   };
+     
        
        // styles for the slider
        const StyledSlider = styled(Slider)`

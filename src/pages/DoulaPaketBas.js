@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography, Box, Grid, List, ListItem, ListItemIcon } from '@mui/material';
 import { packages, testimonials } from '../components/PackageData'; // Adjust the import path as necessary
 import CircleIcon from '@mui/icons-material/Circle';
-import TestimonialSlider  from './TestemonialsSlider';
+import TestimonialSlider  from './TestimonialsSlider';
 import { useTheme } from '@mui/material/styles';
 
 const DoulaPaketBas = () => {

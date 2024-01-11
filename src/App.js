@@ -8,7 +8,7 @@ import Hem from './pages/Hem';
 import { NotFound } from './pages/NotFound';
 import DoulaPaket from './pages/DoulaPaket';
 import DoulaEffekten from './pages/DoulaEffekten';
-
+import DoulorPage from './pages/DoulorPage';
  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -41,6 +41,7 @@ const App = () => {
           <ResponsiveMenu />
           <Routes>
             <Route path="/" element={<Hem />} />
+<Route path="/Doulor" element={<DoulorPage />} />
 <Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />

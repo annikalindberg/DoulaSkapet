@@ -27,7 +27,7 @@ const camelCaseToWords = (str) => {
 
 
  
-const pages = ['Hem', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'Doulor', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

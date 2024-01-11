@@ -145,9 +145,9 @@ export const Theme = createTheme({
 
     },
     italic: {
-      fontFamily: '"Lato", sans-serif',
+        fontFamily: '"Playfair Display", serif',
       fontSize: '1rem',
-      fontWeight: 500,
+      fontWeight: 400,
       lineHeight: 1.57,
       letterSpacing: '0.00714em',
       fontStyle: 'italic',
@@ -156,7 +156,20 @@ export const Theme = createTheme({
       '@media (min-width:900px)': { fontSize: '1.5rem' },
       '@media (min-width:1200px)': { fontSize: '1.7rem' },
 
-    },
+      },
+      italicSmall: {  
+        fontFamily: '"Lato", sans-serif',
+        fontSize: '0.875rem',
+        fontWeight: 500,
+        lineHeight: 1.57,
+        letterSpacing: '0.00714em',
+        fontStyle: 'italic',
+             '@media (max-width:600px)': { fontSize: '1rem' },
+        '@media (min-width:600px)': { fontSize: '1.1rem' },
+        '@media (min-width:900px)': { fontSize: '1.2rem' },
+        '@media (min-width:1200px)': { fontSize: '1.3rem' },
+  
+        },
     overline: {
       fontFamily: '"Lato", sans-serif',
       fontSize: '0.75rem',
