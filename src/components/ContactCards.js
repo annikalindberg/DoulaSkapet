@@ -37,9 +37,15 @@ const ContactCards = ({ name, image, bor, kontakt, showFormButton }) => {
                         variant='contained' 
                         onClick={handleScrollToForm}
                         aria-label="Gå till kontaktformuläret"
-                
+                  sx={{ 
+                            mt: 2, // Add margin top for spacing
+                            fontSize: '0.75rem', // Smaller font size
+                            padding: '6px 12px', // Smaller padding
+                            maxWidth: '100%', // Ensure it doesn't overflow
+                      width: 'auto', // Auto width to fit content
+                        }}
                     >
-                        Fyll i kontaktformuläret
+                        Kontakta Annika
                     </Button>
                 )}
             </CardContent>

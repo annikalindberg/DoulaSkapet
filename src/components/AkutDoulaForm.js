@@ -7,7 +7,9 @@ import PrivacyNotice from './Integritetsmeddelande';
 const AkutDoulaForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+      email: '',
+        phone: '', // Added phone number field
+
     message: '',
     consent: false,
   });
@@ -79,7 +81,18 @@ const AkutDoulaForm = () => {
         fullWidth
         sx={{ bgcolor: 'background.default' }}
       />
-      <ValidationError field="email" prefix="Email" errors={state.errors} />
+          <ValidationError field="email" prefix="Email" errors={state.errors} />
+           <TextField
+        label="Phone Number"
+        variant="outlined"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        fullWidth
+        sx={{ bgcolor: 'background.default' }}
+      />
+      <ValidationError field="phone" prefix="Phone" errors={state.errors} />
+
       <TextField
         label="Message"
         variant="outlined"

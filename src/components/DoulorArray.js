@@ -59,7 +59,7 @@ export const doulorArray = [
       name: 'Dunja Grisell',
         bor: 'Tyresö, Stockholm',
         erbjuder: ['Baspaket'],
-      description: 'Jag har egen erfarenhet av att föda på sjukhus, på sjukhus med egen barnmorska, planerad hemförlossning samt kejsarfödsel. Jag är även utbildad peer supporter, vilket innebär att jag har erfarenhet och kunskap om hur man stöttar människor i svåra livsomständigheter, vid kris och i återhämntning. Jag jobbar traumamedvetet, vilket innebär att jag gärna har extra samtal kring eventuella trauman som kan finnas kring sjukvård eller den egna kroppen. Mitt fokus är trygghet och relationsskapande. Hur skapar vi trygghet i en otrygg värld? Jag vill stärka dig i att känna dig trygg i din egen kropp. Det är inte ett maraton du ska springa, det är ditt livs största utmaning vad gäller din tillit till dig själv och din kropp.',
+      description: 'Jag har egen erfarenhet av att föda på sjukhus, på sjukhus med egen barnmorska, planerad hemförlossning samt kejsarfödsel. Jag är även utbildad peer supporter, vilket innebär att jag har erfarenhet och kunskap om hur man stöttar människor i svåra livsomständigheter, vid kris och i återhämtning. Jag jobbar traumamedvetet, vilket innebär att jag gärna har extra samtal kring eventuella trauman som kan finnas kring sjukvård eller den egna kroppen. Mitt fokus är trygghet och relationsskapande. Hur skapar vi trygghet i en otrygg värld? Jag vill stärka dig i att känna dig trygg i din egen kropp. Det är inte ett maraton du ska springa, det är ditt livs största utmaning vad gäller din tillit till dig själv och din kropp.',
       price: 'Prisuppgifter kommer...',
          hasOwnProfile: false,
       image: doulaImages[3],

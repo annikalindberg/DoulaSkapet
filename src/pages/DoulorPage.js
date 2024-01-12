@@ -5,7 +5,6 @@ import {doulorArray} from '../components/DoulorArray';
 import PageWrapper from '../components/PageWrapper';
 import PageSpecificHero from '../components/PageSpecificHero';
 import MyBreadcrumbs from '../components/BreadCrumbs';
-import Link from '@mui/material/Link';
 import rebozowomen from '../assets/rebozo.svg';
 
 const DoulorPage = () => {
@@ -85,10 +84,7 @@ const DoulorPage = () => {
             <Typography gutterBottom paragraph >DoulaSkapet består av doulorna: Dunja, Karin, Jenny och Annika. Vi är verksamma och boende i Stockholm med omnejd och vårt gemensamma uppdrag är att vi ska erbjuda dig och din familj just det stöd som du - ni behöver, för att göra resan genom graviditeten och förlossningen till en så trygg och fantastisk upplevelse som möjligt. Vårt stöd är anpassat till att kunna skräddarsys helt efter behov och önskemål. Och vi älskar det vi gör. 
          
        </Typography>
-       <Typography variant='overline'>För att kontakta någon av oss, gå till respektive profilsida för kontaktuppgifter. Eller gå till {' '}
-         <Link href="/Kontakt">
-          /Kontakt
-        </Link></Typography>
+ 
        
         
        </Box>

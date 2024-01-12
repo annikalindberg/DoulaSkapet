@@ -29,7 +29,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'flex-start',
+        
           mb: 5,
           py: {
             xs: 2,  // Equivalent to theme.spacing(2)
@@ -46,7 +46,6 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
           color: theme.palette.text.primary,
           textAlign: 'center',
           gap: 2,
-          border: '1px solid red',
         }}
       >
         {/* You can include an image here */}

@@ -14,15 +14,15 @@ const HeroSection = () => {
   return (
 
      <PageWrapper>
-   
-        <Typography gutterBottom variant='h2' > Personligt utformat Stöd Genom Graviditet och Förlossning
+   r
+        <Typography gutterBottom variant='h2' > Personligt utformat stöd genom graviditet och förlossning
       </Typography>
       <Typography variant='italic' ></Typography>
       <Typography gutterBottom paragraph>
-         Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning till en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography> <Typography paragraph>
+         Att anlita en doula är kanske den bästa present du kan ge till dig själv under graviditeten. Förlossningen är en av livets mest krävande och intensiva upplevelse och med hjälp av en doula ger du dig själv en bättre förutsättning för en positiv förlossningsupplevelse. Det möjliggör också en trygg start för din bebis för livet utanför magen. Forskning* visar nämligen att föräldrar som har stöd av en doula ökar chansen till en positiv förlossningsupplevelse och därmed även en bättre start i livet som förälder.</Typography> <Typography paragraph>
   Mer om fördelarna med att anlita en doula och forskningen bakom det kan du läsa mer om under {' '}
          <Link href="/DoulaEffekten">
-          /Doulaeffekten
+          Doulaeffekten
         </Link>
       </Typography>
         
@@ -45,7 +45,7 @@ const HeroSection = () => {
           // Remove justifyContent and alignSelf from here
         }}
         />
-        <Typography variant='h5' gutterBottom>Alla våra Doulor är duktiga, proffesionella och erfarna. Men vi vet att att hitta en <Typography variant='italic'> duktig och erfaren  </Typography>doula inte är samma sak som att hitta<Typography variant='italic'> den rätta  </Typography>doulan. </Typography>
+        <Typography variant='h5' gutterBottom>Alla våra Doulor är duktiga, professionella och erfarna. Men vi vet att att hitta en <Typography variant='italic'> duktig och erfaren  </Typography>doula, inte nödvändigtvis detsamma som att hitta<Typography variant='italic'> den rätta  </Typography>doulan. </Typography>
         
 </Box> 
         
@@ -56,8 +56,8 @@ const HeroSection = () => {
            
      
         
-        <Typography variant='h3' gutterBottom>Matcha med rätt Doula</Typography>
-        <Typography variant='body1'>Att välja Doula handlar om magkänsla, personkemi och just dina/era unika behov. Alla våra doulor är proffesionella och erfarna, men matchninigen ska kännas 100% rätt för alla parter. Därför erbjuder vi på DoulaSkapet alltid ett första (kostnadsfritt och helt förutsättningslöst) "lära-känna" möte med en eller flera av våra Doulor. <Typography variant='body2'gutterBottom> (*OBS Detta gäller ÄVEN för den av oss som ska bli "back-up-doula" för den doula ni väljer).</Typography> Varmt välkommen att skriva till oss, kontaktuppgifter till oss alla hittar ni under {' '}
+        <Typography variant='h3' gutterBottom>Matcha med rätt doula</Typography>
+        <Typography variant='body1'>Att välja doula handlar om magkänsla, personkemi och just dina/era unika behov. Alla våra doulor är professionella och erfarna, men matchningen ska kännas 100% rätt för alla parter. Därför erbjuder vi på DoulaSkapet alltid ett första (kostnadsfritt och helt förutsättningslöst) "lära-känna" möte med en eller flera av våra doulor. <Typography variant='body2'gutterBottom> (*OBS Detta gäller även för den av oss som ska bli "back-up-doula" för den doula ni väljer).</Typography> Varmt välkommen att skriva till oss, kontaktuppgifter till oss alla hittar ni under {' '}
          <Link href="/Kontakt">
           /Kontakt
           </Link></Typography>

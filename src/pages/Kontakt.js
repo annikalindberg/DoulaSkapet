@@ -11,7 +11,7 @@ const Kontakt = () => {
     const title = "Kontakt";
     const subtitle = "Vi finns här för dig, hör av dig till oss så berättar vi mer om hur vi kan hjälpa dig.";
 
-    const image = "/optimized-images/kontakt.webp";
+    const image = "/optimized-images/belliespregnant-tablet.webp";
 
     
 
@@ -23,18 +23,17 @@ const Kontakt = () => {
                 image={image}
             />
 
+         
             <Grid container spacing={4} justifyContent="center">
                 {doulorArray.map((doula) => (
-                    <Grid item xs={12} sm={6} md={4} key={doula.id}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} key={doula.id}> {/* Adjusted grid sizes */}
                         <ContactCards
                             name={doula.name}
                             image={doula.image}
                             bor={doula.bor}
                             pris={doula.pris}
                             kontakt={doula.kontakt} 
-                            showFormButton={doula.showFormButton} 
-                            
-
+                            showFormButton={doula.showFormButton}
                         />
                     </Grid>
                 ))}

@@ -13,6 +13,9 @@ const AnnikaProfilePage = () => {
   const theme = useTheme();
   const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
 
+ const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
  
   return (
     <Container
@@ -87,27 +90,22 @@ const AnnikaProfilePage = () => {
                     >
                 Postpartumsupport
               </Button>
-              <Button
-                     component={RouterLink}
-                        variant="outlined"
-                        color="primary"
-                        to='DoulaPaket/AkutDoula'
-                    sx={{
-                      mt: 1,
-                      mb: 1,
-                      textTransform: 'none',
-                      justifyContent: 'flex-start',
-               bgcolor: theme.palette.background.paper,
-                      color: theme.palette.text.dark,
-                      
-                      '&:hover': {
-                        bgcolor: theme.palette.secondary.contrastText,
-                        color: theme.palette.secondary.main,
-                      },
-                    }}
-                    >
-                AkutDoula
-              </Button>
+             <Button 
+                variant="contained" 
+                onClick={() => scrollToSection('contact-form-section')} 
+                aria-label="Gå till kontaktformuläret"
+            >
+                Fyll i kontaktformuläret
+            </Button>
+
+            <Button 
+                variant="contained" 
+                onClick={() => scrollToSection('akut-doula-form-section')} 
+                aria-label="Gå till akutdoula-formuläret"
+            >
+                Fyll i akutdoula-formuläret
+            </Button>
+
               </Box>
   <Box display="flex" gap={2} sx={{ 
     flexDirection: 'column', 
@@ -131,9 +129,22 @@ const AnnikaProfilePage = () => {
             Maila mig 
                   </Button>
                   <Typography variant='body2' sx={{ mt: 2 }}>eller</Typography>
-                  <Button variant='contained' Link component={RouterLink} to='/Kontakt' aria-label="Gå till kontaktformuläret">
-                    Fyll i kontaktformuläret
-                  </Button>
+                     <Button 
+                variant="contained" 
+                onClick={() => scrollToSection('contact-form')} 
+                aria-label="Gå till kontaktformuläret"
+            >
+                Fyll i kontaktformuläret
+            </Button>
+
+            <Button 
+                variant="contained" 
+                onClick={() => scrollToSection('akut-doula-form-section')} 
+                aria-label="Gå till akutdoula-formuläret"
+            >
+                Fyll i akutdoula-formuläret
+            </Button>
+                
        
       
        
@@ -196,14 +207,14 @@ Graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanha
 
         </Grid>
       </Grid>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
+      <Box id="contact-form" sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
             <Typography gutterBottom variant='h2' >Kontakta mig!</Typography>
             <Typography gutterBottom variant='body1' >Vill du boka ett kostnadsfritt lära-känna-samtal med mig, varmt välkommen att skriva till mig här så kontaktar jag dig snarast och bokar. Ser fram emot att höras!</Typography>
                         
         <CustomFormspreeForm />
 </Box>
 
-     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
+     <Box id="akut-doula-form-section" sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
                       <Typography variant="h3" gutterBottom sx={{ textAlign: 'center', color: '#d30f0f' }}>
                         Akutdoula-formulär
                     </Typography>

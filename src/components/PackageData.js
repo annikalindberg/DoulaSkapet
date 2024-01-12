@@ -1,9 +1,9 @@
 export const packageImages = {
   1: {
-    mobile: '/optimized-images/twomoms-mobile.webp',
-    tablet: '/optimized-images/twomoms-tablet.webp',
-    desktop: '/optimized-images/twomoms-desktop.webp',
-    alt: 'Two moms with baby',
+    mobile: '/optimized-images/kvinnorpluspåstickan.webp',
+    tablet: '/optimized-images/kvinnorpluspåstickan.webp',
+    desktop: '/optimized-images/kvinnorpluspåstickan.webp',
+    alt: 'Two happy women reveling a positive pregnancy test',
   },
   2: {
     mobile: '/optimized-images/partnerdoula-mb.webp',
@@ -42,8 +42,8 @@ export const packageImages = {
     {
       id: 2,
       title: 'Akut-Doula',
-      description: 'Ibland blir det inte som en tänkt sig. Vår Akutdoula-tjänst är designad för just dessa situationer, när du snabbt behöver stöd, vare sig det är nära inpå eller under förlossningen.',
-      rubrik1: 'När kan Expressdoula vara rätt för dig?',
+      description: 'Ibland blir det inte som en tänkt sig. Vår Akutdoula-tjänst är designad för just dessa situationer, när du snabbt behöver stöd, vare sig det är nära inpå eller till och med under förlossningen.',
+      rubrik1: 'När kan Akutdoula vara rätt för dig?',
       list1: 'Du inser sent under graviditeten att du önskar extra stöd.',
       list2: 'En oväntad händelse har skapat oro eller ändrat dina planer.',
       list3: 'Du har en partner som inte kan vara med dig under förlossningen.',
@@ -51,8 +51,8 @@ export const packageImages = {
       rubrik2: 'Vad ingår i Akutdoula-tjänsten?',
       text2: 'Vårt Akutdoula-paket är omfattande och inkluderar:',
       list2_1: 'Församtal Online: 1 timmes förberedande samtal online, om det är möjligt.',
-      list2_2: 'Stöd under Latensfas: Jag är tillgänglig över telefon för att stötta dig när förlossningen närmar sig.',
-      list2_3: 'Fysisk Närvaro under Förlossning: Stöd av Doula under hela förlossningsprocessen.',
+      list2_2: 'Stöd under latensfas: Doulan är tillgänglig över telefon för att stötta dig när förlossningen närmar sig.',
+      list2_3: 'Fysisk närvaro under förlossning: Stöd av Doula under hela förlossningsprocessen.',
       list2_4: 'Eftersamtal: Ett möte några veckor efter förlossningen för att reflektera över din upplevelse.',
       price: 'Från 7 000 SEK (inkl moms). Priset varierar beroende på hur nära inpå BF du kontaktar oss.',
       image: packageImages[2], // Link the images directly here

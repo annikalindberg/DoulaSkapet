@@ -82,7 +82,6 @@ export const Theme = createTheme({
       h4: {
         fontFamily: '"Playfair Display", serif',
         fontSize: '0.875rem',
-        textTransform: 'uppercase',
   
 
         '@media (min-width:600px)': { fontSize: '1rem' },
@@ -117,13 +116,13 @@ export const Theme = createTheme({
       paragraph: {
             fontFamily: '"Lato", sans-serif',
 
-      fontSize: '1.2rem',
+      fontSize: '1.1rem',
       fontWeight: 400,
       lineHeight: 1.5,
  
-        '@media (max-width:600px)': { fontSize: '1.2rem' },
-        '@media (min-width:900px)': { fontSize: '1.4rem' },
-        '@media (min-width:1200px)': { fontSize: '1.5rem' },
+        '@media (max-width:600px)': { fontSize: '1.1rem' },
+        '@media (min-width:900px)': { fontSize: '1.2rem' },
+        '@media (min-width:1200px)': { fontSize: '1.3rem' },
 
     },
     subtitle1: {

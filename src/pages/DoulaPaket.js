@@ -1,13 +1,35 @@
 import React from 'react';
 import DoulaPackageCard from '../components/PackageCards';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import TestimonialsSlider from './TestimonialsSlider';
 import { packages, testimonials } from '../components/PackageData';
+import PageSpecificHero from '../components/PageSpecificHero';
 
 const DoulaPaket = () => {
+
+  const title = 'DoulaPaket';
+  const subtitle = 'Läs mer om vilka tjänster vi erbjuder.';
+      const image = "/optimized-images/belliespregnant-tablet.webp";
+
+  
   return (
     <Box>
+      <PageSpecificHero
+        title={title}
+        subtitle={subtitle}
+        image={image}
+      />
+      <Typography gutterBottom variant='h3' data-aos="fade-right"
+        sx={{ textAlign: 'center' }}
+      >Våra tjänster</Typography>
+      <Typography paragraph data-aos="fade-right"
+        sx={{ textAlign: 'center' }}
+      >
+        Vi erbjuder olika typer av tjänster för att passa just dina behov. Läs mer om våra tjänster nedan.
+      </Typography>
+
+      
       <Grid container>
         {packages.map((pkg) => {
           let linkPath;
@@ -43,6 +65,9 @@ const DoulaPaket = () => {
           );
         })}
       </Grid>
+      <Typography gutterBottom variant='h3' data-aos="fade-right"
+        sx={{ textAlign: 'center' }}
+      > Ord från klienter</Typography>
       <TestimonialsSlider testimonials={testimonials} />
     </Box> 
   );

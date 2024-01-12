@@ -8,6 +8,7 @@ const CustomFormspreeForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '', 
     message: '',
     consent: false,
   });
@@ -79,6 +80,16 @@ const CustomFormspreeForm = () => {
         sx={{ bgcolor: 'background.default' }}
       />
       <ValidationError field="email" prefix="Email" errors={state.errors} />
+         <TextField
+        label="Phone Number"
+        variant="outlined"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        fullWidth
+        sx={{ bgcolor: 'background.default' }}
+      />
+      <ValidationError field="phone" prefix="Phone" errors={state.errors} />
       <TextField
         label="Message"
         variant="outlined"
