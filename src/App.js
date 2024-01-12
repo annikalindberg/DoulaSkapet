@@ -6,6 +6,7 @@ import { Theme } from './styles/Theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Hem from './pages/Hem';
 import { NotFound } from './pages/NotFound';
+import Kontakt from './pages/Kontakt';
 import DoulaPaket from './pages/DoulaPaket';
 import DoulaEffekten from './pages/DoulaEffekten';
 import DoulorPage from './pages/DoulorPage';
@@ -47,7 +48,8 @@ const App = () => {
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
             <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
-            <Route path="/DoulaEffekten" element={< DoulaEffekten/>} />
+            <Route path="/DoulaEffekten" element={< DoulaEffekten />} />
+            <Route path="/kontakt" element={<Kontakt />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

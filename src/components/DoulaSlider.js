@@ -82,6 +82,10 @@ const PrevArrow = (props) => (
                   erbjuder={doula.erbjuder}
             image={doula.image}
             description={doula.description}
+            rubrik2={doula.rubrik2}
+            stycke2={doula.stycke2}
+            stycke3={doula.stycke3}
+            
             bor={doula.bor}
             pris={doula.pris}
           />

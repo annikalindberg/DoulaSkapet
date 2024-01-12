@@ -26,18 +26,7 @@ export const Theme = createTheme({
       dark: '#4A4033',
       light: 'rgb(248, 248, 248)',
     },
-/*    action: {
-     active: '#DDB6C6',
-     activeText: '#4A2F43',
-      hover: 'rgba(221,182,198,0.08)',
-      selected: 'rgba(221,182,198,0.16)',
-      disabled: 'rgb(14, 12, 13)',
-      disabledBackground: 'rgba(221,182,∏198,0.12)',
-      activeText: '#4A2F43',
-      hoverText: '#4A2F43',
-      selectedText: '#4A2F43',
-      disabledText: '#4A2F43',
-    }, */
+
     custom: {
       // For glassmorphism effect, semi-transparent white with a hint of the primary color
       glassBackground: 'rgb(243 238 232 / 85%)',
@@ -114,34 +103,37 @@ export const Theme = createTheme({
         '@media (min-width:900px)': { fontSize: '0.875rem' },
         '@media (min-width:1200px)': { fontSize: '1rem' },
       },
-    body1: {
+      body1: {
+                  fontFamily: '"Lato", sans-serif',
+
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: 1.5,
-      '@media (max-width:600px)': { fontSize: '0.875rem' },
+      '@media (max-width:600px)': { fontSize: '1rem' },
+        '@media (min-width:900px)': { fontSize: '1.2rem' },
+        '@media (min-width:1200px)': { fontSize: '1.3rem' },
+  
     },
-    paragraph: {
+      paragraph: {
+            fontFamily: '"Lato", sans-serif',
+
       fontSize: '1.2rem',
       fontWeight: 400,
       lineHeight: 1.5,
  
-      '@media (max-width:600px)': { fontSize: '0.975rem' },
-      '@media (min-width:600px)': { fontSize: '1.1rem' },
-      '@media (min-width:900px)': { fontSize: '1.2rem' },
-      '@media (min-width:1200px)': { fontSize: '1.3rem' },
+        '@media (max-width:600px)': { fontSize: '1.2rem' },
+        '@media (min-width:900px)': { fontSize: '1.4rem' },
+        '@media (min-width:1200px)': { fontSize: '1.5rem' },
 
     },
     subtitle1: {
-      fontFamily: '"Lato", sans-serif',
+        fontFamily: '"Playfair Display", serif',
       fontSize: '2rem',
       fontWeight: 500,
       lineHeight: 1.4,
-     
-      letterSpacing: '0.00938em',
-      '@media (max-width:600px)': { fontSize: '1rem' },
-      '@media (min-width:600px)': { fontSize: '1.3rem' },
-      '@media (min-width:900px)': { fontSize: '1.5rem' },
-      '@media (min-width:1200px)': { fontSize: '1.7rem' },
+      '@media (max-width:600px)': { fontSize: '2rem' },
+      '@media (min-width:900px)': { fontSize: '2.4rem' },
+      '@media (min-width:1200px)': { fontSize: '2.6rem' },
 
     },
     italic: {
@@ -165,20 +157,23 @@ export const Theme = createTheme({
         letterSpacing: '0.00714em',
         fontStyle: 'italic',
              '@media (max-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:600px)': { fontSize: '1.1rem' },
         '@media (min-width:900px)': { fontSize: '1.2rem' },
         '@media (min-width:1200px)': { fontSize: '1.3rem' },
   
         },
     overline: {
       fontFamily: '"Lato", sans-serif',
-      fontSize: '0.75rem',
+      fontSize: '0.875rem',
       fontWeight: 400,
       lineHeight: 2.66,
       letterSpacing: '0.08333em',
       textTransform: 'uppercase',
       marginTop: '50px', // this is not having any effect?
-      
+      '@media (max-width:600px)': { fontSize: '0.875rem' },
+      '@media (min-width:900px)': { fontSize: '1rem' },
+      '@media (min-width:1200px)': { fontSize: '1.25rem' },
+
+  
     },
     customHeader: {
       fontFamily: '"Playfair Display", serif',
@@ -187,14 +182,9 @@ export const Theme = createTheme({
       lineHeight: 1.2,
       marginTop: '16px',
       marginBottom: '8px',
-    },
-    customBody: {
-      fontFamily: '"Lato", sans-serif',
-      fontSize: '1rem',
-      fontWeight: 400,
-      lineHeight: 1.5,
-      marginTop: '8px',
-      marginBottom: '8px',
+      '@media (max-width:600px)': { fontSize: '2rem' },
+      '@media (min-width:900px)': { fontSize: '2.5rem' },
+      '@media (min-width:1200px)': { fontSize: '3rem' },
     },
 
 

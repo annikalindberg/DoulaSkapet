@@ -4,14 +4,14 @@ import { Box, TextField, Typography, Snackbar, Alert, Modal, Checkbox, FormContr
 import LoadingButton from '@mui/lab/LoadingButton';
 import PrivacyNotice from './Integritetsmeddelande';
 
-const CustomFormspreeForm = () => {
+const AkutDoulaForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
     consent: false,
   });
-  const [state, handleSubmit] = useForm('xyyrygee'); // Replace 'your-form-id' with your actual Formspree form ID
+  const [state, handleSubmit] = useForm('myyrykwk'); // Replace 'your-form-id' with your actual Formspree form ID
   const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => setOpenModal(true);
@@ -47,15 +47,16 @@ const CustomFormspreeForm = () => {
         alignItems: 'center',
         gap: 2,
         p: 4,
-        bgcolor: 'background.paper',
-        borderRadius: 2,
+        bgcolor: '#eee778', // Light red background
+          borderRadius: 2,
+        border: '4px solid #D32F2F', // Red border
       }}
     >
-
-          <Typography variant="body1" sx={{ color: 'text.primary', mb: 2 }}>
-             Kontakta Annika
+     
+                    <Typography variant="body1" sx={{ color: 'text.primary', mb: 2 }}>
+            Akutdoula formulär
       </Typography>
-      <Typography variant="body2" sx={{ color: 'text.primary', mb: 2 }}>Svarar vanligtvis inom 1-3 dagar. Gäller det förfrågningar om Akuutdoula - vänligen skriv i Akutddoula-formuläret istället</Typography>
+      <Typography variant="body2" sx={{ color: 'text.primary', mb: 2 }}>Här svarar jag så snart jag kan, men inte senare än 24 h. Vänligen skriv gärna ett telefonnummer jag kan nå dig/er på i meddelanderutan</Typography>
      <TextField
         label="Name"
         variant="outlined"
@@ -64,7 +65,7 @@ const CustomFormspreeForm = () => {
               required
                 fullWidth
         onChange={handleChange}
-        sx={{ bgcolor: 'background.default' }}
+        sx={{ bgcolor: 'background.default', borderColor: 'text.primary' }}
       />
       <ValidationError field="name" prefix="Name" errors={state.errors} />
       <TextField
@@ -104,7 +105,7 @@ const CustomFormspreeForm = () => {
         label={
           <Typography variant="body2">
             Jag godkänner{' '}
-           <Link href="#" onClick={handleOpenModal} sx={{ color: '#D32F2F' }}> Integritetspolicy
+             <Link href="#" onClick={handleOpenModal} sx={{ color: '#D32F2F' }}> Integritetspolicy
             </Link>
           </Typography>
         }
@@ -113,9 +114,9 @@ const CustomFormspreeForm = () => {
   type="submit"
   loading={state.submitting}
   variant="contained"
-  color="primary"
-  disabled={!isFormValid()}
-  sx={{ mt: 2, fontWeight: 'bold' }}
+/*         color="secondary" // Bold button color
+ */  disabled={!isFormValid()}
+  sx={{ mt: 2, fontWeight: 'bold', color: '#d30f0f' }}
 >
   SKICKA
 </LoadingButton>
@@ -149,7 +150,7 @@ const CustomFormspreeForm = () => {
         onClose={() => {}}
       >
         <Alert severity="success" sx={{ width: '100%' }}>
-          Tack för att du kontaktar oss! Vi återkommer så snart vi kan.
+          Tack för att du kontaktar mig! Jag återkommer så snart jag kan (senast inom 24 h).
         </Alert>
       </Snackbar>
      <Snackbar
@@ -168,4 +169,4 @@ const CustomFormspreeForm = () => {
   );
 };
 
-export default CustomFormspreeForm;
+export default AkutDoulaForm;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, ListItem, List } from '@mui/material';  
+import { Grid, Typography, ListItem, List, Box } from '@mui/material';  
 import PageWrapper from '../components/PageWrapper';
 import PageSpecificHero from '../components/PageSpecificHero';
 import MyBreadcrumbs from '../components/BreadCrumbs';
@@ -19,7 +19,7 @@ const DoulaEffekten = () => {
        <Typography variant='h3' data-aos="fade-right"
         sx={{ textAlign: 'center' }}
       >Vad är en doula?</Typography>
-      
+
      
            <Typography paragraph >
          Att föda barn är en av de mest kraftfulla upplevelser en människa kan gå igenom, och oavsett hur födseln går till så påverkar det oss djupt på många plan: fysiologiskt, emotionellt, mentalt och själsligt.
@@ -32,13 +32,15 @@ const DoulaEffekten = () => {
           </Typography>
 
        
- <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center', maxWidth: '400px', ml: 'auto', mr: 'auto' }}>
      <ResponsiveImage
 
   mobileSrc={`${process.env.PUBLIC_URL}/optimized-images/mammorkramarmage.webp`}
      
         alt="two moms holding their baby"
-      />
+          />
+        </Box>
       </Grid>
       <Typography variant='h3' gutterBottom>Varför anlita en doula?</Typography>
    
@@ -68,7 +70,16 @@ const DoulaEffekten = () => {
              <Typography variant='h3'>Ett välkommet stöd i förlossningsvården </Typography>
         <Typography paragraph> Vårt samarbete med sjukvården har visat sig vara mycket värdefullt. Barnmorskor och övrig vårdpersonal uppskattar ofta vår närvaro eftersom effekten av en ökad oxytocinmängd ger ett lugn och en positiv atomsfär i förlossningsrummet. Det gynnar alltså både dig som blivande förälder och ditt sjukvårdsteam.
         </Typography>
-        <Typography variant='h3'>Partnerns roll</Typography>
+      <Typography variant='h3'>Partnerns roll</Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center', maxWidth: '400px', ml: 'auto', mr: 'auto' }}>
+            <ResponsiveImage
+           
+           mobileSrc={`${process.env.PUBLIC_URL}/optimized-images/partnerdoula-mb.webp`}
+           tabletSrc={`${process.env.PUBLIC_URL}/optimized-images/partnerdoula-tb.webp`}
+           desktopSrc={`${process.env.PUBLIC_URL}/optimized-images/partnerdoula-dt.webp`}
+           alt="Doula and partner supporting pregnant woman"
+      />
+      </Box>
         <Typography paragraph>
           Finns det en partner/stödperson med, är det en stor fördel att ha med sig en doula som kan stötta både dig och din partner/stödperson under förlossningen. Du som partner/stödperson är den som känner den som föder allra bäst, och doulans uppgift är därför att se till att DU har det stöd som DU behöver för att vara det. Med en doula har du som partner/stödperson en större möjlighet att vara mer delaktig i och vara mer närvarande för den som föder. Många upplever att med doulans närvaro tenderar partnerns/ stödpersonens engagemang att öka under förlossningen och upplever sig kunna vara mer närvarande. </Typography>
     </PageWrapper>

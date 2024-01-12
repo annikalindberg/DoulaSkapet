@@ -9,8 +9,15 @@ const ResponsiveImage = ({ mobileSrc, tabletSrc, desktopSrc, alt }) => (
       height: 'auto',
       boxShadow: '0 4px 8px rgba(0,0,0,0.2)', 
       borderRadius: '20px',
+      mt: { xs: 3, md: 8 },
+      mb: { xs: 3, md: 10 },
+    
+
       
-    }}
+       
+  }}
+      
+    
     src={mobileSrc} // Default src
     srcSet={`
       ${mobileSrc} 300w,  // Width for mobile
@@ -18,6 +25,7 @@ const ResponsiveImage = ({ mobileSrc, tabletSrc, desktopSrc, alt }) => (
       ${desktopSrc} 1280w // Width for desktop
     `}
     alt={alt}
+    
   />
 );
 

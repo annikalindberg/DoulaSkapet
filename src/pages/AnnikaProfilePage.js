@@ -7,6 +7,7 @@ import CustomFormspreeForm from '../components/FormspreeForm';
 import PageSpecificHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
 import { Link as RouterLink } from 'react-router-dom'; // Import from react-router-dom
+import AkutDoulaForm from '../components/AkutDoulaForm';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
@@ -124,11 +125,15 @@ const AnnikaProfilePage = () => {
                 
                 </Box>
                        <Box sx={{ display: 'flex', flexDirection: { xs: 'column'}, gap: 2, mt: 3 }}><Typography>
-         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig till oss!
+         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig!
        </Typography>
           <Button variant='contained' href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
-            Boka kostnadsfritt möte
-       </Button>
+            Maila mig 
+                  </Button>
+                  <Typography variant='body2' sx={{ mt: 2 }}>eller</Typography>
+                  <Button variant='contained' Link component={RouterLink} to='/Kontakt' aria-label="Gå till kontaktformuläret">
+                    Fyll i kontaktformuläret
+                  </Button>
        
       
        
@@ -192,16 +197,20 @@ Graviditet och födande kan innebära att du/ni som HBTQI+ möter dessa sammanha
         </Grid>
       </Grid>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
-         <Typography gutterBottom variant='h2' >DoulaSkapet</Typography>
+            <Typography gutterBottom variant='h2' >Kontakta mig!</Typography>
+            <Typography gutterBottom variant='body1' >Vill du boka ett kostnadsfritt lära-känna-samtal med mig, varmt välkommen att skriva till mig här så kontaktar jag dig snarast och bokar. Ser fram emot att höras!</Typography>
+                        
         <CustomFormspreeForm />
 </Box>
 
-      <Box sx={{ maxWidth: '70%', mx: 'auto', bgcolor: '#FFF7F8' }}>
-       
-        <Typography variant='subtitle2'>
-     Hej  hej detta ska vara kursivt
-        </Typography>
-        {/* Add more content as needed */}
+     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}>
+                      <Typography variant="h3" gutterBottom sx={{ textAlign: 'center', color: '#d30f0f' }}>
+                        Akutdoula-formulär
+                    </Typography>
+                     <Typography variant="body1" sx={{ color: '#d30f0f', mb: 2 }}>
+    Detta formulär gäller ENDAST ärenden om Akutdoula-tjänster, för andra ärenden använd övriga kontaktvägar.
+          </Typography>
+       <AkutDoulaForm />
       </Box>
       {/* Rest of your component */}
         </Box>
