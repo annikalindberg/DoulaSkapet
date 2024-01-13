@@ -4,9 +4,14 @@ import { packages, testimonials } from '../components/PackageData'; // Adjust th
 import CircleIcon from '@mui/icons-material/Circle';
 import TestimonialSlider  from './TestimonialsSlider';
 import { useTheme } from '@mui/material/styles';
+import PageWrapper from '../components/PageWrapper';
+import PagespecifikHero from '../components/PageSpecificHero';
 
 const DoulaPaketBas = () => {
     const theme = useTheme();
+  const title = 'Föda med Doula';
+  const subtitle = 'Stöd under graviditet och förlossning';
+  const image = '/Optimized-images/handsheart-bg.webp';
 
   const basPackage = packages.find(pkg => pkg.title === 'Doulapaket Bas - Trygg Förlossning');
 
@@ -15,6 +20,8 @@ const DoulaPaketBas = () => {
   }
 
   return (
+    <PageWrapper>
+    <PagespecifikHero title={title} subtitle={subtitle} image={image} />
     <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
     <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
@@ -60,10 +67,19 @@ const DoulaPaketBas = () => {
             
           </Card>
         </Grid>
-      </Grid>
+        </Grid>
+        <Typography gutterBottom variant='h4' sx={{
+              mt: 8, mb: 5,
+          textAlign: 'center',
+          fontSize: '20px', // doesent have eny effect
+    
+            }}>
+          
+        Ord från Doulaskapets klienter</Typography>
             <TestimonialSlider testimonials={testimonials} />
 
-    </Box>
+      </Box>
+    </PageWrapper>
   );
 };
 

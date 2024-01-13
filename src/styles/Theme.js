@@ -81,8 +81,7 @@ export const Theme = createTheme({
       },
       h4: {
         fontFamily: '"Playfair Display", serif',
-        fontSize: '0.875rem',
-  
+        fontSize: '1rem',
 
         '@media (min-width:600px)': { fontSize: '1rem' },
         '@media (min-width:900px)': { fontSize: '1.25rem' },
@@ -90,18 +89,21 @@ export const Theme = createTheme({
       },
       h5: {
         fontFamily: '"Playfair Display", serif',
-        fontSize: '0.75rem',
-        '@media (min-width:600px)': { fontSize: '0.875rem' },
-        '@media (min-width:900px)': { fontSize: '1rem' },
-        '@media (min-width:1200px)': { fontSize: '1.25rem' },
+        fontSize: '1rem',
+        fontWeight: 400, // Adjust weight as needed
+        '@media (min-width:600px)': { fontSize: '1rem' },
+        '@media (min-width:900px)': { fontSize: '1.25rem' },
+        '@media (min-width:1200px)': { fontSize: '1.5rem' },
       },
       h6: {
         fontFamily: '"Playfair Display", serif',
-        fontSize: '0.625rem',
-        '@media (min-width:600px)': { fontSize: '0.75rem' },
-        '@media (min-width:900px)': { fontSize: '0.875rem' },
-        '@media (min-width:1200px)': { fontSize: '1rem' },
+        fontSize: '1rem',
+        fontWeight: 400, // Adjust weight as needed
+        '@media (min-width:600px)': { fontSize: '1rem' },
+        '@media (min-width:900px)': { fontSize: '1.25rem' },
+        '@media (min-width:1200px)': { fontSize: '1.5rem' },
       },
+ 
       body1: {
                   fontFamily: '"Lato", sans-serif',
 
@@ -116,13 +118,14 @@ export const Theme = createTheme({
       paragraph: {
             fontFamily: '"Lato", sans-serif',
 
-      fontSize: '1.1rem',
+      fontSize: '0.9rem',
       fontWeight: 400,
       lineHeight: 1.5,
  
-        '@media (max-width:600px)': { fontSize: '1.1rem' },
-        '@media (min-width:900px)': { fontSize: '1.2rem' },
-        '@media (min-width:1200px)': { fontSize: '1.3rem' },
+        '@media (max-width:600px)': { fontSize: '0.9rem' },
+        '@media (min-width:900px)': { fontSize: '1rem' },
+        '@media (min-width:1200px)': { fontSize: '1.1rem' },
+
 
     },
     subtitle1: {

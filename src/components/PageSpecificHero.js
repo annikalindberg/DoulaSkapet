@@ -8,12 +8,13 @@ const StyledHeroBox = styled(Box)`
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center; // Updated to center align items horizontally
+  justify-content: center; // Added to center align items vertically
+  text-align: center; // Ensure text inside is centered
 
   background-image: url(${props => props.backgroundImage || '/Optimized-images/händerpåmage.webp'}); // Default image
-
 `;
+
 
 
 
@@ -23,12 +24,12 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
   return (
     <StyledHeroBox
         backgroundImage={image}
-        backgroundSize="cover"
+        /* backgroundSize="cover"
         backgroundPosition="center"
-        backgroundRepeat="no-repeat"
+        backgroundRepeat="no-repeat" */
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
+        /*   display: 'flex',
+          flexDirection: 'column', */
         
           mb: 5,
           py: {
@@ -44,35 +45,31 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
             lg: 10
           },
           color: theme.palette.text.primary,
-          textAlign: 'center',
-          gap: 2,
+/*           textAlign: 'center',
+ */          /* gap: 2, */
         }}
       >
-        {/* You can include an image here */}
-      {/* You can include subtitle and other content here */}
-    
+       
      
         <Typography
            variant="h1" gutterBottom
            sx={{
                mt: 8, mb: 5,
              color: theme.palette.text.primary,
+              /* textAlign: 'center', */
             
 
               
-           }}
-        >
+           }}>
+        
       
         {title}
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'left', justifyContent: 'center', maxWidth: '60%', ml: 'auto', mr: 'auto' }} 
-        
-      >
+     
             <Typography
         variant="italic"
         sx={{
          
-          textAlign: 'center', 
          
                   
 
@@ -80,8 +77,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         }}
       >
         {subtitle}
-        </Typography>
-      </Box>
+      </Typography>
     </StyledHeroBox>
   );
 };

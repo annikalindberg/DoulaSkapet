@@ -3,9 +3,15 @@ import { Card, CardContent, Typography, Box, Grid, List, ListItem, ListItemIcon 
 import { packages } from '../components/PackageData'; // Adjust the import path as necessary
 import CircleIcon from '@mui/icons-material/Circle';
 import { useTheme } from '@mui/material/styles';
+import PagespecifikHero from '../components/PageSpecificHero';
+import PageWrapper from '../components/PageWrapper';
 
 const AkutDoulaPage = () => {
   const theme = useTheme();
+  const title = 'Akut Doula';
+  const subtitle = 'När du behöver en doula snabbt';
+  const image = '/Optimized-images/handsheart-bg.webp';
+
   // Locate the specific Akut-Doula package
   const akutDoulaPackage = packages.find(pkg => pkg.title === 'Akut-Doula');
 
@@ -15,7 +21,9 @@ const AkutDoulaPage = () => {
   }
 
   return (
-    <Box sx={{ my: 4 }}>
+    <PageWrapper>
+    <PagespecifikHero title={title} subtitle={subtitle} image={image} />
+        <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
     <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
       <Card sx={{ maxWidth: '100%', borderRadius: '16px', backgroundColor: 'transparent' }}> {/* Max width 100% */}
@@ -66,7 +74,8 @@ const AkutDoulaPage = () => {
           </Card>
         </Grid>
       </Grid>
-    </Box>
+      </Box>
+    </PageWrapper>
   );
 };
 

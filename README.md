@@ -24,11 +24,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-Absolutely, here are the steps to follow for the Image Optimization Process, which you can include in your README under the "Image Optimization Process" header:
+The build is minified and the filenames include the hashes.
 
 ## Image Optimization Process
 
@@ -64,6 +60,24 @@ This project includes an automated image optimization process using Sharp, a hig
 - **Automated Creation of Directories**: If the `public/optimized-images` directory does not exist, the script will automatically create it.
 - **Supported Formats**: The script currently processes JPEG, PNG, and WebP formats. Other formats like SVG are skipped.
 - **Supported Image Dimensions**: The script currently processes images with a width of 800px or greater. Images with a width less than 800px are skipped.
+Open Graph Image Processing
+Overview
+In addition to standard image optimization, we have a separate script processOgImages.js dedicated to processing images specifically for Open Graph (OG) tags. This script is designed to resize and format images to meet the recommended specifications for optimal display on social media platforms like Facebook and LinkedIn.
+
+Usage
+This script should be run whenever there are new images added to the project or when existing images need to be updated for social media sharing. It processes images in the ./src/assets/images directory and outputs them to ./public/optimized-images/og.
+
+Running the Script
+To process the Open Graph images, run the following command:
+
+bash
+Copy code
+npm run process-og-images
+This command will resize and optimize the images for Open Graph, ensuring they are appropriately formatted for sharing on social media platforms.
+
+Integration
+The script can be run independently or integrated into the existing image optimization workflow as needed. It is a standalone process and does not interfere with other image processing tasks.
+
 
 ### `npm run eject`
 

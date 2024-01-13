@@ -10,13 +10,16 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew'; // Import the icon fo
 
 
 const DoulaEffekten = () => {
+
   return (
 
     <PageWrapper>
       <PageSpecificHero
         component="h1"
         title="DoulaEffekten"
-        subtitle="Forskning visar att doulan kan bidra till en positiv förlossningsupplevelse och en bättre start i livet som förälder." />
+        subtitle="Forskning visar att doulan kan bidra till en positiv förlossningsupplevelse och en bättre start i livet som förälder."
+        image="/optimized-images/handsheart-bg.webp"
+      />
       <MyBreadcrumbs />
 
        <Typography variant='h3' data-aos="fade-right"

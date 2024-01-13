@@ -13,7 +13,12 @@ const DoulorPage = () => {
    return (
      <PageWrapper >
         <MyBreadcrumbs />
-       <PageSpecificHero title="Doulor" />
+       <PageSpecificHero
+         component="h1"
+         title="Doulor"
+         subtitle="Träffa våra fantastiska doulor"
+          image="/optimized-images/orange-bg.webp"
+       />
        
     
        <Grid container spacing={4} justifyContent="center">

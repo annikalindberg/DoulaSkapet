@@ -8,10 +8,10 @@ import ContactCards from "../components/ContactCards";
 import AkutDoulaForm from "../components/AkutDoulaForm";
 
 const Kontakt = () => {
-    const title = "Kontakt";
-    const subtitle = "Vi finns här för dig, hör av dig till oss så berättar vi mer om hur vi kan hjälpa dig.";
+    const title = "Skriv till oss!";
+    const subtitle = "Hur kan vi tillsammans kan skapa en tryggare och mer kärleksfull födselupplevelse för just dig?";
 
-    const image = "/optimized-images/belliespregnant-tablet.webp";
+    const image = "/optimized-images/orangebg.webp";
 
     
 

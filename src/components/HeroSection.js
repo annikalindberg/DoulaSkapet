@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
 
      <PageWrapper>
-   r
+   
         <Typography gutterBottom variant='h2' > Personligt utformat stöd genom graviditet och förlossning
       </Typography>
       <Typography variant='italic' ></Typography>

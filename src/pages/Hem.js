@@ -16,7 +16,8 @@ const Hem = () => {
     <PageWrapper>
     <PageSpecificHero component="h1"
         title="På jakt efter en Doula i Stockholm?" 
-      subtitle="Då har du hittat helt rätt."/>
+        subtitle="Då har du hittat helt rätt." 
+      image="/optimized-images/handsheart-bg.webp"/>
       <MyBreadcrumbs />
       <HeroSection />
      
