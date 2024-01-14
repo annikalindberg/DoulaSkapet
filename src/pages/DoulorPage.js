@@ -6,12 +6,19 @@ import PageWrapper from '../components/PageWrapper';
 import PageSpecificHero from '../components/PageSpecificHero';
 import MyBreadcrumbs from '../components/BreadCrumbs';
 import rebozowomen from '../assets/rebozo.svg';
+import { Helmet } from 'react-helmet';
+
 
 const DoulorPage = () => {
 
  
    return (
      <PageWrapper >
+       <Helmet>
+         <title>Doulor</title>
+         <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet. Vi har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt." />
+        </Helmet>
+         
         <MyBreadcrumbs />
        <PageSpecificHero
          component="h1"

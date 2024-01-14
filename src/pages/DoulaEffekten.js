@@ -5,7 +5,7 @@ import PageSpecificHero from '../components/PageSpecificHero';
 import MyBreadcrumbs from '../components/BreadCrumbs';
 import ResponsiveImage from '../components/ResponsiveImage';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'; // Import the icon for external links
-
+import { Helmet } from 'react-helmet';
 
 
 
@@ -14,6 +14,10 @@ const DoulaEffekten = () => {
   return (
 
     <PageWrapper>
+      <Helmet>
+        <title>Doulaeffekten - fördelarna med att anlita en doula</title>
+<meta name="description" content="Upptäck doulaeffekten och de vetenskapligt stödda fördelarna med att anlita en doula. Forskning visar på ökad trygghet och positiv påverkan på förlossningsupplevelsen. Läs mer om hur en doula kan bidra till en tryggare och mer tillfredsställande graviditet och förlossning." />
+      </Helmet>
       <PageSpecificHero
         component="h1"
         title="DoulaEffekten"

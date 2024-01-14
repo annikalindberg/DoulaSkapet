@@ -6,6 +6,7 @@ import PageSpecificHero from "../components/PageSpecificHero";
  import FormspreeForm from "../components/FormspreeForm";
 import ContactCards from "../components/ContactCards";
 import AkutDoulaForm from "../components/AkutDoulaForm";
+import { Helmet } from "react-helmet";
 
 const Kontakt = () => {
     const title = "Skriv till oss!";
@@ -17,6 +18,10 @@ const Kontakt = () => {
 
     return (
         <PageWrapper>
+            <Helmet>
+                <title>Kontakt</title>
+                <meta name="description" content="Kontakta DoulaSkapet för en personlig konsultation om doulaservice i Stockholm. Vårt team är redo att lyssna och skapa en skräddarsydd födselupplevelse för dig. Få snabbt svar för akut doulastöd eller boka ett förutsättningslöst möte för att diskutera dina behov och önskemål." />
+            </Helmet>
             <PageSpecificHero
                 title={title}
                 subtitle={subtitle}
@@ -34,6 +39,7 @@ const Kontakt = () => {
                             pris={doula.pris}
                             kontakt={doula.kontakt} 
                             showFormButton={doula.showFormButton}
+                            hasProfilePage={doula.name === 'Annika Lindberg'}
                         />
                     </Grid>
                 ))}

@@ -6,6 +6,9 @@ import TestimonialSlider  from './TestimonialsSlider';
 import { useTheme } from '@mui/material/styles';
 import PageWrapper from '../components/PageWrapper';
 import PagespecifikHero from '../components/PageSpecificHero';
+import { Helmet } from 'react-helmet';
+import { doulorArray } from '../components/DoulorArray';
+import ContactCards from '../components/ContactCards';
 
 const DoulaPaketBas = () => {
     const theme = useTheme();
@@ -13,14 +16,21 @@ const DoulaPaketBas = () => {
   const subtitle = 'Stöd under graviditet och förlossning';
   const image = '/Optimized-images/handsheart-bg.webp';
 
+  const basPaketDoulas = doulorArray.filter(doula => doula.erbjuder.includes('Baspaket'));
+  
   const basPackage = packages.find(pkg => pkg.title === 'Doulapaket Bas - Trygg Förlossning');
 
   if (!basPackage) {
     return <div>Package not found</div>;
   }
+  
 
   return (
     <PageWrapper>
+      <Helmet>
+        <title>Doulapaket Bas - Trygg Förlossning</title>
+        <meta name="description" content="Vårt 'Trygg Förlossning' doulapaket erbjuder specialiserat stöd för en trygg och väl förberedd förlossningsupplevelse i Stockholm. Lär dig hur våra expertdoulor kan hjälpa dig att känna dig säkrare och mer avslappnad inför, under och efter förlossningen. Finns det en partner/stödperson stöttar doulan er som team, för att stödpersonen/partnern ska kunna vara ett så bra stöd som möjligt för den födande." />
+      </Helmet>
     <PagespecifikHero title={title} subtitle={subtitle} image={image} />
     <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
@@ -78,6 +88,23 @@ const DoulaPaketBas = () => {
         Ord från Doulaskapets klienter</Typography>
             <TestimonialSlider testimonials={testimonials} />
 
+      </Box>
+          <Box sx={{ my: 4 }}>
+        <Typography variant="h4" sx={{ mb: 2 }}>Doulor som erbjuder Baspaket - Trygg förlossning</Typography>
+        <Grid container spacing={2} justifyContent="center">
+          {basPaketDoulas.map(doula => (
+            <Grid item key={doula.id} xs={12} sm={6} md={4}>
+              <ContactCards 
+                name={doula.name} 
+                image={doula.image} 
+                bor={doula.bor} 
+                kontakt={doula.kontakt} 
+                showFormButton={doula.showFormButton} 
+                hasProfilePage={doula.hasOwnProfile}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </PageWrapper>
   );

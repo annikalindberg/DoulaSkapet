@@ -1,16 +1,21 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box, Grid, List, ListItem, ListItemIcon } from '@mui/material';
-import { packages } from '../components/PackageData'; // Adjust the import path as necessary
+import { packages} from '../components/PackageData'; // Adjust the import path as necessary
 import CircleIcon from '@mui/icons-material/Circle';
 import { useTheme } from '@mui/material/styles';
 import PagespecifikHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
+import { Helmet } from 'react-helmet';
+import { doulorArray } from '../components/DoulorArray';
+import ContactCards from '../components/ContactCards';
 
 const AkutDoulaPage = () => {
   const theme = useTheme();
   const title = 'Akut Doula';
   const subtitle = 'När du behöver en doula snabbt';
   const image = '/Optimized-images/handsheart-bg.webp';
+
+    const akutDoulaDoulas = doulorArray.filter(doula => doula.erbjuder.includes('AkutDoula'));
 
   // Locate the specific Akut-Doula package
   const akutDoulaPackage = packages.find(pkg => pkg.title === 'Akut-Doula');
@@ -22,6 +27,10 @@ const AkutDoulaPage = () => {
 
   return (
     <PageWrapper>
+      <Helmet>
+        <title>Akutdoula</title>
+      <meta name="description" content="Akutdoula eller expressdoula är en tjänst för dig som behöver en doula snabbt och oplanerat. Vår akutdoulatjänst är anpassad efter de situationer när någonting oförutsätt inträffar, till exempel om din partner eller stödperson blir sjuk och inte kan vara med på förlossningen. Använd vårt Akutdoula-formulär så får du garanterat svar så snabbt vi kan, men senast inom 24 timmar."></meta>
+      </Helmet>
     <PagespecifikHero title={title} subtitle={subtitle} image={image} />
         <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
@@ -74,6 +83,23 @@ const AkutDoulaPage = () => {
           </Card>
         </Grid>
       </Grid>
+      </Box>
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" sx={{ mb: 2 }}>Doulor som erbjuder Akutdoula-tjänsten</Typography>
+        <Grid container spacing={2} justifyContent="center">
+          {akutDoulaDoulas.map(doula => (
+            <Grid item key={doula.id} xs={12} sm={6} md={4}>
+              <ContactCards 
+                name={doula.name} 
+                image={doula.image} 
+                bor={doula.bor} 
+                kontakt={doula.kontakt} 
+                showFormButton={doula.showFormButton} 
+                hasProfilePage={doula.hasOwnProfile}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </PageWrapper>
   );

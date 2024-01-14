@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import HeroSection from '../components/HeroSection';
 import PageSpecificHero from '../components/PageSpecificHero';
 import  PageWrapper  from '../components/PageWrapper';
@@ -7,13 +8,16 @@ import MyBreadcrumbs from '../components/BreadCrumbs';
 import ResponsiveImage from '../components/ResponsiveImage';
 import { Typography, Box } from '@mui/material';
 import highfive from '../assets/highfive.png'
-/* import twowomen from '../assets/twowomen.svg';
- */
+
 const Hem = () => {
 
   return (
-    
-    <PageWrapper>
+        <PageWrapper>
+    <Helmet>
+        <title>DoulaSkapet - Hem</title>
+      <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet. Vi har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt."></meta>
+      </Helmet>
+
     <PageSpecificHero component="h1"
         title="På jakt efter en Doula i Stockholm?" 
         subtitle="Då har du hittat helt rätt." 
@@ -108,7 +112,6 @@ const Hem = () => {
       
         
 </PageWrapper>
-
   );
 }
 

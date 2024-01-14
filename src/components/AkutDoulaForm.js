@@ -3,6 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Box, TextField, Typography, Snackbar, Alert, Modal, Checkbox, FormControlLabel, Link } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
 import PrivacyNotice from './Integritetsmeddelande';
+import { Helmet } from 'react-helmet';
 
 const AkutDoulaForm = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +55,10 @@ const AkutDoulaForm = () => {
         border: '4px solid #D32F2F', // Red border
       }}
     >
-     
+      <Helmet>
+        <title>Akutdoula</title>
+      <meta name="description" content="Akutdoula eller expressdoula är en tjänst för dig som behöver en doula snabbt och oplanerat. Vår akutdoulatjänst är anpassad efter de situationer när någonting oförutsätt inträffar, till exempel om din partner eller stödperson blir sjuk och inte kan vara med på förlossningen. Använd vårt Akutdoula-formulär så får du garanterat svar så snabbt vi kan, men senast inom 24 timmar."></meta>
+      </Helmet>
                     <Typography variant="body1" sx={{ color: 'text.primary', mb: 2 }}>
             Akutdoula formulär
       </Typography>

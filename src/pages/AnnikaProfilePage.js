@@ -8,6 +8,7 @@ import PageSpecificHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
 import { Link as RouterLink } from 'react-router-dom'; // Import from react-router-dom
 import AkutDoulaForm from '../components/AkutDoulaForm';
+import { Helmet } from 'react-helmet';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
@@ -29,6 +30,10 @@ const AnnikaProfilePage = () => {
 
       }}
     >
+      <Helmet>
+        <title>Annika Lindberg - Proffessionell och erfaren doula med HBTQ-kompetens</title>
+      <meta name="description" content="Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj utanför heteronormen. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer."></meta>
+      </Helmet>
       <PageSpecificHero
         subtitle={subtitle} 
         image="/Optimized-images/annikaHero.webp"

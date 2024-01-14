@@ -5,6 +5,7 @@ import { Box, Typography } from '@mui/material';
 import TestimonialsSlider from './TestimonialsSlider';
 import { packages, testimonials } from '../components/PackageData';
 import PageSpecificHero from '../components/PageSpecificHero';
+import { Helmet } from 'react-helmet';
 
 const DoulaPaket = () => {
 
@@ -15,6 +16,11 @@ const DoulaPaket = () => {
   
   return (
     <Box>
+      <Helmet>
+      <title>DoulaPaket - våra tjänster</title>
+        <meta name="description" content="Utforska våra skräddarsydda doulapaket i Stockholm, designade för att ge stöd och komfort genom hela graviditets- och förlossningsprocessen. Lär dig mer om hur våra doulas kan anpassa sitt stöd för att möta dina specifika behov och önskemål. Vi erbjuder postpartumstöd, föda tryggt med doula och akutdoula-paket" />
+      </Helmet>
+
       <PageSpecificHero
         title={title}
         subtitle={subtitle}

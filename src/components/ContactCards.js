@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Link, CardContent, Typography, CardMedia, Button } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
-const ContactCards = ({ name, image, bor, kontakt, showFormButton }) => {
+const ContactCards = ({ name, image, bor, kontakt, showFormButton, hasProfilePage }) => {
     const handleScrollToForm = () => {
         const formElement = document.getElementById("contact-form");
         formElement?.scrollIntoView({ behavior: "smooth" });
@@ -45,9 +46,20 @@ const ContactCards = ({ name, image, bor, kontakt, showFormButton }) => {
                       width: 'auto', // Auto width to fit content
                         }}
                     >
-                        Kontakta Annika
+                        Annikas kontaktformulär
                     </Button>
                 )}
+                  {hasProfilePage && (
+                <Button
+                    component={RouterLink}
+                    to="/doulor/annika"
+                    variant="contained"
+                    sx={{ mt: 2, fontSize: '0.75rem', padding: '6px 12px' }}
+                    aria-label={`Gå till ${name}s profilsida`}
+                >
+                    Gå till Annikas Profilsida
+                </Button>
+            )}
             </CardContent>
         </Card>
     );

@@ -3,10 +3,19 @@ import { Card, CardContent, Typography, Box, Grid, List, ListItem , ListItemIcon
 import { packages } from '../components/PackageData'; // Adjust the import path as necessary
 import { useTheme } from '@mui/material/styles';
 import CircleIcon from '@mui/icons-material/Circle';
+import { Helmet } from 'react-helmet';
+import PagespecifikHero from '../components/PageSpecificHero';
+import PageWrapper from '../components/PageWrapper';
+import { doulorArray } from '../components/DoulorArray';
+import ContactCards from '../components/ContactCards';
 
 const PostpartumSupportPage = () => {
   const theme = useTheme();
-
+  const title = 'Postpartumstöd';
+  const subtitle = 'Tiden efter förlossningen';
+  const image = '/Optimized-images/postpartum-bg.webp';
+  const postpartumDoulas = doulorArray.filter(doula => doula.erbjuder.includes('Postpartum'));
+  
   const postpartumPackage = packages.find(pkg => pkg.title === 'Postpartumstöd – tiden efter förlossningen');
 
   // If package is not found, render a placeholder or a not found message
@@ -15,6 +24,13 @@ const PostpartumSupportPage = () => {
   }
 
   return (
+    <PageWrapper>
+
+      <Helmet>
+        <title>Postpartumstöd – tiden efter förlossningen</title>
+        <meta name="description" content="Upptäck vårt omfattande Postpartumstöd hos DoulaSkapet. Vi erbjuder anpassad hjälp och vägledning för nya föräldrar i Stockholm under den viktiga tiden efter förlossningen, inklusive emotionellt stöd, praktiska tips och hjälp med att anpassa sig till föräldraskapet. Kontakta oss för att skapa en plan som passar dina unika behov." />
+      </Helmet>
+      <PagespecifikHero title={title} subtitle={subtitle} image={image} />
     <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
     <Grid item xs={12} sm={10} md={8} lg={6}> {/* Adjusted grid sizes */}
@@ -63,12 +79,31 @@ const PostpartumSupportPage = () => {
               
               <Typography variant="body1" sx={{ mb: 2, fontStyle: 'italic' }}>
                 {postpartumPackage.disclaimer}
-              </Typography>
+                </Typography>
+            
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-    </Box>
+      </Box>
+      <Box sx={{ my: 4 }}>
+<Typography variant="h4" sx={{ mb: 2 }}>Våra Postpartum Doulas</Typography>
+<Grid container spacing={2} justifyContent="center">
+{postpartumDoulas.map(doula => (
+<Grid item key={doula.id} xs={12} sm={6} md={4}>
+<ContactCards 
+             name={doula.name} 
+             image={doula.image} 
+             bor={doula.bor} 
+             kontakt={doula.kontakt} 
+             showFormButton={doula.showFormButton} 
+             hasProfilePage={doula.hasOwnProfile}
+           />
+</Grid>
+))}
+</Grid>
+</Box>
+    </PageWrapper>
   );
 };
 

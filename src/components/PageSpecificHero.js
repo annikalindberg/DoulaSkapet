@@ -54,7 +54,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         <Typography
            variant="h1" gutterBottom
            sx={{
-               mt: 8, mb: 5,
+               mt: 10, mb: 10,
              color: theme.palette.text.primary,
               /* textAlign: 'center', */
             

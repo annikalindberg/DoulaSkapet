@@ -25,7 +25,7 @@ export const packageImages = {
     {
       id: 1,
       title: 'Doulapaket Bas - Trygg Förlossning',
-      description: 'Med Doulapaket Bas, ser vi till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. VÅra duktiga och erfarna doulor stöttar igenom hela resan, utifrån de behov som finns och som uppstår under vägen. Våra doulor arbetar alla utifrån Föda Utan Rädsla verktygen och hjälper er också med sömn, vila, mat, massage/beröring och förlossningställningar. Hon peppar och hjälper dig att hitta tillbaka till tilliten och tron på att du kan föda.',
+      description: 'Med Doulapaket Bas, ser vi till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Våra duktiga och erfarna doulor stöttar igenom hela resan, utifrån de behov som finns och som uppstår under vägen. Våra doulor arbetar alla utifrån Föda Utan Rädsla verktygen och hjälper er också med sömn, vila, mat, massage/beröring och förlossningställningar. Hon peppar och hjälper dig att hitta tillbaka till tilliten och tron på att du kan föda.',
       rubrik2: 'Vad ingår i Doulapaket Bas - Trygg förlossning?',
       text2: 'Vårt Doulapaket Bas är omfattande och inkluderar:',
       list2_1: 'Två församtal/förlossningsförberedande workshop: a 2-3',
@@ -35,7 +35,7 @@ export const packageImages = {
       list2_5: 'Backup doula tillgänlig vid behov 24 timmar om dygnaet under hela jourtiden, redo att rycka in om din doula blir sjuk eller av annan anledning inte kan vara med dig, eller i de fall då förlossningen pågår längre än 10 timmar. För att garantera kontirnueligt doulastöd under hela förlossningen, oavsett vad som händer.',
 
       list2_6: 'Eftersamtal: Hembesök av er förlossningsdoula några veckor efter förlossningen där du/ni får chans att prata igenom samt reflektera över förlossningen. Det finns även möjlighet att få stöd i att bearbeta upplevelser kopplade til förlossning/postpartum.',
-      price: 'Mellan 11 000 - 18 000 SEK (inkl moms), beroende på doula samt hur många tilläggstjänster som önskas. Utökad jourtid påverkar även priset.',
+      price: 'Mellan 11 000 - 18 000 SEK (inkl moms), beroende på doula samt hur många tilläggstjänster som önskas. Utökad jourtid påverkar även priset. Vi erbjuder även möjlighet till delbetalning och det går bra att betala med friskvårdsbidrag. Är du självstående eller ensamstående förälder? Hör av dig så kan vi diskutera ett pris som passar dig.',
       ctatext: 'Se priser för respektive doula under fliken "Våra doulor"',
       image: packageImages[1],
     },
