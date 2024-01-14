@@ -8,6 +8,7 @@ import PageWrapper from '../components/PageWrapper';
 import { Helmet } from 'react-helmet';
 import { doulorArray } from '../components/DoulorArray';
 import ContactCards from '../components/ContactCards';
+import MyBreadCrumbs  from '../components/BreadCrumbs';
 
 const AkutDoulaPage = () => {
   const theme = useTheme();
@@ -31,6 +32,7 @@ const AkutDoulaPage = () => {
         <title>Akutdoula</title>
       <meta name="description" content="Akutdoula eller expressdoula är en tjänst för dig som behöver en doula snabbt och oplanerat. Vår akutdoulatjänst är anpassad efter de situationer när någonting oförutsätt inträffar, till exempel om din partner eller stödperson blir sjuk och inte kan vara med på förlossningen. Använd vårt Akutdoula-formulär så får du garanterat svar så snabbt vi kan, men senast inom 24 timmar."></meta>
       </Helmet>
+      <MyBreadCrumbs />
     <PagespecifikHero title={title} subtitle={subtitle} image={image} />
         <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">

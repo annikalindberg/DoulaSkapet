@@ -11,7 +11,7 @@ const StyledHeroBox = styled(Box)`
   align-items: center; // Updated to center align items horizontally
   justify-content: center; // Added to center align items vertically
   text-align: center; // Ensure text inside is centered
-
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   background-image: url(${props => props.backgroundImage || '/Optimized-images/händerpåmage.webp'}); // Default image
 `;
 
@@ -31,7 +31,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         /*   display: 'flex',
           flexDirection: 'column', */
         
-          mb: 5,
+          mb: 2,
           py: {
             xs: 2,  // Equivalent to theme.spacing(2)
             sm: 3,  // Equivalent to theme.spacing(3)
@@ -70,7 +70,7 @@ const PageSpecificHero = ({ title, subtitle, image }) => {
         variant="italic"
         sx={{
          
-         
+         mb: 10,
                   
 
          

@@ -16,7 +16,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import PostpartumSupport from './pages/PostPartumSupport';
+import PostpartumStöd from './pages/PostPartumStöd';
 import AkutDoula from './pages/AkutDoula';  
 import Baspaket from './pages/DoulaPaketBas';
 import AnnikaProfilePage from './pages/AnnikaProfilePage';
@@ -46,7 +46,7 @@ const App = () => {
 <Route path="/Doulor/Annika" element={<AnnikaProfilePage />} />
             <Route path="/DoulaPaket" element={<DoulaPaket />} />
             <Route path="/DoulaPaket/Baspaket" element={<Baspaket />} />
-            <Route path="/DoulaPaket/Postpartumsupport" element={<PostpartumSupport />} />
+            <Route path="/DoulaPaket/PostpartumStöd" element={<PostpartumStöd />} />
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
             <Route path="/DoulaEffekten" element={< DoulaEffekten />} />
             <Route path="/kontakt" element={<Kontakt />} />

@@ -9,11 +9,14 @@ import PageWrapper from '../components/PageWrapper';
 import { Link as RouterLink } from 'react-router-dom'; // Import from react-router-dom
 import AkutDoulaForm from '../components/AkutDoulaForm';
 import { Helmet } from 'react-helmet';
-import {SocialShare} from '../components/SocialShare';
+import { SocialShare } from '../components/SocialShare';
+import MyBreadcrumbs from '../components/BreadCrumbs';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
+  const title = 'Annika Lindberg';
   const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
+  const image = '/Optimized-images/belliespregnant-tablet.webp';
 
   const currentUrl = window.location.href; 
 
@@ -38,9 +41,11 @@ const AnnikaProfilePage = () => {
         <title>Annika Lindberg - Proffessionell och erfaren doula med HBTQ-kompetens</title>
       <meta name="description" content="Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj utanför heteronormen. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer."></meta>
       </Helmet>
+      <MyBreadcrumbs />
       <PageSpecificHero
+        title={title}
         subtitle={subtitle} 
-        image="/Optimized-images/annikaHero.webp"
+        image={image}
       />
       <PageWrapper>
 
@@ -82,7 +87,7 @@ const AnnikaProfilePage = () => {
                         variant="outlined"
                         color="primary"
                       
-                        to='/DoulaPaket/PostpartumSupport'
+                        to='/DoulaPaket/PostpartumStöd'
                     sx={{
                       mt: 1,
                       mb: 1,
@@ -97,9 +102,31 @@ const AnnikaProfilePage = () => {
                       },
                     }}
                     >
-                Postpartumsupport
+                Postpartumstöd
+                  </Button>
+                  <Button
+                     component={RouterLink}
+                        variant="outlined"
+                        color="primary"
+                      
+                        to='/DoulaPaket/AkutDoula'
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      textTransform: 'none',
+                      justifyContent: 'flex-start',
+               bgcolor: theme.palette.background.paper,
+                      color: theme.palette.text.dark,
+                      
+                      '&:hover': {
+                        bgcolor: theme.palette.secondary.contrastText,
+                        color: theme.palette.secondary.main,
+                      },
+                    }}
+                    >
+                Akutdoula
               </Button>
-             <Button 
+    {/*          <Button 
                 variant="contained" 
                 onClick={() => scrollToSection('contact-form-section')} 
                 aria-label="Gå till kontaktformuläret"
@@ -113,7 +140,7 @@ const AnnikaProfilePage = () => {
                 aria-label="Gå till akutdoula-formuläret"
             >
                 Fyll i akutdoula-formuläret
-            </Button>
+            </Button> */}
 
               </Box>
   <Box display="flex" gap={2} sx={{ 
@@ -122,36 +149,39 @@ const AnnikaProfilePage = () => {
     alignItems: 'flex-start',
     textAlign: 'left' // Changed from 'textAliogn: flexStart'
 }}> 
-      <Typography varianant="subtitle2" sx={{fontWeight: '500'}} > Priser </Typography>
+      <Typography variant="h4" sx={{fontWeight: '500'}} > Priser </Typography>
       <Typography variant="body2" >
        Baspaket: 10 000 SEK</Typography>
               <Typography variant="body2" >
               
-                Postpartumsupport: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
+                Postpartumstöd: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
                 </Typography>
                 
-                </Box>
-                       <Box sx={{ display: 'flex', flexDirection: { xs: 'column'}, gap: 2, mt: 3 }}><Typography>
-         Tveka inte att kontakta oss för ett första kostnadsfritt "lära-känna-möte" helt utan förbindelser. Välkommen att höra av dig!
+            {/*     </Box>
+                       <Box sx={{ display: 'flex', flexDirection:  'column', alignItems: 'flexStart', gap: 2, mt: 3 }}> */}<Typography>
+                   <Typography variant="h4" sx={{ fontWeight: '500', textAlign: 'left' }}>
+   Kontakta mig
+  </Typography>
+                    
        </Typography>
           <Button variant='contained' href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
             Maila mig 
                   </Button>
-                  <Typography variant='body2' sx={{ mt: 2 }}>eller</Typography>
+                  <Typography variant='body2' sx={{ mt: 2 }}>...eller genom  att fylla i något av formulären nedan: </Typography>
                      <Button 
                 variant="contained" 
                 onClick={() => scrollToSection('contact-form')} 
                 aria-label="Gå till kontaktformuläret"
             >
-                Fyll i kontaktformuläret
+                Kontaktformulär
             </Button>
-
+<Typography variant='paragraph' sx={{ mt: 2 }}>Söker du en akutdoula? Vänligen fyll i Akutdoula-formuläret nedan </Typography>
             <Button 
                 variant="contained" 
                 onClick={() => scrollToSection('akut-doula-form-section')} 
                 aria-label="Gå till akutdoula-formuläret"
             >
-                Fyll i akutdoula-formuläret
+               Akutdoula förfrågan
                   </Button>
         <SocialShare url={currentUrl} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
                 

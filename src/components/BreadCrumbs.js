@@ -4,9 +4,27 @@ import { Link as RouterLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'; // Importing the icon
 import { useTheme } from '@mui/material/styles';
+import { useLocation } from 'react-router-dom';
+
+// Map of paths to labels
+const breadcrumbNameMap = {
+    '/': 'Hem',
+    '/Doulor': 'Doulor',
+    '/Doulor/Annika': 'Annika',
+    '/DoulaPaket': 'DoulaPaket',
+    '/DoulaPaket/Baspaket': 'Baspaket',
+    '/DoulaPaket/PostpartumStöd': 'PostpartumStöd',
+    '/DoulaPaket/AkutDoula': 'AkutDoula',
+    '/DoulaEffekten': 'DoulaEffekten',
+    '/Kontakt': 'Kontakt',
+};
 
 export default function MyBreadcrumbs() {
     const theme = useTheme();
+    const location = useLocation();
+    const pathnames = location.pathname.split('/').filter(x => x);
+
+
 
     return (
         <Breadcrumbs 
@@ -23,22 +41,31 @@ export default function MyBreadcrumbs() {
                 },
             }}
         >
-            <Link component={RouterLink} color="inherit" to="/">
-                Hem
-            </Link>
-            <Link component={RouterLink} color="inherit" underline="hover" to="/Doulor">
-                Doulor
-            </Link>
-           
-            <Link component={RouterLink} color="inherit" underline="hover" to="/DoulaPaket">
-                DoulaPaket
-            </Link>
-            <Link component={RouterLink} color="inherit" underline="hover" to="/Doulaeffekten">
-                Doulaeffekten
-            </Link>
-            <Link component={RouterLink} color="inherit" underline="hover" to="/Kontakt">
-                Kontakt
-            </Link>
+            {pathnames.length > 0 ? (
+                <Link component={RouterLink} color="inherit" to="/">
+                    {breadcrumbNameMap['/']}
+                </Link>
+            ) : (
+                <span>{breadcrumbNameMap['/']}</span>
+            )}
+            {pathnames.map((value, index) => {
+                const last = index === pathnames.length - 1;
+                const pathTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+
+                return last ? (
+                    <span key={pathTo}>{breadcrumbNameMap[pathTo]}</span>
+                ) : (
+                    <Link 
+                        key={pathTo}
+                        component={RouterLink}
+                        color="inherit" 
+                        to={pathTo}
+                        underline="hover"
+                    >
+                        {breadcrumbNameMap[pathTo]}
+                    </Link>
+                );
+            })}
         </Breadcrumbs>
     );
 };

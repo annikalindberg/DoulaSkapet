@@ -7,6 +7,7 @@ import PageSpecificHero from "../components/PageSpecificHero";
 import ContactCards from "../components/ContactCards";
 import AkutDoulaForm from "../components/AkutDoulaForm";
 import { Helmet } from "react-helmet";
+import MyBreadcrumbs from "../components/BreadCrumbs";
 
 const Kontakt = () => {
     const title = "Skriv till oss!";
@@ -22,6 +23,7 @@ const Kontakt = () => {
                 <title>Kontakt</title>
                 <meta name="description" content="Kontakta DoulaSkapet för en personlig konsultation om doulaservice i Stockholm. Vårt team är redo att lyssna och skapa en skräddarsydd födselupplevelse för dig. Få snabbt svar för akut doulastöd eller boka ett förutsättningslöst möte för att diskutera dina behov och önskemål." />
             </Helmet>
+            <MyBreadcrumbs />
             <PageSpecificHero
                 title={title}
                 subtitle={subtitle}

@@ -9,6 +9,7 @@ import ResponsiveImage from '../components/ResponsiveImage';
 import { Typography, Box } from '@mui/material';
 import highfive from '../assets/highfive.png'
 
+
 const Hem = () => {
 
   return (
@@ -17,12 +18,11 @@ const Hem = () => {
         <title>DoulaSkapet - Hem</title>
       <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet. Vi har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt."></meta>
       </Helmet>
-
+<MyBreadcrumbs />
     <PageSpecificHero component="h1"
         title="På jakt efter en Doula i Stockholm?" 
         subtitle="Då har du hittat helt rätt." 
       image="/optimized-images/handsheart-bg.webp"/>
-      <MyBreadcrumbs />
       <HeroSection />
      
       <Typography variant='h3' data-aos="fade-right"

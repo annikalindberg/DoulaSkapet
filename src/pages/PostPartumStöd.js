@@ -8,8 +8,9 @@ import PagespecifikHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
 import { doulorArray } from '../components/DoulorArray';
 import ContactCards from '../components/ContactCards';
+import MyBreadcrumbs from '../components/BreadCrumbs';
 
-const PostpartumSupportPage = () => {
+const PostpartumStöd = () => {
   const theme = useTheme();
   const title = 'Postpartumstöd';
   const subtitle = 'Tiden efter förlossningen';
@@ -30,6 +31,7 @@ const PostpartumSupportPage = () => {
         <title>Postpartumstöd – tiden efter förlossningen</title>
         <meta name="description" content="Upptäck vårt omfattande Postpartumstöd hos DoulaSkapet. Vi erbjuder anpassad hjälp och vägledning för nya föräldrar i Stockholm under den viktiga tiden efter förlossningen, inklusive emotionellt stöd, praktiska tips och hjälp med att anpassa sig till föräldraskapet. Kontakta oss för att skapa en plan som passar dina unika behov." />
       </Helmet>
+      <MyBreadcrumbs />
       <PagespecifikHero title={title} subtitle={subtitle} image={image} />
     <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">
@@ -107,4 +109,4 @@ const PostpartumSupportPage = () => {
   );
 };
 
-export default PostpartumSupportPage;
+export default PostpartumStöd;

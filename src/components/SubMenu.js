@@ -7,7 +7,7 @@ const Submenu = ({ pageName, isOpen, handleCloseNavMenu }) => {
   let submenuItems = [];
 
   if (pageName === 'DoulaPaket') {
-    submenuItems = ['Baspaket', 'PostpartumSupport', 'AkutDoula'];
+    submenuItems = ['Baspaket', 'PostpartumStöd', 'AkutDoula'];
   } else if (pageName === 'Doulor') {
     submenuItems = ['Annika']; // Add other submenu items if needed
   }

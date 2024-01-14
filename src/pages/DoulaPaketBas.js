@@ -9,6 +9,7 @@ import PagespecifikHero from '../components/PageSpecificHero';
 import { Helmet } from 'react-helmet';
 import { doulorArray } from '../components/DoulorArray';
 import ContactCards from '../components/ContactCards';
+import MyBreadcrumbs from '../components/BreadCrumbs';
 
 const DoulaPaketBas = () => {
     const theme = useTheme();
@@ -31,6 +32,7 @@ const DoulaPaketBas = () => {
         <title>Doulapaket Bas - Trygg Förlossning</title>
         <meta name="description" content="Vårt 'Trygg Förlossning' doulapaket erbjuder specialiserat stöd för en trygg och väl förberedd förlossningsupplevelse i Stockholm. Lär dig hur våra expertdoulor kan hjälpa dig att känna dig säkrare och mer avslappnad inför, under och efter förlossningen. Finns det en partner/stödperson stöttar doulan er som team, för att stödpersonen/partnern ska kunna vara ett så bra stöd som möjligt för den födande." />
       </Helmet>
+      <MyBreadcrumbs />
     <PagespecifikHero title={title} subtitle={subtitle} image={image} />
     <Box sx={{ my: 4 }}>
   <Grid container spacing={2} justifyContent="center">

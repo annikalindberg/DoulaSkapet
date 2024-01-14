@@ -1,11 +1,13 @@
 import React from 'react';
 import DoulaPackageCard from '../components/PackageCards';
 import Grid from '@mui/material/Grid';
-import { Box, Typography } from '@mui/material';
+import {  Typography } from '@mui/material';
 import TestimonialsSlider from './TestimonialsSlider';
 import { packages, testimonials } from '../components/PackageData';
 import PageSpecificHero from '../components/PageSpecificHero';
 import { Helmet } from 'react-helmet';
+import PageWrapper from '../components/PageWrapper';
+import MyBreadCrumbs  from '../components/BreadCrumbs';
 
 const DoulaPaket = () => {
 
@@ -15,12 +17,14 @@ const DoulaPaket = () => {
 
   
   return (
-    <Box>
+    <PageWrapper>
+      <MyBreadCrumbs />
+
+   
       <Helmet>
       <title>DoulaPaket - våra tjänster</title>
         <meta name="description" content="Utforska våra skräddarsydda doulapaket i Stockholm, designade för att ge stöd och komfort genom hela graviditets- och förlossningsprocessen. Lär dig mer om hur våra doulas kan anpassa sitt stöd för att möta dina specifika behov och önskemål. Vi erbjuder postpartumstöd, föda tryggt med doula och akutdoula-paket" />
       </Helmet>
-
       <PageSpecificHero
         title={title}
         subtitle={subtitle}
@@ -42,7 +46,7 @@ const DoulaPaket = () => {
           if (pkg.title === 'Akut-Doula') {
             linkPath = '/DoulaPaket/AkutDoula';
           } else if (pkg.title === 'Postpartumstöd – tiden efter förlossningen') {
-            linkPath = '/DoulaPaket/PostpartumSupport';
+            linkPath = '/DoulaPaket/PostpartumStöd';
           } else if (pkg.title === 'Doulapaket Bas - Trygg Förlossning') {
             linkPath = '/DoulaPaket/Baspaket';
           }
@@ -75,7 +79,7 @@ const DoulaPaket = () => {
         sx={{ textAlign: 'center' }}
       > Ord från klienter</Typography>
       <TestimonialsSlider testimonials={testimonials} />
-    </Box> 
+    </PageWrapper>
   );
 };
 
