@@ -9,10 +9,14 @@ import PageWrapper from '../components/PageWrapper';
 import { Link as RouterLink } from 'react-router-dom'; // Import from react-router-dom
 import AkutDoulaForm from '../components/AkutDoulaForm';
 import { Helmet } from 'react-helmet';
+import {SocialShare} from '../components/SocialShare';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
   const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
+
+  const currentUrl = window.location.href; 
+
 
  const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -148,7 +152,8 @@ const AnnikaProfilePage = () => {
                 aria-label="Gå till akutdoula-formuläret"
             >
                 Fyll i akutdoula-formuläret
-            </Button>
+                  </Button>
+        <SocialShare url={currentUrl} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
                 
        
       

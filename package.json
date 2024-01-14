@@ -24,6 +24,7 @@
     "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
+    "react-share": "^5.0.3",
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.3",
     "slick-carousel": "^1.8.1",
@@ -31,7 +32,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-      "process-og-images": "node processOgImages.js",
+    "process-og-images": "node processOgImages.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
