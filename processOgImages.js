@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = './src/assets/images';
+const inputDir = './src/assets/ogimages'; // New input directory
 const ogImageOutputDir = './public/optimized-images/og'; // Directory for OG images
 
 // Create OG images directory if it doesn't exist

@@ -14,7 +14,7 @@ const Kontakt = () => {
     const title = "Skriv till oss!";
     const subtitle = "Hur kan vi tillsammans kan skapa en tryggare och mer kärleksfull födselupplevelse för just dig?";
 
-    const image = "/optimized-images/orangebg.webp";
+    const image = "/optimized-images/orange-bg.webp";
 
     
 
