@@ -3,6 +3,7 @@ import { Card, CardActions, CardContent, Typography, Button, CardMedia, useTheme
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { Link } from 'react-router-dom';
+import PortraitIcon from '@mui/icons-material/Portrait';
 
 const PresentationsCards = ({ name, image, description, erbjuder, bor, pris, rubrik2, stycke2, stycke3, hasOwnProfile }) => {
     const [isTextVisible, setIsTextVisible] = useState(false);
@@ -25,6 +26,7 @@ const PresentationsCards = ({ name, image, description, erbjuder, bor, pris, rub
                     color="primary"
                     component={Link}
                     to="/Doulor/Annika"
+                    startIcon={<PortraitIcon />}
                     sx={{
                         mt: 1,
                         mb: 1,

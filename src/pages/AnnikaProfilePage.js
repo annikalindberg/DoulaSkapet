@@ -169,7 +169,7 @@ const AnnikaProfilePage = () => {
                       
             variant='outlined'
             href={`mailto:annika.edit.lindberg@gmail.com`}
-            aria-label="Maila en förfrågan via email"
+            aria-label="Maila en förfrågan"
                       startIcon={<AlternateEmailIcon />}
           >
  
@@ -195,7 +195,7 @@ const AnnikaProfilePage = () => {
   }
 }}
   >
- Akutdoula
+ Kontaktformulär
 </Button>
         </Tooltip>
                   <Typography variant='paragraph' sx={{ mt: 2 }}>Söker du en akutdoula? Vänligen fyll i Akutdoula-formuläret nedan </Typography>
