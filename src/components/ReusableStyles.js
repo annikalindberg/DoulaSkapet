@@ -1,6 +1,6 @@
 
 export const gradientStyle = {
-    background: 'linear-gradient(to right, #c9c9c982, #d3d2d28a);',
+    background: 'linear-gradient(to right, rgb(243 243 243), rgb(228 224 224 / 43%));',
     // Add more styles as needed
     minHeight: '100vh',
 };

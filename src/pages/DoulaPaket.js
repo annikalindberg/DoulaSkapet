@@ -77,7 +77,7 @@ const DoulaPaket = () => {
       </Grid>
       <Typography gutterBottom variant='h3' data-aos="fade-right"
         sx={{ textAlign: 'center' }}
-      > Ord från klienter</Typography>
+      > Vitsord från DoulaSkapets klienter</Typography>
       <TestimonialsSlider testimonials={testimonials} />
     </PageWrapper>
   );

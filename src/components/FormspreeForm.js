@@ -56,7 +56,7 @@ const CustomFormspreeForm = () => {
           <Typography variant="body1" sx={{ color: 'text.primary', mb: 2 }}>
              Kontakta Annika
       </Typography>
-      <Typography variant="body2" sx={{ color: 'text.primary', mb: 2 }}>Svarar vanligtvis inom 1-3 dagar. Gäller det förfrågningar om Akuutdoula - vänligen skriv i Akutddoula-formuläret istället</Typography>
+      <Typography variant="body2" sx={{ color: 'text.primary', mb: 2 }}>Svarar vanligtvis inom 1-3 dagar. Gäller det förfrågningar om Akutdoula - vänligen skriv i Akutdoula-formuläret istället</Typography>
      <TextField
         label="Name"
         variant="outlined"

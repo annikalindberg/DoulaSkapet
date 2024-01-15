@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, Container, Button, } from '@mui/material';
+import { Box, Grid, Typography, Container, Button, Tooltip } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import lgbt from '../assets/lgbtq.svg'
 import rebozo from '../assets/rebozo.svg'
@@ -11,6 +11,7 @@ import AkutDoulaForm from '../components/AkutDoulaForm';
 import { Helmet } from 'react-helmet';
 import { SocialShare } from '../components/SocialShare';
 import MyBreadcrumbs from '../components/BreadCrumbs';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
@@ -18,7 +19,8 @@ const AnnikaProfilePage = () => {
   const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
   const image = '/Optimized-images/belliespregnant-tablet.webp';
 
-  const currentUrl = window.location.href; 
+  // Define the URL for social sharing as a static string
+  const url = 'https://www.doulaskapet.se/doulor/annika';
 
 
  const scrollToSection = (sectionId) => {
@@ -164,9 +166,16 @@ const AnnikaProfilePage = () => {
   </Typography>
                     
        </Typography>
-          <Button variant='contained' href={`mailto:doulaskapet@gmail.com`} aria-label="Maila en förfrågan via email">
-            Maila mig 
-                  </Button>
+                  <Tooltip title="annika.edit.lindberg@gmail.com">
+          <Button
+            variant='outlined'
+            href={`mailto:annika.edit.lindberg@gmail.com`}
+            aria-label="Maila en förfrågan via email"
+            startIcon={<AlternateEmailIcon />}
+          >
+            {/* You can keep the text or remove it, depending on your design */}
+          </Button>
+        </Tooltip>
                   <Typography variant='body2' sx={{ mt: 2 }}>...eller genom  att fylla i något av formulären nedan: </Typography>
                      <Button 
                 variant="contained" 
@@ -183,7 +192,7 @@ const AnnikaProfilePage = () => {
             >
                Akutdoula förfrågan
                   </Button>
-        <SocialShare url={currentUrl} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
+        <SocialShare url={url} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
                 
        
       
