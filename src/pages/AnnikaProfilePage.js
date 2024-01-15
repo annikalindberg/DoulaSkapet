@@ -12,6 +12,8 @@ import { Helmet } from 'react-helmet';
 import { SocialShare } from '../components/SocialShare';
 import MyBreadcrumbs from '../components/BreadCrumbs';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import ForumIcon from '@mui/icons-material/Forum';
+import QuickreplyIcon from '@mui/icons-material/Quickreply';
 
 const AnnikaProfilePage = () => {
   const theme = useTheme();
@@ -25,7 +27,8 @@ const AnnikaProfilePage = () => {
 
  const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
+ };
+  
  
   return (
     <Container
@@ -68,20 +71,19 @@ const AnnikaProfilePage = () => {
                         variant="outlined"
                         color="primary"
                         to='/DoulaPaket/Baspaket'
-                    sx={{
-                      mt: 1,
-                      mb: 1,
-                      textTransform: 'none',
-                      justifyContent: 'flex-start',
-               bgcolor: theme.palette.background.paper,
-                      color: theme.palette.text.dark,
-                      
-                      '&:hover': {
-                        bgcolor: theme.palette.secondary.contrastText,
-                        color: theme.palette.secondary.main,
-                      },
-                    }}
-                    >
+            sx={{
+    mt: 1,
+    mb: 1,
+    textTransform: 'none',
+    justifyContent: 'flex-start',
+    backgroundColor: theme.palette.background.paper, // Corrected property name
+    color: theme.palette.text.dark,
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.contrastText, // Corrected property name
+      color: theme.palette.secondary.main,
+    },
+  }}
+>
                         Baspaket  
               </Button>
               <Button
@@ -124,26 +126,13 @@ const AnnikaProfilePage = () => {
                         bgcolor: theme.palette.secondary.contrastText,
                         color: theme.palette.secondary.main,
                       },
+                      
                     }}
                     >
                 Akutdoula
-              </Button>
-    {/*          <Button 
-                variant="contained" 
-                onClick={() => scrollToSection('contact-form-section')} 
-                aria-label="Gå till kontaktformuläret"
-            >
-                Fyll i kontaktformuläret
-            </Button>
-
-            <Button 
-                variant="contained" 
-                onClick={() => scrollToSection('akut-doula-form-section')} 
-                aria-label="Gå till akutdoula-formuläret"
-            >
-                Fyll i akutdoula-formuläret
-            </Button> */}
-
+                  </Button>
+                  
+   
               </Box>
   <Box display="flex" gap={2} sx={{ 
     flexDirection: 'column', 
@@ -159,39 +148,80 @@ const AnnikaProfilePage = () => {
                 Postpartumstöd: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
                 </Typography>
                 
-            {/*     </Box>
-                       <Box sx={{ display: 'flex', flexDirection:  'column', alignItems: 'flexStart', gap: 2, mt: 3 }}> */}<Typography>
+         <Typography>
                    <Typography variant="h4" sx={{ fontWeight: '500', textAlign: 'left' }}>
    Kontakta mig
   </Typography>
                     
        </Typography>
                   <Tooltip title="annika.edit.lindberg@gmail.com">
-          <Button
+          <Button sx={{ mt: 1,
+  mb: 1,
+  textTransform: 'none',
+  bgcolor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  '&:hover': {
+    bgcolor: theme.palette.primary.dark,
+                        color: theme.palette.secondary.contrastText
+                      }
+                    }
+                  }
+                      
             variant='outlined'
             href={`mailto:annika.edit.lindberg@gmail.com`}
             aria-label="Maila en förfrågan via email"
-            startIcon={<AlternateEmailIcon />}
+                      startIcon={<AlternateEmailIcon />}
           >
-            {/* You can keep the text or remove it, depending on your design */}
+ 
+          
+           Maila mig
           </Button>
         </Tooltip>
                   <Typography variant='body2' sx={{ mt: 2 }}>...eller genom  att fylla i något av formulären nedan: </Typography>
-                     <Button 
-                variant="contained" 
-                onClick={() => scrollToSection('contact-form')} 
-                aria-label="Gå till kontaktformuläret"
-            >
-                Kontaktformulär
-            </Button>
-<Typography variant='paragraph' sx={{ mt: 2 }}>Söker du en akutdoula? Vänligen fyll i Akutdoula-formuläret nedan </Typography>
-            <Button 
+                            <Tooltip title="Kontakta mig via formulär">
+          <Button
+            variant="contained"
+            onClick={() => scrollToSection('contact-form')}
+                      aria-label="Gå till kontaktformuläret"
+                      startIcon={<ForumIcon />}
+            sx={{ mt: 1,
+  mb: 1,
+  textTransform: 'none',
+  bgcolor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  '&:hover': {
+    bgcolor: theme.palette.primary.dark,
+    color: theme.palette.secondary.contrastText
+  }
+}}
+  >
+ Akutdoula
+</Button>
+        </Tooltip>
+                  <Typography variant='paragraph' sx={{ mt: 2 }}>Söker du en akutdoula? Vänligen fyll i Akutdoula-formuläret nedan </Typography>
+                  <Tooltip title="Akutdoula-formulär">
+            <Button sx={{ mt: 1,
+  mb: 1,
+  textTransform: 'none',
+  bgcolor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  '&:hover': {
+    bgcolor: theme.palette.primary.dark,
+                      color: theme.palette.secondary.contrastText
+                    }
+                  }
+                }
                 variant="contained" 
                 onClick={() => scrollToSection('akut-doula-form-section')} 
-                aria-label="Gå till akutdoula-formuläret"
+                    aria-label="Gå till akutdoula-formuläret"
+                                          startIcon={<QuickreplyIcon />}
+
             >
                Akutdoula förfrågan
-                  </Button>
+                    </Button>
+                  </Tooltip>
+                  <Typography variant='paragraph' sx={{ mt: 2 }}>Dela innehåll: </Typography>
+                  
         <SocialShare url={url} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
                 
        
