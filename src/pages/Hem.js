@@ -48,7 +48,7 @@ const Hem = () => {
        
          
           <Typography variant='h4' gutterbottom>Trygghet på dina villkor</Typography>
-          <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen, samt välkomna ett nytt litet liv till världen. </Typography>
+          <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen. Och för att välkomna ett nytt litet liv till världen. </Typography>
           
           
      

@@ -45,7 +45,7 @@ const HeroSection = () => {
           // Remove justifyContent and alignSelf from here
         }}
         />
-        <Typography variant='h5' gutterBottom>Alla våra Doulor är duktiga, professionella och erfarna. Men vi vet att att hitta en <Typography variant='italic'> duktig och erfaren  </Typography>doula, inte nödvändigtvis detsamma som att hitta<Typography variant='italic'> den rätta  </Typography>doulan. </Typography>
+        <Typography variant='h5' gutterBottom>Alla våra Doulor är duktiga, professionella och erfarna. Men vi vet att hitta en <Typography variant='italic'> duktig och erfaren  </Typography>doula, inte nödvändigtvis detsamma som att hitta<Typography variant='italic'> den rätta  </Typography>doulan. </Typography>
         
 </Box> 
         
