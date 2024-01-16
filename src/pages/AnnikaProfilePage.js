@@ -20,6 +20,8 @@ const AnnikaProfilePage = () => {
   const title = 'Annika Lindberg';
   const subtitle = "“Birth is not only about making babies. Birth is about making mothers - strong, competent, capable mothers who trust themselves and know their inner strength.” ― Barbara Katz Rothman";
   const image = '/Optimized-images/belliespregnant-tablet.webp';
+    const ogImagePath = process.env.PUBLIC_URL + '/optimized-images/og/annikaprofil-og.jpg';
+
 
   // Define the URL for social sharing as a static string
   const url = 'https://www.doulaskapet.se/doulor/annika';
@@ -38,13 +40,14 @@ const AnnikaProfilePage = () => {
         maxWidth: '100%',
         px: { xs: 2, sm: 3, md: 4, lg: 10 },
         py: { xs: 2, sm: 3, md: 4, lg: 10 },
-        border: '1px solid green',
 
       }}
     >
       <Helmet>
         <title>Annika Lindberg - Proffessionell och erfaren doula med HBTQ-kompetens</title>
-      <meta name="description" content="Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj utanför heteronormen. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer."></meta>
+        <meta name="description" content="Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj utanför heteronormen. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer."></meta>
+        <meta property="og:image" content={ogImagePath} />
+      
       </Helmet>
       <MyBreadcrumbs />
       <PageSpecificHero

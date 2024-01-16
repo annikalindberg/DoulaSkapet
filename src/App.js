@@ -1,5 +1,6 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
+import { useLocation } from 'react-router-dom';import './App.css';
 import ResponsiveMenu from './components/ResponsiveMenu';
 import StickyFooter from './components/Footer';
 import { Theme } from './styles/Theme';
@@ -15,31 +16,38 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 import PostpartumStöd from './pages/PostPartumStöd';
 import AkutDoula from './pages/AkutDoula';  
 import Baspaket from './pages/DoulaPaketBas';
 import AnnikaProfilePage from './pages/AnnikaProfilePage';
 import { gradientStyle } from './components/ReusableStyles';
 import Box from '@mui/material/Box';
+const RouteHandler = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return (
+    <Routes>
+      {/* Define your routes here */}
+    </Routes>
+  );
+};
 
 const App = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true,
-    });
+    AOS.init({ duration: 2000, once: true });
+    ReactGA.initialize('G-YCXHC9RKK7'); // Replace with your actual GA4 ID
   }, []);
-
-/*   const theme = useTheme(); */
-
-  
   return (
     <Router>
       <ThemeProvider theme={Theme} >
       <Box sx={gradientStyle}>
         
           <ResponsiveMenu />
+          <RouteHandler />
           <Routes>
             <Route path="/" element={<Hem />} />
 <Route path="/Doulor" element={<DoulorPage />} />
