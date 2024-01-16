@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';import './App.css';
 import ResponsiveMenu from './components/ResponsiveMenu';
@@ -22,6 +22,10 @@ import Baspaket from './pages/DoulaPaketBas';
 import AnnikaProfilePage from './pages/AnnikaProfilePage';
 import { gradientStyle } from './components/ReusableStyles';
 import Box from '@mui/material/Box';
+import CookieConsentDialog from './components/CookieConsent';
+import CookiePolicy from './components/CookiePolicy';
+import CustomizeCookieDialog from './components/CustomizeCookieDialog';
+
 const RouteHandler = () => {
   const location = useLocation();
 
@@ -29,24 +33,53 @@ const RouteHandler = () => {
     ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location]);
 
-  return (
+ /*  return (
     <Routes>
-      {/* Define your routes here */}
+  
     </Routes>
-  );
+  ); */
 };
 
 const App = () => {
+  const [cookieDialogOpen, setCookieDialogOpen] = useState(
+    !localStorage.getItem('cookiePreferences')
+
+  )
+  const [customizeDialogOpen, setCustomizeDialogOpen] = useState(false);
+
+
+
+  const handleCloseCookieDialog = () => {
+    setCookieDialogOpen(false);
+  };
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
     ReactGA.initialize('G-YCXHC9RKK7'); // Replace with your actual GA4 ID
   }, []);
+
+  const handleOpenCustomizeDialog = () => {
+    // Öppna dialogrutan eller navigera till sidan för anpassning av cookies
+    setCustomizeDialogOpen(true);
+    handleCloseCookieDialog(); // Stäng cookie-dialogrutan
+  
+  };
+
   return (
     <Router>
       <ThemeProvider theme={Theme} >
       <Box sx={gradientStyle}>
         
           <ResponsiveMenu />
+          <CookieConsentDialog
+            open={cookieDialogOpen}
+            onClose={handleCloseCookieDialog}
+            onReadPolicy={handleCloseCookieDialog}
+            onCustomize={handleOpenCustomizeDialog}
+          />
+          <CustomizeCookieDialog
+            open={customizeDialogOpen}
+            onClose={() => setCustomizeDialogOpen(false)}
+          />
           <RouteHandler />
           <Routes>
             <Route path="/" element={<Hem />} />
@@ -58,6 +91,8 @@ const App = () => {
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
             <Route path="/DoulaEffekten" element={< DoulaEffekten />} />
             <Route path="/kontakt" element={<Kontakt />} />
+                  <Route path="/cookiepolicy" element={<CookiePolicy />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

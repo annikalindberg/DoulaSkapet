@@ -59,11 +59,11 @@ const HeroSection = () => {
         <Typography variant='h3' gutterBottom>Matcha med rätt doula</Typography>
         <Typography variant='body1'>Att välja doula handlar om magkänsla, personkemi och just dina/era unika behov. Alla våra doulor är professionella och erfarna, men matchningen ska kännas 100% rätt för alla parter. Därför erbjuder vi på DoulaSkapet alltid ett första (kostnadsfritt och helt förutsättningslöst) "lära-känna" möte med en eller flera av våra doulor. <Typography variant='body2'gutterBottom> (*OBS Detta gäller även för den av oss som ska bli "back-up-doula" för den doula ni väljer).</Typography> Varmt välkommen att skriva till oss, kontaktuppgifter till oss alla hittar ni under {' '}
          <Link href="/Kontakt">
-          /Kontakt
+          Kontakt
           </Link></Typography>
         <Typography>Lär känna oss lite närmare under {' '}
          <Link href="/Doulor">
-          /Doulor
+          Doulor
           </Link>
         </Typography>
         
