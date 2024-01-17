@@ -99,12 +99,16 @@ function ResponsiveAppBar() {
 
           {/* Social media icons */}
          <Box sx={{
-        display: { xs: 'none', md: 'flex' },
-        position: 'absolute',
-        right: 0, // Align to the right
-        top: 0, // Align to the top
+        display: { /* xs: 'none', */ md: 'flex' },
+/*         position: 'absolute',
+ */        right: 0, // Align to the right
+            top: 0, // Align to the top
+        mt: { xs: '2', md: 'center' },
       }}>
-            <a href="https://www.instagram.com/doulaskapet__tryggforlossning/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/doulaskapet__tryggforlossning/" target="_blank"
+              rel="noopener noreferrer"
+              
+            >
               <IconButton sx={{ color: 'black' }}><Instagram /></IconButton>
             </a>
             <a href="https://www.facebook.com/doulaskapet" target="_blank" rel="noopener noreferrer">

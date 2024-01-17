@@ -19,8 +19,13 @@ export const PageWrapper = ({ children }) => {
         },
         justifyContent: 'center',
         alignItems: 'center',
-      }}
-    >
+        '& h1, & h2, & h3, & h4, & h5, & h6': {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(),
+    },
+  }}
+>
+
       {children}
     </Box>
   );

@@ -7,7 +7,8 @@ import  PageWrapper  from '../components/PageWrapper';
 import MyBreadcrumbs from '../components/BreadCrumbs';
 import ResponsiveImage from '../components/ResponsiveImage';
 import { Typography, Box } from '@mui/material';
-import highfive from '../assets/highfive.png'
+import twowomen from '../assets/twowomen.svg'
+import layingdown from '../assets/layongdown.svg'
 
 
 const Hem = () => {
@@ -16,39 +17,64 @@ const Hem = () => {
         <PageWrapper>
     <Helmet>
         <title>DoulaSkapet - Hem</title>
-      <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet. Vi har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt."></meta>
+      <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet att stötta HBTQ-personer, självstående, regnbågsgamiler och jobbar traumamedvetet och HBTQ-medvetet. Våra doulor har olika erfarenheter av att t.ex. föda barn utanför heteronormen, cisnormen och tvåsamhetsnormen. Vi har ett normkritiskt perspektiv och jobbar behovsanpassat och proffessionellt."></meta>
       </Helmet>
 <MyBreadcrumbs />
     <PageSpecificHero component="h1"
-        title="På jakt efter en Doula i Stockholm?" 
+        title="Letar du efter en Doula i Stockholm?" 
         subtitle="Då har du hittat helt rätt." 
       image="/optimized-images/handsheart-bg.webp"/>
       <HeroSection />
      
-      <Typography variant='h3' data-aos="fade-right"
+      <Typography gutterBottom variant='h3' data-aos="fade-right"
         sx={{textAlign: 'center'}}
-      >DoulaSkapet - vår filosofi </Typography>
-       
-           <Typography paragraph>
-         Relationen mellan doulan och den födande bygger på ett ömsesidigt förtroende, en djup respekt och lyhördhet för den födandes behov och önskan, Att ha ett ständigt öppet sinne samt en fingertoppskänsla är viktiga egenskaper hos våra doulor. 
-          </Typography>
-          <Typography paragraph>
+      >DoulaSkapet - trygghet på dina villkor </Typography>
+          <Typography gutterbottom paragraph>
          Varje födsel är unik och det gör att vi doulor anpassar vårt arbete efter vem vi jobbar med. Vi ser till att du/ni får ett tryggt doulastöd inför, under och efter födseln för att hela familjen ska få en så trygg och positiv start som möjligt. Från "plusset på stickan" till och med den fjärde trimestern, eller postpartum - den första tiden med er nya lilla familjemedlem, så har vi det ni behöver i form av stöd och trygghet.
          
       </Typography>
-
-
-   
-        <Typography variant='h4' gutterbottom>Trygghet på dina villkor</Typography>
-
-          <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen, samt välkomna ett nytt litet liv till världen. </Typography>
-        
+      <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen. Och för att välkomna ett nytt litet liv till världen. </Typography>
+          {/*  <Typography gutterBottom paragraph >
+         Relationen mellan doulan och den födande bygger på ett ömsesidigt förtroende, en djup respekt och lyhördhet för den födandes behov och önskan, Att ha ett ständigt öppet sinne samt en fingertoppskänsla är viktiga egenskaper hos våra doulor. 
+      </Typography> */}
 
         
+     
+      
+      <Typography variant='h3' gutterbottom>HBTQ-kompetens och normkritiskt perspektiv</Typography>
+      <Typography paragraph gutterbottom>Vi på DoulaSkapet har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt. Vi tror att en doula som har egen levd erfarenhet av att att föda barn utanför normen ger en unik möjilghet att se de behov som andra födande med liknande erfarenheter kan ha. Våra doulor har erfarenhet av att att både stötta klienter som bryter mot cis-normen, heteronormen och tvåsamhetsnormen, men även att själv göra det. </Typography>
+      
+      <Box
+        
+    display="flex" // Enable flex container
+    justifyContent="center" // Horizontally center the child
+    alignItems="center" // Vertically center the child
+        sx={{   
+       mr: { xs: 2, md: 4, large: 6 },
+          mt: { xs: 2, md: 4, large: 6 },
+          mb: { xs: 2, md: 3 }, }}
+>
+ 
+        <Typography variant='italic' gutterBottom >Vi jobbar aktivt med de normer vi själva präglas av, och mot att frigöra oss från alla föreställningar som finns om hur familjer kan se ut, vilken typ av kroppar som föder barn, ammar och blir förälder. </Typography>
+         <Box
+        data-aos="fade-right"
+        component="img"
+        src={layingdown}
+        alt="Doula holding pregnant womans legs while laying down"
+        sx={{
+          maxWidth: '200px',
        
-         
-          <Typography variant='h4' gutterbottom>Trygghet på dina villkor</Typography>
-          <Typography paragraph> Vårt mål är tydligt: du/ni ska ha de förutsättningar som krävs för att du/ni ska få den bästa tänkbara förlossningsupplevelsen. Och för att välkomna ett nytt litet liv till världen. </Typography>
+          mt: { xs: 2, md: 3 },
+          mb: { xs: 2, md: 3 },
+          width: '100%', // Responsive image width
+          // Remove justifyContent and alignSelf from here
+        }}
+        />   
+      </Box> 
+             
+       
+ 
+     
           
           
      
@@ -59,7 +85,7 @@ const Hem = () => {
 
       
    
-              <Typography variant='h4' gutterBottom>Föda Utan Rädsla (FUR)</Typography>
+              <Typography variant='h3' gutterBottom>Föda Utan Rädsla (FUR)</Typography>
             <Typography paragraph gutterBottom>Föda Utan Rädsla-metoden har redan använts av tusentals födande i flera länder och allt fler professionella vårdgivare och sjukhus låter sig utbildas i vår unika omvårdnadsmodell (SAFE). FUR-metoden fokuserar på att stärka din och ditt barns egen förmåga och kraft som redan finns inom er. Vi vet att både du och barnet redan har all kunskap ni behöver för att föda och födas. Våra metoder vilar på en stabil grund av fysiologisk kunskap och innehåller en bredd av verktyg som är utvecklade kring bevisade effekter.  {/*  <a
           href="https://fodautanradsla.se/om/metoden"
           target="_blank"
@@ -97,7 +123,7 @@ const Hem = () => {
         <Box
         data-aos="fade-right"
         component="img"
-        src={highfive}
+        src={twowomen}
         alt="Pregnant woman and doula"
         sx={{
           maxWidth: '200px',

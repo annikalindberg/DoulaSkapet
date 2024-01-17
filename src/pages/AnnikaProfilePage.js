@@ -223,9 +223,9 @@ const AnnikaProfilePage = () => {
                Akutdoula förfrågan
                     </Button>
                   </Tooltip>
-                  <Typography variant='paragraph' sx={{ mt: 2 }}>Dela innehåll: </Typography>
+                 
                   
-        <SocialShare url={url} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens" />
+        <SocialShare url={url} title="Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens"  />
                 
        
       

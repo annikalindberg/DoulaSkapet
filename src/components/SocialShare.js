@@ -4,18 +4,19 @@ import {
   TwitterShareButton,
 } from 'react-share';
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export const SocialShare = ({ url, title }) => 
 
     (
     <Box sx={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flexStart',
         alignItems: 'center',
         gap: 2,
 
   }} >
+    <Typography variant='paragraph' sx={{  }}>Dela sidan </Typography>
     <FacebookShareButton url={url} quote={title}>
       <FacebookIcon size={32} round />
     </FacebookShareButton>
