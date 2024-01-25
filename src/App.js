@@ -25,6 +25,7 @@ import Box from '@mui/material/Box';
 import CookieConsentDialog from './components/CookieConsent';
 import CookiePolicy from './components/CookiePolicy';
 import CustomizeCookieDialog from './components/CustomizeCookieDialog';
+import TipsOchFördjupning from './pages/TipsOchFördjupning';
 
 const RouteHandler = () => {
   const location = useLocation();
@@ -33,11 +34,6 @@ const RouteHandler = () => {
     ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location]);
 
- /*  return (
-    <Routes>
-  
-    </Routes>
-  ); */
 };
 
 const App = () => {
@@ -46,8 +42,6 @@ const App = () => {
 
   )
   const [customizeDialogOpen, setCustomizeDialogOpen] = useState(false);
-
-
 
   const handleCloseCookieDialog = () => {
     setCookieDialogOpen(false);
@@ -91,6 +85,7 @@ const App = () => {
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
             <Route path="/DoulaEffekten" element={< DoulaEffekten />} />
             <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/TipsOchFördjupning" element={<TipsOchFördjupning />} /> 
                   <Route path="/cookiepolicy" element={<CookiePolicy />} />
 
             <Route path="*" element={<NotFound />} />

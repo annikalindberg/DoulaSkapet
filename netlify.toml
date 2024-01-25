@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://doulaskapet.netlify.app/*"
+  to = "https://www.doulaskapet.se/:splat"
+  status = 301
+  force = true

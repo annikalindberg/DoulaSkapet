@@ -16,6 +16,7 @@ const breadcrumbNameMap = {
     '/DoulaPaket/PostpartumStöd': 'PostpartumStöd',
     '/DoulaPaket/AkutDoula': 'AkutDoula',
     '/DoulaEffekten': 'DoulaEffekten',
+    '/TipsOchFördjupning': 'TipsOchFördjupning',
     '/Kontakt': 'Kontakt',
 };
 

@@ -11,7 +11,7 @@ import logoImage from '../assets/nobg-logo.svg';
 import { Instagram, Facebook } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
-
+import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home'; 
 
 const camelCaseToWords = (str) => {
@@ -27,7 +27,7 @@ const camelCaseToWords = (str) => {
 
 
  
-const pages = ['Hem', 'Doulor', 'DoulaEffekten', 'DoulaPaket', 'Kontakt'];
+const pages = ['Hem', 'Doulor', 'DoulaEffekten', 'DoulaPaket', 'Kontakt','TipsOchFördjupning'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -53,25 +53,44 @@ function ResponsiveAppBar() {
           </Link>
 
           {/* Mobile menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flexStart', alignItems: 'center' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex',  }, justifyContent: 'flexStart', alignItems: 'center' }}>
             <Link to="/" sx={{ mx: 2, display: 'flex', alignItems: 'center' }}>
               <HomeIcon sx={{ color: theme.palette.primary.dark, display: { xs: 'flex', md: 'none' } }} />
             </Link>
 
-            <IconButton size="large" aria-label="menu" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="">
-              <MenuIcon />
+            <IconButton size="large" aria-label="menu" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="" sx={{
+              display: { xs: 'flex', md: 'flex', lg: 'none' },
+              
+            }}>
+              <MenuIcon
+                sx={{
+                  fontSize: { xs: 'large', md: 'larger' },
+                }}
+                
+              />
             </IconButton>
             <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}
                 slotProps={{ 
     paper: { sx: { color: theme.palette.text.dark, bgcolor: theme.palette.background.solidPaper } }
   }}
- sx={{ display: { xs: 'block', md: 'none' } }}>
+ sx={{ display: { xs: 'block', md: 'block' } }}>
               {pages.map((page) => (
                 <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: theme.palette.text.dark, fontWeight: 'normal', display: 'block' }}>
                       {/* Check if the page is 'Home' and adjust the Link accordingly */}
-      <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  {camelCaseToWords(page)}
-      </Link>
+      <Typography
+      component={Link}
+      to={page === 'Hem' ? '/' : `/${page}`}
+      sx={{
+        textDecoration: 'none',
+        color: 'inherit',
+        '&:hover': {
+          textDecoration: 'underline',
+        },
+      }}
+    >
+      {camelCaseToWords(page)}
+    </Typography>
+
 
                 </Button>
               ))}
@@ -79,19 +98,35 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* Desktop menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{
+            flexGrow: 1,
+flexWrap: 'wrap',
+            display: { xs: 'none', md: 'none', lg: 'flex' }
+         
+          }}>
             {pages.map((page) => (
               <Button key={page} sx={{
                 my: 2,
                 color: theme.palette.text.dark,
                 fontWeight: 'normal',
                 display: 'block',
+                
 
               }}>
                     {/* Check if the page is 'Home' and adjust the Link accordingly */}
-      <Link to={page === 'Hem' ? '/' : `/${page}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-        {camelCaseToWords(page)}
-      </Link>
+               <Typography
+      component={Link}
+      to={page === 'Hem' ? '/' : `/${page}`}
+      sx={{
+        textDecoration: 'none',
+        color: 'inherit',
+        '&:hover': {
+          textDecoration: 'underline',
+        },
+      }}
+    >
+      {camelCaseToWords(page)}
+    </Typography>
 
               </Button>
             ))}

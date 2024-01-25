@@ -1,26 +1,22 @@
 import { createTheme } from '@mui/material/styles';
-// use in component by importing: import { Theme } from '../styles/Theme'; and then using it like this: <ThemeProvider theme={Theme}>...</ThemeProvider> 
+
 export const Theme = createTheme({
   palette: {
     primary: {
-      // A warm, dusky pink that serves as the main brand color
       main: '#DDB6C6',
-      contrastText: '#4A2F43', // A deep purple that contrasts well with the main color
+      contrastText: '#4A2F43', 
     },
     secondary: {
-      // A complementary color that's calm and not too loud
       main: '#d3c1b0a8;',
-      contrastText: '#563C5C', // New deeper purple/burgundy for better contrast
+      contrastText: '#563C5C', 
     },
     background: {
-      // The light pastel pink background of the entire page
       default: '#FFF7F8',
       paper: '#bdb1b16e',
       solidPaper: '#efe1f8',
       solidYellow: '#f5f6c9'
     },
     text: {
-      // For text, using a darker shade that ensures accessibility
       primary: '#4A2F43',
       secondary: '#6D6875',
       dark: '#4A4033',
@@ -28,7 +24,7 @@ export const Theme = createTheme({
     },
 
     custom: {
-      // For glassmorphism effect, semi-transparent white with a hint of the primary color
+   
       glassBackground: 'rgb(243 238 232 / 85%)',
       glassBackgroundDark: 'rgb(231 213 195 / 89%);',
     },
@@ -36,7 +32,7 @@ export const Theme = createTheme({
   components: {
     MuiLink: {
       styleOverrides: {
-        root: {  // 'root' key targets the base style of the component
+        root: {  
           color: '#341f33', // Link color
           textDecoration: 'underline', // Underline for links
           fontWeight: 'bold', // Bold for emphasis
