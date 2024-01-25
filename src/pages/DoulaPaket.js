@@ -22,7 +22,8 @@ const DoulaPaket = () => {
 
    
       <Helmet>
-      <title>DoulaPaket - våra tjänster</title>
+        <title>DoulaPaket - våra tjänster</title>
+         <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket" />
         <meta name="description" content="Utforska våra skräddarsydda doulapaket i Stockholm, designade för att ge stöd och komfort genom hela graviditets- och förlossningsprocessen. Lär dig mer om hur våra doulas kan anpassa sitt stöd för att möta dina specifika behov och önskemål. Vi erbjuder postpartumstöd, föda tryggt med doula och akutdoula-paket" />
       </Helmet>
       <PageSpecificHero

@@ -17,6 +17,7 @@ const DoulaEffekten = () => {
       <MyBreadCrumbs />
       <Helmet>
         <title>Doulaeffekten - fördelarna med att anlita en doula</title>
+         <link rel="canonical" href="https://www.doulaskapet.se/DoulaEffekten" />
 <meta name="description" content="Upptäck doulaeffekten och de vetenskapligt stödda fördelarna med att anlita en doula. Forskning visar på ökad trygghet och positiv påverkan på förlossningsupplevelsen. Läs mer om hur en doula kan bidra till en tryggare och mer tillfredsställande graviditet och förlossning." />
       </Helmet>
    

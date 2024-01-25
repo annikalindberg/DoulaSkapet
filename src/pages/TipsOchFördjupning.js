@@ -23,6 +23,7 @@ const TipsOchFördjupning = () => {
       <Helmet>
         {/* SEO Meta Tags */}
         <title>Användbara Resurser - DoulaSkapet</title>
+         <link rel="canonical" href="https://www.doulaskapet.se/TipsOchFördjupning" />
         <meta name="description" content="Hitta användbara resurser som podcasts, blogginlägg och HBTQI-material för blivande familjer." />
       </Helmet>
       <MyBreadcrumbs />

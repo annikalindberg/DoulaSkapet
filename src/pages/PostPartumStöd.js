@@ -29,6 +29,7 @@ const PostpartumStöd = () => {
 
       <Helmet>
         <title>Postpartumstöd – tiden efter förlossningen</title>
+         <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket/Postpartumstöd" />
         <meta name="description" content="Upptäck vårt omfattande Postpartumstöd hos DoulaSkapet. Vi erbjuder anpassad hjälp och vägledning för nya föräldrar i Stockholm under den viktiga tiden efter förlossningen, inklusive emotionellt stöd, praktiska tips och hjälp med att anpassa sig till föräldraskapet. Kontakta oss för att skapa en plan som passar dina unika behov." />
       </Helmet>
       <MyBreadcrumbs />

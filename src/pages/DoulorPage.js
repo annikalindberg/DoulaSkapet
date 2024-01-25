@@ -16,6 +16,7 @@ const DoulorPage = () => {
      <PageWrapper >
        <Helmet>
          <title>Doulor</title>
+          <link rel="canonical" href="https://www.doulaskapet.se/Doulor" />
          <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet. Vi har ett normkritiskt och inkluderande perspektiv, jobbar medvetet, behovsanpassat och proffessionellt." />
         </Helmet>
          

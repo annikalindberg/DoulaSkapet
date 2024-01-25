@@ -30,6 +30,7 @@ const DoulaPaketBas = () => {
     <PageWrapper>
       <Helmet>
         <title>Doulapaket Bas - Trygg Förlossning</title>
+         <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket/DoulaPaketBas" />
         <meta name="description" content="Vårt 'Trygg Förlossning' doulapaket erbjuder specialiserat stöd för en trygg och väl förberedd förlossningsupplevelse i Stockholm. Lär dig hur våra expertdoulor kan hjälpa dig att känna dig säkrare och mer avslappnad inför, under och efter förlossningen. Finns det en partner/stödperson stöttar doulan er som team, för att stödpersonen/partnern ska kunna vara ett så bra stöd som möjligt för den födande." />
       </Helmet>
       <MyBreadcrumbs />

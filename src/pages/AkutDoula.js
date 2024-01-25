@@ -30,6 +30,7 @@ const AkutDoulaPage = () => {
     <PageWrapper>
       <Helmet>
         <title>Akutdoula</title>
+          <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket/AkutDoula" />
       <meta name="description" content="Akutdoula eller expressdoula är en tjänst för dig som behöver en doula snabbt och oplanerat. Vår akutdoulatjänst är anpassad efter de situationer när någonting oförutsätt inträffar, till exempel om din partner eller stödperson blir sjuk och inte kan vara med på förlossningen. Använd vårt Akutdoula-formulär så får du garanterat svar så snabbt vi kan, men senast inom 24 timmar."></meta>
       </Helmet>
       <MyBreadCrumbs />

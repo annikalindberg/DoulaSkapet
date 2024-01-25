@@ -26,7 +26,8 @@ const Kontakt = () => {
     return (
         <PageWrapper>
             <Helmet>
-                <title>Kontakt</title>
+                <title>Kontakta DoulaSkapet</title>
+                 <link rel="canonical" href="https://www.doulaskapet.se/kontakt" />
                 <meta name="description" content="Kontakta DoulaSkapet för en personlig konsultation om doulaservice i Stockholm. Vårt team är redo att lyssna och skapa en skräddarsydd födselupplevelse för dig. Få snabbt svar för akut doulastöd eller boka ett förutsättningslöst möte för att diskutera dina behov och önskemål." />
             </Helmet>
             <MyBreadcrumbs />
