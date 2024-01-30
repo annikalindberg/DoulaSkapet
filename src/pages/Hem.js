@@ -18,7 +18,7 @@ const Hem = () => {
     <Helmet>
         <title>DoulaSkapet - Trygg Förlossning</title>
          <link rel="canonical" href="https://www.doulaskapet.se" />
-      <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Stöd för genom graviditet, förlossning och postpartum. Våra doulor är erfarna och har bred kompetens och erfarenhet att stötta HBTQ-personer, självstående, regnbågsgamiler och jobbar traumamedvetet och HBTQ-medvetet. Våra doulor har olika erfarenheter av att t.ex. föda barn utanför heteronormen, cisnormen och tvåsamhetsnormen. Vi har ett normkritiskt perspektiv och jobbar behovsanpassat och proffessionellt."></meta>
+      <meta name="description" content="DoulaSkapet i Stockholm erbjuder professionella doulatjänster. Våra erfarna och diplomerade doulor ger dig som gravid och din partner stöd genom graviditet, förlossning och även tiden efter födseln (postpartum/fjärde trimestern). Våra doulor är erfarna och har bred kompetens och erfarenhet att stötta HBTQ-personer, självstående, regnbågsgamiler och jobbar traumamedvetet och HBTQ-medvetet. Våra doulor har olika erfarenheter av att t.ex. föda barn utanför heteronormen, cisnormen och tvåsamhetsnormen. Vi har ett normkritiskt perspektiv och jobbar behovsanpassat och proffessionellt."></meta>
       </Helmet>
 <MyBreadcrumbs />
     <PageSpecificHero component="h1"
