@@ -150,7 +150,9 @@ const AnnikaProfilePage = () => {
               <Typography variant="body2" >
               
                 Postpartumstöd: 700 SEK i timmen för Doulaklienter </Typography> <Typography variant='body2'>(För icke doulaklienter 850 SEK i timmen)
-                </Typography>
+                  </Typography>
+                  <Typography variant="body2" >
+                    Det går att använda friskvårdsbidrag som betalning för alla mina tjänster.  </Typography>
                 
          <Typography>
                    <Typography variant="h4" sx={{ fontWeight: '500', textAlign: 'left' }}>
@@ -280,7 +282,7 @@ const AnnikaProfilePage = () => {
                 mt: 2
               }}
 />
-              <Typography variant='subtitle1'> Queermedevetet doulaskap </Typography>
+              <Typography variant='subtitle1'>HBTQI+ - trygg i din kropp och i mötet med vården </Typography>
               </Box>
             <Typography paragraph gutterBottom> 
                 Förutom doula (och fd idrottare) är jag även genusvetare och jag har jobbat med utbildning och inkludering samt normkritik i över 20 års tid, vilket har gett mig en djup inblick hur normer och förväntningar påverkar kroppar på olika sätt i olika sammanhang. </Typography>
