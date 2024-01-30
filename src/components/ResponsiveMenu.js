@@ -14,18 +14,14 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home'; 
 
-const camelCaseToWords = (str) => {
-  return str
-    // Handle special characters like 'Ä'
-    .replace(/Ä/g, ' Ä')
-    // Insert a space before all caps (excluding the first character)
-    .replace(/([A-Z][a-z])/g, ' $1')
-    // Uppercase the first character
-    .replace(/^./, (str) => str.toUpperCase());
-}
-
-
-
+const pagesReadableMapping = {
+  'Hem': 'Hem',
+  'Doulor': 'Doulor',
+  'DoulaEffekten': 'Doula Effekten',
+  'DoulaPaket': 'Doula Paket',
+  'Kontakt': 'Kontakt',
+  'TipsOchFördjupning': 'Tips Och Fördjupning'
+};
  
 const pages = ['Hem', 'Doulor', 'DoulaEffekten', 'DoulaPaket', 'Kontakt','TipsOchFördjupning'];
 
@@ -46,9 +42,12 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Logo */}
-          <Link to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link
+            to="/" sx={{
+              textDecoration: 'none', color: 'inherit'
+            }}>
             <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'flex' }, mr: 1 }}>
-              <img src={logoImage} alt="Logo" style={{ width: '200px', paddingTop: "4rem", paddingBottom: "4rem"}} sx={{}} />
+              <img src={logoImage} alt="DoulaSkapet logo. Klicka för att komma till förstasidan" style={{ width: '200px', paddingTop: "4rem", paddingBottom: "4rem"}} sx={{}} />
             </Box>
           </Link>
 
@@ -88,7 +87,7 @@ function ResponsiveAppBar() {
         },
       }}
     >
-      {camelCaseToWords(page)}
+  {pagesReadableMapping[page]}
     </Typography>
 
 
@@ -105,7 +104,10 @@ flexWrap: 'wrap',
          
           }}>
             {pages.map((page) => (
-              <Button key={page} sx={{
+              <Button
+                key={page}
+                aria-label={page} 
+                sx={{
                 my: 2,
                 color: theme.palette.text.dark,
                 fontWeight: 'normal',
@@ -125,7 +127,7 @@ flexWrap: 'wrap',
         },
       }}
     >
-      {camelCaseToWords(page)}
+   {pagesReadableMapping[page]}
     </Typography>
 
               </Button>
@@ -140,14 +142,30 @@ flexWrap: 'wrap',
             top: 0, // Align to the top
         mt: { xs: '2', md: 'center' },
       }}>
-            <a href="https://www.instagram.com/doulaskapet__tryggforlossning/" target="_blank"
+            <a href="https://www.instagram.com/doulaskapet__tryggforlossning/"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
               
             >
-              <IconButton sx={{ color: 'black' }}><Instagram /></IconButton>
+              <IconButton sx={{
+                color: 'black'
+              }}>
+                <Instagram />
+              </IconButton>
             </a>
-            <a href="https://www.facebook.com/doulaskapet" target="_blank" rel="noopener noreferrer">
-              <IconButton sx={{ color: 'black' }}><Facebook /></IconButton>
+            <a
+              href="https://www.facebook.com/doulaskapet"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              
+            >
+              <IconButton sx={{
+                color: 'black'
+              }}>
+                <Facebook />
+              </IconButton>
             </a>
             {/* <a href="mailto:your.email@example.com">
               <IconButton sx={{ color: 'black' }}><Email /></IconButton>

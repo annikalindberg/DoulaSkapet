@@ -61,11 +61,13 @@ const HeroSection = () => {
          <Link href="/Kontakt">
           Kontakt
           </Link></Typography>
-        <Typography>Lär känna oss lite närmare under {' '}
+        <Typography gutterBottom>Lär känna oss lite närmare under {' '}
          <Link href="/Doulor">
           Doulor
           </Link>
         </Typography>
+        
+        <Typography variant='overline'gutterBottom> Friskvårdsbidrag gäller för alla våra tjänster!</Typography>
         
          <DoulaSlider
            

@@ -33,31 +33,6 @@ const ContactCards = ({ name, image, bor, kontakt, showFormButton, hasProfilePag
                 <Typography variant="body2" color="text.secondary">
                     Bor: {bor}
                 </Typography> 
-
-                {kontakt && (
-                    <Typography variant="h6" color="text.secondary">
-                        Kontakt: 
-                        <br />
-                        <Button sx={{
-                            mt: 1,
-  mb: 1,
-  textTransform: 'none',
-                            backgroundColor: theme.palette.background.solidYellow,
-                            color: theme.palette.text.primary,
-  '&:hover': {
-      backgroundColor: theme.palette.background.default,    
-    color: theme.palette.text.contrastText,  
-                      }
-                    }
-                  } href={`mailto:${kontakt}`}
-                            aria-label={`Skicka ett e-postmeddelande till ${name}`}
-                            startIcon={<AlternateEmailIcon />}
-                        >
-                              {kontakt}
-                                        
-                        </Button>
-                    </Typography>
-                )}
       {showFormButton && (
                   <Tooltip title="Kontakta mig via formulär">
           <Button
@@ -91,9 +66,34 @@ const ContactCards = ({ name, image, bor, kontakt, showFormButton, hasProfilePag
                     sx={{ mt: 2, fontSize: '0.75rem', padding: '6px 12px', }}
                     aria-label={`Gå till ${name}s profilsida`}
                 >
-                    Gå till Annikas Profilsida
+                    Annikas Profilsida
                 </Button>
             )}
+                {kontakt && (
+                    <Typography variant="h6" color="text.secondary">
+                        E-post: 
+                        <br />
+                        <Button sx={{
+                            mt: 1,
+  mb: 1,
+  textTransform: 'none',
+                            backgroundColor: theme.palette.background.solidYellow,
+                            color: theme.palette.text.primary,
+  '&:hover': {
+      backgroundColor: theme.palette.background.default,    
+    color: theme.palette.text.contrastText,  
+                      }
+                    }
+                  } href={`mailto:${kontakt}`}
+                            aria-label={`Skicka ett e-postmeddelande till ${name}`}
+                            startIcon={<AlternateEmailIcon />}
+                        >
+                              {kontakt}
+                                        
+                        </Button>
+                    </Typography>
+                )}
+
                 
               
             

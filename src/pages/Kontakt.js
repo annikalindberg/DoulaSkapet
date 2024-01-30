@@ -46,9 +46,9 @@ const Kontakt = () => {
                             image={doula.image}
                             bor={doula.bor}
                             pris={doula.pris}
-                            kontakt={doula.kontakt} 
                             showFormButton={doula.showFormButton}
                             hasProfilePage={doula.name === 'Annika Lindberg'}
+                            kontakt={doula.kontakt} 
                         />
                     </Grid>
                 ))}
