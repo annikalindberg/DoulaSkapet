@@ -86,9 +86,8 @@ const App = () => {
             <Route path="/DoulaPaket/AkutDoula" element={<AkutDoula />} />
             <Route path="/DoulaEffekten" element={< DoulaEffekten />} />
             <Route path="/kontakt" element={<Kontakt />} />
-          <Route path="/TipsOchFördjupning" element={<TipsOchFördjupning />} /> 
-                  <Route path="/cookiepolicy" element={<CookiePolicy />} />
-
+            <Route path="/TipsOchFördjupning" element={<TipsOchFördjupning />} />
+            <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <StickyFooter />

@@ -111,6 +111,17 @@ export const Theme = createTheme({
         '@media (min-width:1200px)': { fontSize: '1.3rem' },
   
     },
+    body2: {
+      fontFamily: '"Lato", sans-serif',
+
+fontSize: '0.95rem',
+lineHeight: 1.8,
+fontWeight: 400,
+'@media (max-width:600px)': { fontSize: '0.95rem' },
+'@media (min-width:900px)': { fontSize: '1rem' },
+'@media (min-width:1200px)': { fontSize: '1.1rem' },
+
+},
       paragraph: {
             fontFamily: '"Lato", sans-serif',
 

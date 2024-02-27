@@ -24,6 +24,9 @@ export default function MyBreadcrumbs() {
     const theme = useTheme();
     const location = useLocation();
     const pathnames = location.pathname.split('/').filter(x => x);
+    console.log(location.pathname); // Log the current path
+console.log(pathnames); // Log the split pathnames
+
 
 
 

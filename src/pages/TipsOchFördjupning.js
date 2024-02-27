@@ -37,7 +37,7 @@ const TipsOchFördjupning = () => {
         <link rel="canonical" href="https://www.doulaskapet.se/TipsOchFördjupning" />
         <meta name="description" content="Hitta användbara resurser som podcasts, blogginlägg och informationsmaterial. Bland annat riktat till dig som är hbtqia+ och blivande förälder." />
       </Helmet>
-      <MyBreadcrumbs />
+      <MyBreadcrumbs currentPage="Tips och Fördjupning" />
       <PageSpecificHero title="Tips och Fördjupning" subtitle="Vi i DoulaSkapet älskar att dela med oss av artiklar, blogginlägg och tips på poddar om födande, graviditet och att vara förälder. Här försöker vi ge våra bästa lyssnings- och lästips till dig som väntar barn." />
       <Typography variant="body1" sx={{ mb: 3 }}>
         Det är lätt att som blivande förälder bli överväldigad av all information som finns tillgänglig. I DoulaSKapets kunskapsbank vill vil tipsa om resurser som vi tycker är speciellt användbara för er som väntar barn. Till exempel blogginlägg som vi gillar, podcastavsnitt som berör vissa ämnen samt värdefulla resurser till dig som är HBTQIA+.
@@ -58,7 +58,10 @@ const TipsOchFördjupning = () => {
               <Grid container spacing={2}>
                 {resources[category].map(resource => (
                   <Grid item xs={12} sm={6} md={4} lg={3} key={resource.id}>
-                    <Card>
+                    <Card
+                
+                    >
+        
                       <CardActionArea component="a" href={resource.link} target="_blank" rel="noopener noreferrer">
                         <CardContent>
                           <Typography gutterBottom variant="h6" component="h3"> 
