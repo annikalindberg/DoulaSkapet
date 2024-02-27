@@ -5,7 +5,7 @@ const CustomizeCookieDialog = ({ open, onClose }) => {
   const [cookiePreferences, setCookiePreferences] = useState({
     prestanda: false,
     Funktionalitet: false,
-    Analy: false,
+    Analys: false,
     Marknadsföring: false,
   });
 

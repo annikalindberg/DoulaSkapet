@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# DoulaSkapet Company Website
+
+This project is a company website for DoulaSkapet, a doula service provider based in Sweden. The website is built using React and is designed to provide information about the company's services, team, and contact details.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -27,6 +27,7 @@ import CookiePolicy from './components/CookiePolicy';
 import CustomizeCookieDialog from './components/CustomizeCookieDialog';
 import TipsOchFördjupning from './pages/TipsOchFördjupning';
 
+
 const RouteHandler = () => {
   const location = useLocation();
 
