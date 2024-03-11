@@ -54,7 +54,7 @@ export const packageImages = {
       list2_2: 'Stöd under latensfas: Doulan är tillgänglig över telefon för att stötta dig när förlossningen närmar sig.',
       list2_3: 'Fysisk närvaro under förlossning: Stöd av Doula under hela förlossningsprocessen.',
       list2_4: 'Eftersamtal: Ett möte några veckor efter förlossningen för att reflektera över din upplevelse.',
-      price: 'Från 7 000 SEK (inkl moms). Priset varierar beroende på hur nära inpå BF du kontaktar oss.',
+      price: 'Från 7 000 SEK (inkl moms). Priset varierar beroende på hur nära inpå BF du kontaktar oss. (Friskvårdsbidrag kan användas!).',
       image: packageImages[2], // Link the images directly here
 
     },
@@ -67,16 +67,16 @@ export const packageImages = {
       rubrik2: 'Exempel på tjänster som kan ingå i postpartumstödet:',
       list1: 'Kontinuerligt emotionellt stöd på plats och via telefon utifrån era behov.',
       list2: 'Vägledning i hur du kan skapa en närande och lugn miljö efter förlossningen.',
-      list3: 'Hjälp med att ta hand om bCoachning och stöd i att etablera rutiner som fungerar din nya familj.',
+      list3: 'Coachning och stöd i att etablera rutiner som fungerar din nya familj.',
       list4: 'Stöd i att lära känna ditt barns signaler och förstå och svara på ditt barns behov.',
       list5: 'Bebispassning en stund så att du som förälder kan ta igen sömn eller få lite egentid ',
       list6: 'Få praktiska tips och stöd i bebisomvårdnad, sömn, bärsjal och babypottning.',
       list7: 'Tillgång till mallar och checklistor för att organisera och planera din postpartumtid.',
       list8: 'Rent praktiska göromål som inköp, städning, matlagning mm.' ,
-      rubrik3: 'Prissättning Post Partumstöd',
+      rubrik3: 'RUT-avdrag upp till 50% gäller för postpartumstöd',
       prisinformation: 'Som Doulaklient till mig, erbjuder jag postpartumstödet till ett lägre pris. Postpartum tjänsterna går även att köpa separat även om du inte anlitat mig som doula, men då till det ordinarie priset.',
  
-      price: 'Priset är 650 kr/ timme för doulaklienter och 850 kr/timme för icke doulaklienter. Priset gäller vid bokning av minst fyra timmars varaktighet.',
+      price: 'Priset är 650 kr/ timme för doulaklienter och 750 kr/timme för icke doulaklienter. Priset gäller vid bokning av minst fyra timmars varaktighet. RUT-avdrag går att ordna för postpartumstöd, vilket innebär att du faktureras endast för 50% av de angivna priserna. ',
       ctatext: 'Kontakta mig idag för att planera din postpartumtid och få det stöd du förtjänar under denna speciella tid. Jag ser fram emot att vara en del av din resa som nybliven förälder, och att hjälpa dig att navigera genom denna underbara, men ibland utmanande tid.',
 
       disclaimer: '*Även när det gäller postpartum-stöd, har doulan inget medicinskt ansvar för barn eller förälder. Om doulan bedömer att medicinsk kompetens behövs, kommer hon alltid i första hand att ge stöd i att söka medicinsk rådgivning via 1177 eller rekommenderad mottagning för vidare kontakt.',

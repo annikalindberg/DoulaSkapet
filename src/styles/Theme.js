@@ -103,33 +103,33 @@ export const Theme = createTheme({
       body1: {
                   fontFamily: '"Lato", sans-serif',
 
-      fontSize: '1rem',
+      fontSize: '0.8rem',
       fontWeight: 400,
-      lineHeight: 1.5,
-      '@media (max-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:900px)': { fontSize: '1.2rem' },
-        '@media (min-width:1200px)': { fontSize: '1.3rem' },
+      lineHeight: 1.8,
+      '@media (max-width:600px)': { fontSize: '0.8rem' },
+        '@media (min-width:900px)': { fontSize: '1rem' },
+        '@media (min-width:1200px)': { fontSize: '1.2rem' },
   
     },
     body2: {
       fontFamily: '"Lato", sans-serif',
 
-fontSize: '0.95rem',
+fontSize: '0.8rem',
 lineHeight: 1.8,
 fontWeight: 400,
-'@media (max-width:600px)': { fontSize: '0.95rem' },
-'@media (min-width:900px)': { fontSize: '1rem' },
-'@media (min-width:1200px)': { fontSize: '1.1rem' },
+'@media (max-width:600px)': { fontSize: '0.8rem' },
+'@media (min-width:900px)': { fontSize: '0.9rem' },
+'@media (min-width:1200px)': { fontSize: '1rem' },
 
 },
       paragraph: {
             fontFamily: '"Lato", sans-serif',
 
-      fontSize: '0.9rem',
+      fontSize: '0.8rem',
       fontWeight: 400,
-      lineHeight: 1.5,
+      lineHeight: 1.7,
  
-        '@media (max-width:600px)': { fontSize: '0.9rem' },
+        '@media (max-width:600px)': { fontSize: '0.8rem' },
         '@media (min-width:900px)': { fontSize: '1rem' },
         '@media (min-width:1200px)': { fontSize: '1.1rem' },
 

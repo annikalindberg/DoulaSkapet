@@ -31,7 +31,7 @@ const DoulaPaket = () => {
         subtitle={subtitle}
         image={image}
       />
-      <Typography gutterBottom variant='h3' data-aos="fade-right"
+      <Typography gutterBottom variant='h2' data-aos="fade-right"
         sx={{ textAlign: 'center' }}
       >Våra tjänster</Typography>
       <Typography paragraph data-aos="fade-right"
@@ -39,6 +39,7 @@ const DoulaPaket = () => {
       >
         Vi erbjuder olika typer av tjänster för att passa just dina behov. Läs mer om våra tjänster nedan.
       </Typography>
+      <Typography variant='subtitle1' component='h3' data-aos="fade-right"> OBS du vet väl att det går att använda friskvårdsbidraget för doulatjänster och RUT-avdrag (50%) för postpartumstöd?</Typography>
 
       
       <Grid container>
@@ -76,7 +77,7 @@ const DoulaPaket = () => {
           );
         })}
       </Grid>
-      <Typography gutterBottom variant='h3' data-aos="fade-right"
+      <Typography gutterBottom variant='h4' data-aos="fade-right"
         sx={{ textAlign: 'center' }}
       > Vitsord från DoulaSkapets klienter</Typography>
       <TestimonialsSlider testimonials={testimonials} />
