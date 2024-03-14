@@ -1,24 +1,35 @@
 export const resources = {
   podcasts: [
-    {
+  /*   {
       id: 1,
-      title: "Farligt att föda?",
-      source: "Föda med stöd",
-      podcastName: "Doulapodden",
+      title: "Förlossningskanalen",
+      source: "Förlossningskanalen",
+      podcastName: "Förlossningskanalen",
       episodeName: "Farligt att föda?",
       link: "https://xn--fdamedstd-07ah.se/om-mig/#:~:text=Doulapodden%3A%20Farligt%20att%20f%C3%B6da%3F",
       description: "En podcast som diskuterar om farorna med barnafödande.",
       type: "Podcast",
-subject: "Förlossningsrädsla"    },
+subject: "Förlossningsrädsla"    }, */
+    {
+      id: 2,
+      title: "BABYBABYPODDEN",
+      source: "Lisen Forsberg, skapare av bloggen BabyBaby",
+      podcastName: "BABYBABYPODDEN",
+      episodeName: "",
+      link: "https://babybabypodden.se/",
+      description: "En podd om livet med små barn",
+      type: "Podcast",
+subject: "Föräldraskap"    },
   ],
+
   blogPosts: [
     {
       id: 1,
-      title: "Föda med stöd",
+      title: "DET ÄR DU SOM BESTÄMMER OM IGÅNGSÄTTNING",
       source: "Föda med stöd",
       blogName: "Föda med stöd",
       link: "https://xn--fdamedstd-07ah.se/det-ar-du-som-bestammer-om-igangsattning/",
-      description: "Det är du som bestämmer om igångsättning.",
+      description: "Artikel av Eva Rydahl, är (dansk) jordemoder, Ph.d. och forskare. Översatt av Märta Cullhed Engblom",
       type: "Artikel",
 subject: "Igångsättning"    },
     // Add more blog posts here

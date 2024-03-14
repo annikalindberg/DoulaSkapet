@@ -61,13 +61,13 @@ const HeroSection = () => {
          <Link href="/Kontakt">
           Kontakt
           </Link></Typography>
-        <Typography gutterBottom>Lär känna oss lite närmare under {' '}
+        <Typography gutterBottom>Alla våra doulor bor i Stockholm. Lär känna oss lite närmare under {' '}
          <Link href="/Doulor">
           Doulor
           </Link>
         </Typography>
         
-        <Typography variant='overline'gutterBottom> Friskvårdsbidrag gäller för alla våra tjänster!</Typography>
+        <Typography variant='overline'gutterBottom> Obs! Du vet väl att du kan använda friskvårdsbidraget för doulatjänster, och att RUT-avdrag gäller för postpartumtjänster!</Typography>
         
          <DoulaSlider
            

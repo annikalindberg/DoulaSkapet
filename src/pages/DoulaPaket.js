@@ -15,12 +15,12 @@ const DoulaPaket = () => {
   const subtitle = 'Läs mer om vilka tjänster vi erbjuder.';
       const image = "/optimized-images/belliespregnant-tablet.webp";
 
-  
+
   return (
     <PageWrapper>
       <MyBreadCrumbs />
 
-   
+
       <Helmet>
         <title>DoulaPaket - våra tjänster</title>
          <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket" />
@@ -41,7 +41,6 @@ const DoulaPaket = () => {
       </Typography>
       <Typography variant='subtitle1' component='h3' data-aos="fade-right"> OBS du vet väl att det går att använda friskvårdsbidraget för doulatjänster och RUT-avdrag (50%) för postpartumstöd?</Typography>
 
-      
       <Grid container>
         {packages.map((pkg) => {
           let linkPath;
@@ -56,8 +55,8 @@ const DoulaPaket = () => {
           return (
             <Grid
               item
-              xs={12} 
-              sm={12} 
+              xs={12}
+              sm={12}
               md={4} // 2 cards per row on medium screens and up to show 3 cards per row on larger screens change this to md={4}
               key={pkg.id}
               sx={{

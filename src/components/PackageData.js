@@ -9,7 +9,7 @@ export const packageImages = {
     mobile: '/optimized-images/partnerdoula-mb.webp',
     tablet: '/optimized-images/partnerdoula-tb.webp',
     desktop: '/optimized-images/partnerdoula-dt.webp',
-    alt: 'Partner adn doula supporting pregnant woman',
+    alt: 'Partner and doula supporting pregnant woman',
  
   },
   3: {

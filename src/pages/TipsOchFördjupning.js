@@ -33,7 +33,7 @@ const TipsOchFördjupning = () => {
       {/* Helmet and Breadcrumbs remain unchanged */}
       <Helmet>
         {/* SEO Meta Tags */}
-        <title>Användbara Resurser - DoulaSkapet</title>
+        <title>Tips och fördjupning</title>
         <link rel="canonical" href="https://www.doulaskapet.se/TipsOchFördjupning" />
         <meta name="description" content="Hitta användbara resurser som podcasts, blogginlägg och informationsmaterial. Bland annat riktat till dig som är hbtqia+ och blivande förälder." />
       </Helmet>
@@ -59,17 +59,21 @@ const TipsOchFördjupning = () => {
                 {resources[category].map(resource => (
                   <Grid item xs={12} sm={6} md={4} lg={3} key={resource.id}>
                     <Card
-                
                     >
-        
+
                       <CardActionArea component="a" href={resource.link} target="_blank" rel="noopener noreferrer">
                         <CardContent>
-                          <Typography gutterBottom variant="h6" component="h3"> 
+                          <Typography gutterBottom variant="h6" component="h3">
                             {resource.title}
                           </Typography>
                           {renderResourceType(resource)}
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography variant="paragraph" color="text.secondary">
                             {resource.description}
+                          </Typography>
+                          <Typography variant="" color="text.secondary">Från:
+                            {resource.source} </Typography>
+                          <Typography variant="paragraph" color="text.secondary">
+                            {resource.organization}
                           </Typography>
                         </CardContent>
                       </CardActionArea>
