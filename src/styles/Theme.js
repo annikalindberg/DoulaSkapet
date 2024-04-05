@@ -4,17 +4,17 @@ export const Theme = createTheme({
   palette: {
     primary: {
       main: '#DDB6C6',
-      contrastText: '#4A2F43', 
+      contrastText: '#4A2F43',
     },
     secondary: {
       main: '#d3c1b0a8;',
-      contrastText: '#563C5C', 
+      contrastText: '#563C5C',
     },
     background: {
       default: '#FFF7F8',
       paper: '#bdb1b16e',
       solidPaper: '#efe1f8',
-      solidYellow: '#f5f6c9'
+      solidYellow: '#f5f6c9',
     },
     text: {
       primary: '#4A2F43',
@@ -24,7 +24,6 @@ export const Theme = createTheme({
     },
 
     custom: {
-   
       glassBackground: 'rgb(243 238 232 / 85%)',
       glassBackgroundDark: 'rgb(231 213 195 / 89%);',
     },
@@ -32,7 +31,7 @@ export const Theme = createTheme({
   components: {
     MuiLink: {
       styleOverrides: {
-        root: {  
+        root: {
           color: '#341f33', // Link color
           textDecoration: 'underline', // Underline for links
           fontWeight: 'bold', // Bold for emphasis
@@ -42,13 +41,12 @@ export const Theme = createTheme({
           },
           '&:focus': {
             outline: '3px solid #4A2F43', // Focus outline for accessibility
-
-    },
+          },
         },
       },
     },
   },
-    typography: {
+  typography: {
     // Setting the default font family to Lato
     fontFamily: '"Lato", sans-serif',
     h1: {
@@ -74,102 +72,95 @@ export const Theme = createTheme({
       '@media (min-width:600px)': { fontSize: '1.5rem' },
       '@media (min-width:900px)': { fontSize: '1.75rem' },
       '@media (min-width:1200px)': { fontSize: '2rem' },
-      },
-      h4: {
-        fontFamily: '"Playfair Display", serif',
-        fontSize: '1rem',
+    },
+    h4: {
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '1rem',
 
-        '@media (min-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:900px)': { fontSize: '1.25rem' },
-        '@media (min-width:1200px)': { fontSize: '1.5rem' },
-      },
-      h5: {
-        fontFamily: '"Playfair Display", serif',
-        fontSize: '1rem',
-        fontWeight: 400, // Adjust weight as needed
-        '@media (min-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:900px)': { fontSize: '1.25rem' },
-        '@media (min-width:1200px)': { fontSize: '1.5rem' },
-      },
-      h6: {
-        fontFamily: '"Playfair Display", serif',
-        fontSize: '1rem',
-        fontWeight: 400, // Adjust weight as needed
-        '@media (min-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:900px)': { fontSize: '1.25rem' },
-        '@media (min-width:1200px)': { fontSize: '1.5rem' },
-      },
- 
-      body1: {
-                  fontFamily: '"Lato", sans-serif',
+      '@media (min-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:900px)': { fontSize: '1.25rem' },
+      '@media (min-width:1200px)': { fontSize: '1.5rem' },
+    },
+    h5: {
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '1rem',
+      fontWeight: 400, // Adjust weight as needed
+      '@media (min-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:900px)': { fontSize: '1.25rem' },
+      '@media (min-width:1200px)': { fontSize: '1.5rem' },
+    },
+    h6: {
+      fontFamily: '"Playfair Display", serif',
+      fontSize: '1rem',
+      fontWeight: 400, // Adjust weight as needed
+      '@media (min-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:900px)': { fontSize: '1.25rem' },
+      '@media (min-width:1200px)': { fontSize: '1.5rem' },
+    },
+
+    body1: {
+      fontFamily: '"Lato", sans-serif',
 
       fontSize: '0.8rem',
       fontWeight: 400,
       lineHeight: 1.8,
       '@media (max-width:600px)': { fontSize: '0.8rem' },
-        '@media (min-width:900px)': { fontSize: '1rem' },
-        '@media (min-width:1200px)': { fontSize: '1.2rem' },
-  
+      '@media (min-width:900px)': { fontSize: '1rem' },
+      '@media (min-width:1200px)': { fontSize: '1.2rem' },
     },
     body2: {
       fontFamily: '"Lato", sans-serif',
 
-fontSize: '0.8rem',
-lineHeight: 1.8,
-fontWeight: 400,
-'@media (max-width:600px)': { fontSize: '0.8rem' },
-'@media (min-width:900px)': { fontSize: '0.9rem' },
-'@media (min-width:1200px)': { fontSize: '1rem' },
-
-},
-      paragraph: {
-            fontFamily: '"Lato", sans-serif',
+      fontSize: '0.8rem',
+      lineHeight: 1.8,
+      fontWeight: 400,
+      '@media (max-width:600px)': { fontSize: '0.8rem' },
+      '@media (min-width:900px)': { fontSize: '0.9rem' },
+      '@media (min-width:1200px)': { fontSize: '1rem' },
+    },
+    paragraph: {
+      fontFamily: '"Lato", sans-serif',
 
       fontSize: '0.8rem',
       fontWeight: 400,
       lineHeight: 1.7,
- 
-        '@media (max-width:600px)': { fontSize: '0.8rem' },
-        '@media (min-width:900px)': { fontSize: '1rem' },
-        '@media (min-width:1200px)': { fontSize: '1.1rem' },
 
-
+      '@media (max-width:600px)': { fontSize: '0.8rem' },
+      '@media (min-width:900px)': { fontSize: '1rem' },
+      '@media (min-width:1200px)': { fontSize: '1.5rem' },
     },
     subtitle1: {
-        fontFamily: '"Playfair Display", serif',
-      fontSize: '2rem',
-      fontWeight: 500,
-      lineHeight: 1.4,
-      '@media (max-width:600px)': { fontSize: '2rem' },
-      '@media (min-width:900px)': { fontSize: '2.4rem' },
-      '@media (min-width:1200px)': { fontSize: '2.6rem' },
+      fontFamily: '"Lato", sans-serif',
+      fontSize: '0.5rem',
 
+      fontWeight: 400, // Adjust weight as needed
+      '@media (min-width:600px)': { fontSize: '0.6rem' },
+      '@media (min-width:900px)': { fontSize: '0.75rem' },
+      '@media (min-width:1200px)': { fontSize: '1rem' },
     },
     italic: {
-        fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Playfair Display", serif',
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: 1.57,
       letterSpacing: '0.00714em',
       fontStyle: 'italic',
-           '@media (max-width:600px)': { fontSize: '1rem' },
+      '@media (max-width:600px)': { fontSize: '1rem' },
       '@media (min-width:600px)': { fontSize: '1.3rem' },
       '@media (min-width:900px)': { fontSize: '1.5rem' },
       '@media (min-width:1200px)': { fontSize: '1.7rem' },
-
-      },
-      italicSmall: {  
-        fontFamily: '"Lato", sans-serif',
-        fontSize: '0.875rem',
-        fontWeight: 500,
-        lineHeight: 1.57,
-        letterSpacing: '0.00714em',
-        fontStyle: 'italic',
-             '@media (max-width:600px)': { fontSize: '1rem' },
-        '@media (min-width:900px)': { fontSize: '1.2rem' },
-        '@media (min-width:1200px)': { fontSize: '1.3rem' },
-  
-        },
+    },
+    italicSmall: {
+      fontFamily: '"Lato", sans-serif',
+      fontSize: '0.875rem',
+      fontWeight: 500,
+      lineHeight: 1.57,
+      letterSpacing: '0.00714em',
+      fontStyle: 'italic',
+      '@media (max-width:600px)': { fontSize: '1rem' },
+      '@media (min-width:900px)': { fontSize: '1.2rem' },
+      '@media (min-width:1200px)': { fontSize: '1.3rem' },
+    },
     overline: {
       fontFamily: '"Lato", sans-serif',
       fontSize: '0.875rem',
@@ -181,8 +172,6 @@ fontWeight: 400,
       '@media (max-width:600px)': { fontSize: '0.875rem' },
       '@media (min-width:900px)': { fontSize: '1rem' },
       '@media (min-width:1200px)': { fontSize: '1.25rem' },
-
-  
     },
     customHeader: {
       fontFamily: '"Playfair Display", serif',
@@ -195,10 +184,5 @@ fontWeight: 400,
       '@media (min-width:900px)': { fontSize: '2.5rem' },
       '@media (min-width:1200px)': { fontSize: '3rem' },
     },
-
-
-    
-       
-    
   },
 });

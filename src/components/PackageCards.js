@@ -25,8 +25,8 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
   return (
     <Card
       sx={{
-        maxWidth: 300, 
-        m: 2, 
+        maxWidth: 300,
+        m: 2,
         borderRadius: '16px',
         display: 'flex',
         flexDirection: 'column',
@@ -37,12 +37,12 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
       }}
       onClick={handleCardClick}
       // Adding role and aria-label for accessibility
-      role="button"
+      role='button'
       aria-label={`Learn more about ${title}`}
     >
       {image && (
         <CardMedia
-          component="img"
+          component='img'
           image={image.mobile}
           alt={title}
           sx={{
@@ -54,20 +54,26 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
         />
       )}
       <CardContent sx={{ bgcolor: theme.palette.background.default }}>
-        <Typography gutterBottom variant="h5" component="div" />
-        <Typography variant="h4" sx={{ mb: 2, mt: 3, textAlign: 'center' }}>
+        <Typography
+          gutterBottom
+          variant='h5'
+          component='div'
+        />
+        <Typography
+          variant='h4'
+          sx={{ mb: 2, mt: 3, textAlign: 'center' }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2">
-          {truncateText(description)}
-        </Typography>
+        <Typography variant='body2'>{truncateText(description)}</Typography>
         <CardActions>
           <Button
             component={Link}
             to={linkPath}
-            size="small"
+            size='small'
             sx={{
               mt: 2,
+              p: 2,
               bgcolor: theme.palette.background.solidYellow,
               color: theme.palette.secondary.contrastText,
               width: '100%',
@@ -76,11 +82,15 @@ const DoulaPackageCard = ({ title, image, description, linkPath }) => {
               '&:hover': {
                 bgcolor: theme.palette.secondary.contrastText,
                 color: theme.palette.secondary.main,
+                transform: 'scale(1.05)',
+              },
+              '&:focus': {
+                outline: '3px solid #4A2F43',
               },
             }}
             endIcon={<ArrowForwardIcon />}
           >
-            Läs mer
+            Läs mer om {title}
           </Button>
         </CardActions>
       </CardContent>

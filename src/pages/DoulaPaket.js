@@ -1,52 +1,73 @@
 import React from 'react';
 import DoulaPackageCard from '../components/PackageCards';
 import Grid from '@mui/material/Grid';
-import {  Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import TestimonialsSlider from './TestimonialsSlider';
 import { packages, testimonials } from '../components/PackageData';
 import PageSpecificHero from '../components/PageSpecificHero';
 import { Helmet } from 'react-helmet';
 import PageWrapper from '../components/PageWrapper';
-import MyBreadCrumbs  from '../components/BreadCrumbs';
+import MyBreadCrumbs from '../components/BreadCrumbs';
 
 const DoulaPaket = () => {
-
   const title = 'DoulaPaket';
   const subtitle = 'Läs mer om vilka tjänster vi erbjuder.';
-      const image = "/optimized-images/belliespregnant-tablet.webp";
-
+  const image = '/optimized-images/belliespregnant-tablet.webp';
 
   return (
     <PageWrapper>
       <MyBreadCrumbs />
 
-
       <Helmet>
         <title>DoulaPaket - våra tjänster</title>
-         <link rel="canonical" href="https://www.doulaskapet.se/DoulaPaket" />
-        <meta name="description" content="Utforska våra skräddarsydda doulapaket i Stockholm, designade för att ge stöd och komfort genom hela graviditets- och förlossningsprocessen. Lär dig mer om hur våra doulas kan anpassa sitt stöd för att möta dina specifika behov och önskemål. Vi erbjuder postpartumstöd, föda tryggt med doula och akutdoula-paket" />
+        <link
+          rel='canonical'
+          href='https://www.doulaskapet.se/DoulaPaket'
+        />
+        <meta
+          name='description'
+          content='Utforska våra skräddarsydda doulapaket i Stockholm, designade för att ge stöd och komfort genom hela graviditets- och förlossningsprocessen. Lär dig mer om hur våra doulas kan anpassa sitt stöd för att möta dina specifika behov och önskemål. Vi erbjuder postpartumstöd, föda tryggt med doula och akutdoula-paket'
+        />
       </Helmet>
       <PageSpecificHero
         title={title}
         subtitle={subtitle}
         image={image}
       />
-      <Typography gutterBottom variant='h2' data-aos="fade-right"
-        sx={{ textAlign: 'center' }}
-      >Våra tjänster</Typography>
-      <Typography paragraph data-aos="fade-right"
+      <Typography
+        gutterBottom
+        variant='h2'
+        data-aos='fade-right'
         sx={{ textAlign: 'center' }}
       >
-        Vi erbjuder olika typer av tjänster för att passa just dina behov. Läs mer om våra tjänster nedan.
+        Våra tjänster
       </Typography>
-      <Typography variant='subtitle1' component='h3' data-aos="fade-right"> OBS du vet väl att det går att använda friskvårdsbidraget för doulatjänster och RUT-avdrag (50%) för postpartumstöd?</Typography>
+      <Typography
+        paragraph
+        data-aos='fade-right'
+        sx={{ textAlign: 'center' }}
+      >
+        Vi erbjuder olika typer av tjänster för att passa just dina behov. Läs
+        mer om våra tjänster nedan.
+      </Typography>
+      <Typography
+        variant='subtitle1'
+        data-aos='fade-right'
+        sx={{ textAlign: 'center' }}
+      >
+        {' '}
+        OBS du vet väl att det går att använda friskvårdsbidraget för
+        doulatjänster och RUT-avdrag (50%) för postpartumstöd?
+      </Typography>
 
       <Grid container>
         {packages.map((pkg) => {
           let linkPath;
           if (pkg.title === 'Akut-Doula') {
             linkPath = '/DoulaPaket/AkutDoula';
-          } else if (pkg.title === 'Postpartumstöd – tiden efter förlossningen') {
+          } else if (
+            pkg.title === 'Postpartumstöd – tiden efter förlossningen'
+          ) {
             linkPath = '/DoulaPaket/PostpartumStöd';
           } else if (pkg.title === 'Doulapaket Bas - Trygg Förlossning') {
             linkPath = '/DoulaPaket/Baspaket';
@@ -76,9 +97,15 @@ const DoulaPaket = () => {
           );
         })}
       </Grid>
-      <Typography gutterBottom variant='h4' data-aos="fade-right"
+      <Typography
+        gutterBottom
+        variant='h4'
+        data-aos='fade-right'
         sx={{ textAlign: 'center' }}
-      > Vitsord från DoulaSkapets klienter</Typography>
+      >
+        {' '}
+        Vitsord från DoulaSkapets klienter
+      </Typography>
       <TestimonialsSlider testimonials={testimonials} />
     </PageWrapper>
   );
