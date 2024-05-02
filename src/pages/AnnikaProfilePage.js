@@ -61,7 +61,7 @@ const AnnikaProfilePage = () => {
         />
         <meta
           name='description'
-          content='Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj och möta förlossningsvården som hbtq-person. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer, hbtqia-personer. Annika har jobbar med att utbilda inom HBTQIA+ frågor och normkritik i över 20 år. Håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm.'
+          content='Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj och möta förlossningsvården som hbtq-person. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer, hbtqia-personer. Annika har jobbar med att utbilda inom HBTQIA+ frågor och normkritik i över 20 år. Håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm. Annika håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm.'
         ></meta>
         <meta
           property='og:image'
@@ -118,16 +118,10 @@ const AnnikaProfilePage = () => {
                 data-aos='fade-up'
               >
                 <Typography
-                  variant='h3'
+                  variant='h2'
                   gutterBottom
                 >
-                  Annika Lindberg
-                </Typography>
-                <Typography
-                  variant='paragraph'
-                  gutterBottom
-                >
-                  ERBJUDER
+                  Doulatjänster
                 </Typography>
                 <Box
                   sx={{
@@ -238,33 +232,6 @@ const AnnikaProfilePage = () => {
                       Kontakta mig
                     </Typography>
                   </Typography>
-                  <Tooltip title='annika.edit.lindberg@gmail.com'>
-                    <Button
-                      sx={{
-                        mt: 1,
-                        mb: 1,
-                        textTransform: 'none',
-                        bgcolor: theme.palette.primary.main,
-                        color: theme.palette.primary.contrastText,
-                        '&:hover': {
-                          bgcolor: theme.palette.primary.dark,
-                          color: theme.palette.secondary.contrastText,
-                        },
-                      }}
-                      variant='outlined'
-                      href={`mailto:annika.edit.lindberg@gmail.com`}
-                      aria-label='Maila en förfrågan'
-                      startIcon={<AlternateEmailIcon />}
-                    >
-                      Maila mig
-                    </Button>
-                  </Tooltip>
-                  <Typography
-                    variant='body2'
-                    sx={{ mt: 2 }}
-                  >
-                    ...eller genom att fylla i något av formulären nedan:{' '}
-                  </Typography>
                   <Tooltip title='Kontakta mig via formulär'>
                     <Button
                       variant='contained'
@@ -290,10 +257,9 @@ const AnnikaProfilePage = () => {
                     variant='paragraph'
                     sx={{ mt: 2 }}
                   >
-                    Söker du en akutdoula? Vänligen fyll i Akutdoula-formuläret
-                    nedan{' '}
+                    Söker du en akutdoula?
                   </Typography>
-                  <Tooltip title='Akutdoula-formulär'>
+                  <Tooltip title='Skicka akutdoula-förfrågan'>
                     <Button
                       sx={{
                         mt: 1,
@@ -311,15 +277,39 @@ const AnnikaProfilePage = () => {
                       aria-label='Gå till akutdoula-formuläret'
                       startIcon={<QuickreplyIcon />}
                     >
-                      Akutdoula förfrågan
+                      Skicka en akutdoula förfrågan
                     </Button>
                   </Tooltip>
-                  <SocialShare
-                    url={url}
-                    title='Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens'
-                  />
+                  <p>
+                    Vi svarar på alla förfrågningar i formulär inom 24 timmar.
+                  </p>
                 </Box>
-
+                Det går även att mejla mig direkt på:{' '}
+                <Tooltip title='annika.edit.lindberg@gmail.com'>
+                  <Button
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      textTransform: 'none',
+                      bgcolor: theme.palette.primary.main,
+                      color: theme.palette.primary.contrastText,
+                      '&:hover': {
+                        bgcolor: theme.palette.primary.dark,
+                        color: theme.palette.secondary.contrastText,
+                      },
+                    }}
+                    variant='outlined'
+                    href={`mailto:annika.edit.lindberg@gmail.com`}
+                    aria-label='Maila en förfrågan'
+                    startIcon={<AlternateEmailIcon />}
+                  >
+                    Maila mig
+                  </Button>
+                </Tooltip>
+                <SocialShare
+                  url={url}
+                  title='Annika Lindberg - Professionell och erfaren doula med HBTQ-kompetens'
+                />
                 <Box
                   data-aos='fade-left'
                   component='img'
@@ -372,6 +362,35 @@ const AnnikaProfilePage = () => {
                 och/eller stödperson, så jobbar jag med att stärka er som ett
                 team.
               </Typography>
+              <Typography paragraph>
+                Nyfiken på att ta reda på om jag är rätt doula för dig? Boka ett
+                gratis och kravlöst lära-känna-samtal med mig!
+              </Typography>
+              <Tooltip title='Boka kostnadsfritt "lära-känna-möte"'>
+                <Button
+                  variant='contained'
+                  onClick={() => scrollToSection('contact-form')}
+                  aria-label='Gå till kontaktformuläret'
+                  startIcon={<ForumIcon />}
+                  sx={{
+                    display: 'flex',
+                    margin: 'auto',
+                    justifyContent: 'center',
+                    fontSize: '1rem',
+                    mt: 1,
+                    mb: 1,
+                    textTransform: 'none',
+                    bgcolor: red[900],
+                    color: red[50],
+                    '&:hover': {
+                      bgcolor: red[800],
+                      transform: 'scale(1.1)',
+                    },
+                  }}
+                >
+                  Boka en kostnadsfri konsultation!
+                </Button>
+              </Tooltip>
               <Box
                 sx={{
                   display: 'flex',
@@ -399,7 +418,7 @@ const AnnikaProfilePage = () => {
                     mt: 2,
                   }}
                 />
-                <Typography variant='subtitle1'>
+                <Typography variant=''>
                   HBTQI+ - trygg i din kropp och i mötet med vården{' '}
                 </Typography>
               </Box>
