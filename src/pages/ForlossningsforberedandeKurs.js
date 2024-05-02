@@ -315,6 +315,15 @@ const ForlossningsforberedandeKurs = () => {
                 stödperson. Är du självstående, ta gärna med eventuell
                 stödperson som kommer att närvara vid födseln.
               </Typography>
+              <h2>Hur anmäler jag mig?</h2>
+              <Typography
+                paragraph
+                gutterBottom
+              >
+                Anmäl dig genom att fylla i formuläret nedan. Vi kommer att
+                skicka en bekräftelse på din anmälan och information om
+                betalning.{' '}
+              </Typography>
 
               <iframe
                 src='https://docs.google.com/forms/d/e/1FAIpQLSee7gUnM6EZ90vc2lHy6JlX-AvA4UyZXLUCRTjrq2XvjlYq_Q/viewform?embedded=true'
@@ -327,111 +336,8 @@ const ForlossningsforberedandeKurs = () => {
               >
                 Läser in …
               </iframe>
-              <Typography paragraph>
-                Nyfiken på att ta reda på om jag är rätt doula för dig? Boka ett
-                gratis och kravlöst lära-känna-samtal med mig!
-              </Typography>
-              <Tooltip title='Boka kostnadsfritt "lära-känna-möte"'>
-                <Button
-                  variant='contained'
-                  onClick={() => scrollToSection('contact-form')}
-                  aria-label='Gå till kontaktformuläret'
-                  startIcon={<ForumIcon />}
-                  sx={{
-                    display: 'flex',
-                    margin: 'auto',
-                    justifyContent: 'center',
-                    fontSize: '1rem',
-                    mt: 1,
-                    mb: 1,
-                    textTransform: 'none',
-                    bgcolor: red[900],
-                    color: red[50],
-                    '&:hover': {
-                      bgcolor: red[800],
-                      transform: 'scale(1.1)',
-                    },
-                  }}
-                >
-                  Boka en kostnadsfri konsultation!
-                </Button>
-              </Tooltip>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                  gap: '16px',
-                  flexWrap: 'wrap',
-                  mt: '20px',
-                  mb: '10px',
-                }}
-                data-aos='fade-up'
-              >
-                <Box
-                  component='img'
-                  src={lgbt}
-                  alt='LGBT Support'
-                  sx={{
-                    width: {
-                      xs: '30px', // Width on extra-small screens
-                      sm: '40px', // Width on small screens
-                      md: '50px', // Width on medium and larger screens
-                    },
-                    height: 'auto', // Height will adjust automatically
-                    mt: 2,
-                  }}
-                />
-                <Typography variant=''>
-                  HBTQI+ - trygg i din kropp och i mötet med vården{' '}
-                </Typography>
-              </Box>
-              <Typography
-                paragraph
-                gutterBottom
-              >
-                Förutom doula (och fd idrottare) är jag även genusvetare och jag
-                har jobbat med utbildning och inkludering samt normkritik i över
-                20 års tid, vilket har gett mig en djup inblick hur normer och
-                förväntningar påverkar kroppar på olika sätt i olika sammanhang.{' '}
-              </Typography>
-              <Typography>
-                Graviditet och födande kan innebära att du/ni som HBTQI+ möter
-                dessa sammanhang utifrån en minoritetsstress som är svår att
-                sätta sig in i utan att själv ha egen levd erfarenhet. Jag har
-                erfarenhet att bära och föda barn utanför heternormen, samt
-                genomgå ivf-behandling som lesbiskt par. Jag har även arbetat
-                med HBTQI+ frågor i olika sammanhang under många år. Jag har en
-                stor förståelse för de utmaningar som kan uppstå i mötet med
-                vården och kan erbjuda stöd utifrån ett HBTQI+ medvetet
-                perspektiv.
-              </Typography>
             </Grid>
           </Grid>
-          <Box
-            id='contact-form'
-            sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 9 }}
-          >
-            <Typography
-              gutterBottom
-              variant='h2'
-            >
-              Kontakta mig!
-            </Typography>
-            <Typography
-              gutterBottom
-              variant='body1'
-            >
-              Vill du boka ett kostnadsfritt lära-känna-samtal med mig, varmt
-              välkommen att skriva till mig här så kontaktar jag dig snarast och
-              bokar. Ser fram emot att höras!
-            </Typography>
-
-            <CustomFormspreeForm />
-          </Box>
-
-          {/* Rest of your component */}
         </Box>
       </PageWrapper>
     </Container>
