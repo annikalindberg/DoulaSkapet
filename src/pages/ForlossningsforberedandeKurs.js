@@ -1,14 +1,6 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Typography,
-  Container,
-  Button,
-  Tooltip,
-} from '@mui/material';
+import { Box, Grid, Typography, Container } from '@mui/material';
 import lgbt from '../assets/lgbtq.svg';
-import CustomFormspreeForm from '../components/FormspreeForm';
 import PageSpecificHero from '../components/PageSpecificHero';
 import PageWrapper from '../components/PageWrapper';
 import Accordion from '@mui/material/Accordion';
@@ -18,8 +10,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Helmet } from 'react-helmet';
 import { SocialShare } from '../components/SocialShare';
 import MyBreadcrumbs from '../components/BreadCrumbs';
-import ForumIcon from '@mui/icons-material/Forum';
-import { red } from '@mui/material/colors';
 
 const ForlossningsforberedandeKurs = () => {
   const title = 'Queermedveten förlossningsförberedande kurs för HBTQIA+';
@@ -31,12 +21,6 @@ const ForlossningsforberedandeKurs = () => {
 
   // Define the URL for social sharing as a static string
   const url = 'https://www.doulaskapet.se/ForlossningsforberedandeKurs';
-
-  const scrollToSection = (sectionId) => {
-    document
-      .getElementById(sectionId)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   return (
     <Container
