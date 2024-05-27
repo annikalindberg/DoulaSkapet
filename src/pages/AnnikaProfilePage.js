@@ -52,16 +52,14 @@ const AnnikaProfilePage = () => {
       }}
     >
       <Helmet>
-        <title>
-          Annika Lindberg - Proffessionell och erfaren doula med HBTQ-kompetens
-        </title>
+        <title>Doula med Elitidrottsbakgrund och HBTQI+ Perspektiv </title>
         <link
           rel='canonical'
           href='https://www.doulaskapet.se/Doulor/Annika'
         />
         <meta
           name='description'
-          content='Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj och möta förlossningsvården som hbtq-person. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer, hbtqia-personer. Annika har jobbar med att utbilda inom HBTQIA+ frågor och normkritik i över 20 år. Håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm. Annika håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm.'
+          content='Annika är doula som bor i Skogås, Huddinge kommun i Stockholm. Hon är utbildad inom Föda Utan Rädsla-metoden och har lång erfarenhet av förlossning och postpartumstöd, amningsrådgivning och att föda barn och bilda familj och möta förlossningsvården som hbtq-person. Annika jobbar queermedvetet och har ett hbtq-medvetet och transinkluderande perspektiv på kroppen som hon tar med sig i sitt doulande. Erfarenhet av att stötta självstående föräldrar och par, regnbågsfamiljer, hbtqia-personer. Annika har jobbar med att utbilda inom HBTQIA+ frågor och normkritik i över 20 år. Annika håller även förlossningsförberedande kurser för hbtqia-personer i Göteborg och i Stockholm.'
         ></meta>
         <meta
           property='og:image'
